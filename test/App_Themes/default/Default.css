@@ -1,0 +1,92 @@
+@charset "utf-8";
+/*-- Nexus Core CSS Document */
+/*--   Essentials   ---------------------------------------------------------------------------------*/
+html, body, form { width:auto; height: 100%; max-height: 100%;  margin: 0;  padding: 0;  }
+iframe { /*position:absolute;*/height: 100%;  width:100%; border: none;}
+
+body  /* Styling the body element */	
+{ 
+	font-size: 80%;
+	font-family: Arial, Tahoma, sans-serif;
+	/*background: #fff;*/
+	color: #000;
+	text-align: left;
+	font-size:0.9em;
+	line-height:130%;
+	
+}
+body.bg { background: #7bd3c3 url(CSS_images/bg.jpg)  top center repeat-x;}
+
+table { border-collapse: collapse;  height: 100%;  width: 100%;} 
+	
+a{ color:#D60808; text-decoration:none;}
+a:hover{ text-decoration:underlin;}
+
+/* Remove border around linked images */
+img { border: 0;}
+a img { border:0;}
+a:hover img { border: none;  background: none;}
+
+/*clear*/
+.clear{
+	clear:both;
+	height:1px;
+	font-size:1px;
+	line-height:1px;
+	border:none;
+	margin:0; padding:0;
+	background:transparent;
+}
+	
+.clearfloat { 
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+    }
+
+
+
+/*--   NexusCore Site layout   ----------------------------------------------------------------------------------*/
+
+#nexusCore_Wrapper{ width:auto;  /*border: 1px #76d4cc solid;*/ margin: 0 10px;  }
+#nexusCore_header
+{      
+     height: auto; /* Change with top of #nexusCore_editor */
+     color: #000;
+     width: 100%;
+     margin: 10px 0;
+}
+
+.logo { top:10px;}
+.mainMenu {	  top:100px; z-index:2;	width:auto;    /*border: 1px #76d4cc solid;*/}
+.mainMenu ul { list-style: none; height: 30px;  margin:0 10px;}
+.mainMenu ul li {  float:left; /* url(CSS_images/r_menu.gif)  top center no-repeat*/;   margin: 0 30px 0 -20px;  padding: 5px 10px;}
+.mainMenu ul li a {  color:#101010; }
+.mainMenu ul li .selected {  color:#fff;  background-color:#101010;   padding: 5px 10px;}
+
+.Level2Menu {   z-index:2; width:auto;}
+.Level2Menu ul { list-style: none;  background-color: #101010;  height: 30px;  border:1px #333 solid;  margin:0 0; }
+.Level2Menu ul li { float:left;  background: #101010 url(CSS_images/r_menu.gif)  top center no-repeat;   margin: 0 30px 0 0px;  padding: 5px 10px;}
+.Level2Menu ul li a { color:White; }
+.Level2Menu ul li .selected { color:#101010;  background-color:White; }
+
+#nexusCore_mainWrapper
+{
+    border: 1px #76d4cc solid; 
+    background-color:White;
+ 
+}
+
+
+
+#nexusCore_mainContent
+{
+    margin: 0px 17em 0px 0;
+    border: 1px #76d4cc solid;  
+ 
+}
+
+#nexusCore_sideBar{ float:right; width:15em; border: 1px #76d4cc solid; }
+#nexusCore_footer { clear:both; margin: 10px 0; }
+

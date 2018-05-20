@@ -1,0 +1,715 @@
+@charset "utf-8";
+
+/*----------------------------------------------------------------------------
+
+
++ ************************************************************************************* +
+*																						*
+*	Description: chinasense.com									                     	*
+*	Last Modified:	10. 2009														    *
+*																						*
++ ************************************************************************************* +
+/*  Forum page
+
+----------------------------------------------------------------------------*/
+#forum 
+{
+	float: left;
+
+	
+}
+
+#forum .page
+{
+	text-align:left;
+	width:auto;
+	margin:0;
+}
+#forum .time
+{
+	color: #ff0000;
+}
+
+
+#forum .panel
+{
+	background: white;
+	color: #000000;
+	padding: 20px 0 0 0;
+	border: 0px outset;
+}
+
+#forum .panelsurround
+{
+	background: white;
+	color: #000000;
+	border: 1px #dcdcdc solid;
+}
+
+#forum legend
+{
+	color: #ff0000;
+	font: 11px;
+	padding:10px;
+}
+
+
+#forum #forumNav
+{
+	z-index:2;
+	float: left;
+	margin-left:-8px;
+	padding: 15px 0px 10px 0px;
+	color:#333;
+	font-size: 0.85em;
+	height:20px;
+}
+
+#forum #forumNav a {margin-bottom:0px; height:25px; color:#7b7b7b; position: relative; padding: 5px; text-decoration:none; font-weight:normal;}
+#forum #forumNav a:hover{margin-bottom:0px; height:25px; color:#7b7b7b; background-color:Transparent; position: relative; padding: 5px; text-decoration:underline;}
+
+#forum a:link, #forum body_alink
+{
+	color: #8c8c8c;
+	background-color: Transparent;
+	text-decoration: none;
+}
+#forum a:visited, #forum body_avisited
+{
+	color: #8c8c8c;
+	background-color: Transparent;
+	text-decoration: none;
+}
+#forum a:hover, #forum a:active, #forum body_ahover
+{
+	color: #8c8c8c;
+	background-color: Transparent;
+	text-decoration: underline;
+}
+
+#forum .tborder
+{
+	background: #D1D1E1;
+	color: #000000;
+	width:100%;
+}
+#forum .tcat
+{
+	background: #000000 url(Forum_images/misc/tcat.gif) top left repeat-x;
+	color: #FFFFFF;
+	font-weight: bold;
+	vertical-align:middle;
+	padding-left:10px;
+	height:31px;
+
+}
+
+
+#forum .non-thead
+{ font-weight:bold; border-bottom: 1px #dcdcdc solid; border-left: 1px #dcdcdc solid; border-right: 1px #dcdcdc solid; padding: 20px;}
+
+#forum .tcat a:link, #forum .tcat_alink
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+#forum .tcat a:visited, #forum .tcat_avisited
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+#forum .tcat a:hover, #forum .tcat a:active, #forum .tcat_ahover
+{
+	color: #ffffff;
+	text-decoration: underline;
+}
+#forum .thead
+{
+	background: #ff0000 url(Forum_images/misc/thead.gif) top left repeat-x;
+	color: #FFFFFF;
+	font: bold 12px Arial, Helvetica, sans-serif;
+	height: 18px;
+}
+#forum .thead a:link, #forum .thead_alink
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#forum .thead a:visited, #forum .thead_avisited
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#forum .thead a:hover, #forum .thead a:active, #forum .thead_ahover
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#forum .tfoot
+{
+	background: #CCCCCC;
+	color: #666666;
+	padding:10px;
+}
+#forum .tfoot a:link, #forum .tfoot_alink
+{
+	color: #666666;
+	text-decoration: underline;
+}
+#forum .tfoot a:visited, #forum .tfoot_avisited
+{
+	color: #666666;
+	text-decoration: underline;
+}
+#forum .tfoot a:hover,  #forum .tfoot a:active, #forum .tfoot_ahover
+{
+	color: #666666;
+	text-decoration: none;
+}
+
+#forum .alt
+{
+	background: white;
+	color: #6e6e6e;
+	font-size: 12px;
+	border-left: 1px #dcdcdc solid;
+	border-bottom: 1px #dcdcdc solid;
+	text-align:center;
+}
+
+#forum .altActive
+{
+	background: white;
+	color: #6e6e6e;
+	font-size: 12px;
+	border-left: 1px #dcdcdc solid;
+	border-bottom: 1px #dcdcdc solid;
+	text-align:left;
+	padding:10px;
+}
+
+#forum .alt a:link, #forum .alt_alink, #forum .altActive a:link, #forum .altActive_alink 
+{
+	color: #3c3c3c;
+	text-decoration: underline;
+	font-weight:bold;
+	
+}
+#forum .alt a:visited, #forum .alt_avisited, #forum .altActive a:visited
+{
+	color: #3c3c3c;
+	text-decoration: underline;
+	font-weight:bold;
+}
+#forum .alt a:hover, #forum .alt a:active, #forum .alt_ahover, #forum .altActive a:hover, #forum .altActive a:active, #forum .altActive_ahover, #forum .altActive a:hover
+{
+	color: #3c3c3c;
+	text-decoration: none;
+	font-weight:bold;
+}
+
+#forum .alt1
+{
+	background: white;
+	color: #6e6e6e;
+	font-size: 12px;
+	border-left: 1px #dcdcdc solid;
+	border-bottom: 1px #dcdcdc solid;
+	text-align:center;
+	width:70px;
+}
+
+#forum .altSticky
+{
+	background: white;
+	color: #6e6e6e;
+	font-size: 12px;
+	border-left: 1px #dcdcdc solid;
+	border-bottom: 1px #dcdcdc solid;
+	text-align:center;
+}
+
+#forum .altAdmin
+{
+	background: white;
+	color: #6e6e6e;
+	font-size: 12px;
+	border-left: 1px #dcdcdc solid;
+	border-bottom: 1px #dcdcdc solid;
+	border-right: 1px #dcdcdc solid;
+	text-align:center;
+	width:120px;
+}
+
+#forum .alt1ForumTitle
+{
+	background: white;
+	color: #6e6e6e;
+	font-size: 12px;
+	border-left: 1px #dcdcdc solid;
+	border-bottom: 1px #dcdcdc solid;
+	text-align:left;
+	padding:10px;
+	width:20%;
+}
+
+#forum .alt1Active
+{
+	background: white;
+	color: #6e6e6e;
+	font-size: 12px;
+	border-left: 1px #dcdcdc solid;
+	border-bottom: 1px #dcdcdc solid;
+	text-align:left;
+	padding:10px;
+	width:35%;
+}
+
+#forum .alt1 a:link, #forum .alt1_alink, #forum .alt1Active a:link, #forum .alt1Active_alink, #forum .alt1ForumTitle a:link, #forum .alt1ForumTitle_alink
+{
+	color: #3c3c3c;
+	text-decoration: underline;
+	font-weight:bold;
+	
+}
+#forum .alt1 a:visited, #forum .alt1_avisited, #forum .alt1Active a:visited, #forum .alt1ForumTitle_avisited, #forum .alt1ForumTitle a:visited, #forum .alt1ForumTitle_avisited
+{
+	color: #3c3c3c;
+	text-decoration: underline;
+	font-weight:bold;
+}
+#forum .alt1 a:hover, #forum .alt1 a:active, #forum .alt1_ahover, #forum .alt1Active a:hover, #forum .alt1Active a:active, #forum .alt1Active_ahover, #forum .alt1Active a:hover, #forum .alt1ForumTitle a:active, #forum .alt1ForumTitle_ahover
+{
+	color: #3c3c3c;
+	text-decoration: none;
+	font-weight:bold;
+}
+
+
+#forum .alt2, #forum .alt2Active
+{
+	background: white;
+	color: #6e6e6e;
+	font-size: 12px;
+	border-left: 1px #dcdcdc solid;
+	border-bottom: 1px #dcdcdc solid;
+	text-align:left;	
+	padding:10px;
+}
+
+
+
+#forum td.inlinemod
+{
+	background: #FFFFCC;
+	color: #000000;
+}
+#forum .wysiwyg
+{
+	background: #F5F5FF;
+	color: #000000;
+	font: 12pt;
+}
+
+
+#forum .vbmenu_control
+{
+	background: #000000 url(Forum_images/misc/tcat.gif) top left repeat-x;
+	color: #FFFFFF;
+	font: bold 12px;
+	padding: 4px 6px 0px 6px;
+	white-space: nowrap;
+	text-align: right;
+}
+#forum .vbmenu_control a:link, #forum .vbmenu_control_alink
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#forum .vbmenu_control a:visited, #forum .vbmenu_control_avisited
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#forum .vbmenu_control a:hover, #forum .vbmenu_control a:active, #forum .vbmenu_control_ahover
+{
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+#forum .vbmenu_popup
+{
+	background: #FFFFFF;
+	color: #000000;
+	border: 1px solid #0B198C;
+}
+#forum .vbmenu_option
+{
+	background: #F7F7F7;
+	color: #666666;
+	font: 12px Arial, Helvetica, sans-serif;;
+	white-space: nowrap;
+	cursor: pointer;
+}
+#forum .vbmenu_option a:link, #forum .vbmenu_option_alink
+{
+	color: #666666;
+	text-decoration: none;
+}
+#forum .vbmenu_option a:visited, #forum .vbmenu_option_avisited
+{
+	color: #666666;
+	text-decoration: none;
+}
+#forum .vbmenu_option a:hover, #forum .vbmenu_option a:active, #forum .vbmenu_option_ahover
+{
+	color: #666666;
+	text-decoration: none;
+}
+#forum .vbmenu_hilite
+{
+	background: white;
+	color: #666666;
+	font: 12px Arial, Helvetica, sans-serif;;
+	white-space: nowrap;
+	cursor: pointer;
+}
+#forum .vbmenu_hilite a:link, #forum .vbmenu_hilite_alink
+{
+	color: #666666;
+	text-decoration: none;
+}
+#forum .vbmenu_hilite a:visited, #forum .vbmenu_hilite_avisited
+{
+	color: #666666;
+	text-decoration: none;
+}
+#forum .vbmenu_hilite a:hover, #forum .vbmenu_hilite a:active, #forum .vbmenu_hilite_ahover
+{
+	color: #666666;
+	text-decoration: none;
+}
+/* ***** styling for 'big' usernames on postbit etc. ***** */
+#forum .bigusername { font-size: 14pt; }
+
+/* ***** small padding on 'thead' elements ***** */
+#forum td.thead, #forum div.thead { padding: 0px 4px 0px 4px; }
+
+/* ***** small padding on 'thead' elements ***** */
+#forum th.thead, #forum div.thead { padding: 0px 4px 0px 4px; }
+
+
+/* ***** basic styles for multi-page nav elements */
+#forum .pagenav a { text-decoration: none; }
+#forum .pagenav td { padding: 2px 4px 2px 4px; }
+
+/* ***** define margin and font-size for elements inside panels ***** */
+#forum .fieldset { margin-bottom: 6px; }
+#forum .fieldset, #forum .fieldset td, #forum .fieldset p, #forum .fieldset li { font-size: 11px; width:500px; }
+#forum ol li .decimal { list-style-type: decimal; } 
+
+/* ***** don't change the following ***** */
+#forum form { display: inline; }
+#forum label { cursor: default; }
+#forum .normal { font-weight: normal; }
+#forum .inlineimg { vertical-align: middle; }
+#forum #logo {
+margin: 39px 0px 12px 38px;
+}
+
+#forum .nav {
+list-style: none;
+padding: 0px;
+margin: 0px;
+}
+
+#forum .nav-button {
+/*font-weight: bold;*/
+font-size: 14px;
+color: #FFFFFF;
+width: 120px;
+height: 25px;
+line-height: 25px;
+text-align: center;
+float: left;
+}
+
+#forum .nav-button a:link {
+/* background: url(Forum_images/misc/nav-button.gif) top right no-repeat; */
+display: block;
+width: 120px;
+height: 25px;
+color: #FFFFFF;
+text-decoration: none;
+}
+
+
+#forum .nav-button a:visited {
+/*background: url(Forum_images/misc/nav-button.gif) top right no-repeat;*/
+display: block;
+width: 120px;
+height: 25px;
+color: #fefefe;
+text-decoration: none;
+}
+
+#forum .nav-button a:active {
+/*background: url(Forum_images/misc/nav-button.gif) top right no-repeat;*/
+display: block;
+width: 120px;
+height: 25px;
+color: #FFFFFF;
+text-decoration: none;
+}
+
+#forum .nav-button a:hover {
+/* background: #ffffff; */
+display: block;
+width: 120px;
+height: 25px;
+color: #e8e8e8;
+text-decoration: none;
+}
+
+#forum #nav-bg {
+/*background: #ffffff url(Forum_images/misc/nav-bg.gif) bottom left repeat-x;*/
+padding-top: 5px;
+padding-bottom: 5px;
+float: left;
+width: 100%;
+}
+
+#forum #bar {
+height: 38px;
+background: #1c1c1c url(Forum_images/misc/bar.gif) top left repeat-x;
+clear: both;
+line-height: 38px;
+color: white;
+font-weight: bold;
+font-size: 11px;
+vertical-align: middle;
+padding: 5px 10px 0px 38px;
+}
+
+
+
+#forum .forms {
+background-color: black;
+border: 1px #373737 solid;
+width: 162px;
+padding: 4px;
+color: white;
+font-size: 11px;
+vertical-align: middle;
+margin: 0px 5px 2px 6px;
+}
+
+#forum .forms2 {
+background-color: black;
+border: 1px #373737 solid;
+width: 82px;
+padding: 4px;
+color: white;
+font-size: 11px;
+vertical-align: middle;
+margin: 0px 0px 2px 6px;
+}
+
+#forum .forms3 {
+background-color: black;
+border: 1px #373737 solid;
+width: 82px;
+padding: 4px;
+color: white;
+font-size: 11px;
+vertical-align: middle;
+margin: 0px 5px 2px 2px;
+}
+
+#forum .go {
+vertical-align: middle;
+margin-bottom: 2px;
+}
+
+#forum .content {
+margin-top: 0px;
+}
+
+#forum .tcat2 {
+background: url(Forum_images/misc/tcat2.gif) top left no-repeat;
+width: 190px;
+height: 31px;
+line-height: 25px;
+color: white;
+font-size: 11px;
+padding: 4px 0px 0px 27px;
+font-weight: bold;
+border-bottom: 3px #d9d9d9 solid;
+}
+
+#forum .ct {
+padding: 8px 27px 15px 24px;
+color: #666666;
+font-size: 11px;
+line-height: 16px;
+background-color: #f2f2f2;
+}
+
+#forum .ct a:link {
+color: #666666;
+font-weight: bold;
+text-decoration: none;
+}
+
+#forum .ct a:visited {
+color: #666666;
+font-weight: bold;
+text-decoration: none;
+}
+
+#forum .ct a:active {
+color: #666666;
+font-weight: bold;
+text-decoration: none;
+}
+
+#forum .ct a:hover {
+color: #666666;
+font-weight: bold;
+text-decoration: underline;
+}
+
+#forum .tcat-l {
+background: url(Forum_images/misc/tcat-l.gif) top left no-repeat;
+width: 9px;
+height: 31px;
+}
+
+#forum .tcat-r {
+background: url(Forum_images/misc/tcat-r.gif) top left no-repeat;
+width: 5px;
+height: 31px;
+}
+
+
+#forum .thead-l {
+background: #ff0000 url(Forum_images/misc/thead-l.gif) top left no-repeat;
+height: 18px;
+font-size: 11px;
+color: white;
+padding: 0px;
+}
+
+#forum .thead-r {
+background: #ff0000 url(Forum_images/misc/thead-r.gif) top right no-repeat;
+height: 18px;
+font-size: 11px;
+color: white;
+padding: 0px;
+}
+
+#forum .thead2 {
+background: url(Forum_images/misc/thead.gif) top left repeat-x;
+padding: 0px;
+}
+
+#forum #footer {
+margin-top: 10px;
+color: #6e6e6e;
+text-align: center;
+font-size: 11px;
+}
+
+#forum #footer a:link {
+color: #626262;
+text-decoration: none;
+}
+
+#forum #footer a:visited {
+color: #626262;
+text-decoration: none;
+}
+
+#forum #footer a:active {
+color: #626262;
+text-decoration: none;
+}
+
+#forum #footer a:hover {
+color: red;
+text-decoration: none;
+}
+
+
+#forum .alt3 {
+background-color: #2b2b2b;
+border-left: 1px #dcdcdc solid;
+border-bottom: 1px #dcdcdc solid;
+padding: 1px 3px 1px 3px;
+text-align: center;
+width:175px;
+}
+
+#forum .usrbit {
+border: 1px solid #5f5f5f;
+background-color: #4a4a4a;
+padding: 4px;
+text-align: left;
+margin: 0px 12px 2px 12px;
+color: white;
+font-size: 11px;
+}
+
+#forum .name {
+background-color: #525252;
+border: 3px #4e4e4e solid;
+line-height: 21px;
+height: 21px;
+text-align: center;
+color: white;
+font-size: 12px;
+font-weight: bold;
+margin-bottom: 12px;
+}
+
+#forum .name a:link {
+color: white;
+text-decoration: none;
+}
+
+#forum .name a:visited {
+color: white;
+text-decoration: none;
+}
+
+#forum .name a:active {
+color: white;
+text-decoration: none;
+}
+
+#forum .name a:hover {
+color: white;
+text-decoration: underline;
+}
+
+#forum .checkbox {
+margin: 0px 4px 0px 0px;
+}
+
+#forum .vbimgcodelimit {
+        cursor: pointer;
+        border: dotted 1px black;
+}
+
+#forum #welcome {
+line-height: 19px;
+color: #8c8c8c;
+font-size: 11px;
+padding: 0px 0px 20px 0px;
+
+}
+
+#forum .welcome-title {
+color: #626262;
+font-weight: bold;
+}
+

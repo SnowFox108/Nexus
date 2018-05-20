@@ -1,0 +1,115 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexusShop", "NexusShop\NexusShop.csproj", "{C9D1922A-7337-4069-82FA-08527213B660}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BBF29D41-B55C-40B2-9428-40C340E403E5} = {BBF29D41-B55C-40B2-9428-40C340E403E5}
+		{956064A1-3760-498A-A4FD-EA71A3B1EC33} = {956064A1-3760-498A-A4FD-EA71A3B1EC33}
+		{B09D61BA-1A80-48BD-945F-75E7E6C57422} = {B09D61BA-1A80-48BD-945F-75E7E6C57422}
+		{E4974FC9-AFC8-4187-9499-E86358ADE6D3} = {E4974FC9-AFC8-4187-9499-E86358ADE6D3}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexusShop_Lib", "NexusShop_Lib\NexusShop_Lib.csproj", "{956064A1-3760-498A-A4FD-EA71A3B1EC33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexusCore_Lib", "..\NexusCore_Lib\NexusCore_Lib.csproj", "{B09D61BA-1A80-48BD-945F-75E7E6C57422}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security", "..\Security\Security.csproj", "{E4974FC9-AFC8-4187-9499-E86358ADE6D3}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Web", "..\Web\", "{C3D42038-0F15-456C-A483-7EE3CA33D3C3}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/Web"
+		Debug.AspNetCompiler.PhysicalPath = "..\Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Web\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Web"
+		Release.AspNetCompiler.PhysicalPath = "..\Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Web\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{C9D1922A-7337-4069-82FA-08527213B660} = {C9D1922A-7337-4069-82FA-08527213B660}
+		{BBF29D41-B55C-40B2-9428-40C340E403E5} = {BBF29D41-B55C-40B2-9428-40C340E403E5}
+		{956064A1-3760-498A-A4FD-EA71A3B1EC33} = {956064A1-3760-498A-A4FD-EA71A3B1EC33}
+		{B09D61BA-1A80-48BD-945F-75E7E6C57422} = {B09D61BA-1A80-48BD-945F-75E7E6C57422}
+		{E4974FC9-AFC8-4187-9499-E86358ADE6D3} = {E4974FC9-AFC8-4187-9499-E86358ADE6D3}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexusCore", "..\NexusCore\NexusCore.csproj", "{BBF29D41-B55C-40B2-9428-40C340E403E5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B09D61BA-1A80-48BD-945F-75E7E6C57422} = {B09D61BA-1A80-48BD-945F-75E7E6C57422}
+		{E4974FC9-AFC8-4187-9499-E86358ADE6D3} = {E4974FC9-AFC8-4187-9499-E86358ADE6D3}
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Web", "..\Controls\e2Shop\Web\", "{E37EB9EB-3D9A-4890-ACAD-DFC0F751A34C}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/Web(1)"
+		Debug.AspNetCompiler.PhysicalPath = "..\Controls\e2Shop\Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Web(1)\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Web(1)"
+		Release.AspNetCompiler.PhysicalPath = "..\Controls\e2Shop\Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Web(1)\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "4550"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{C9D1922A-7337-4069-82FA-08527213B660} = {C9D1922A-7337-4069-82FA-08527213B660}
+		{BBF29D41-B55C-40B2-9428-40C340E403E5} = {BBF29D41-B55C-40B2-9428-40C340E403E5}
+		{956064A1-3760-498A-A4FD-EA71A3B1EC33} = {956064A1-3760-498A-A4FD-EA71A3B1EC33}
+		{B09D61BA-1A80-48BD-945F-75E7E6C57422} = {B09D61BA-1A80-48BD-945F-75E7E6C57422}
+		{E4974FC9-AFC8-4187-9499-E86358ADE6D3} = {E4974FC9-AFC8-4187-9499-E86358ADE6D3}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9D1922A-7337-4069-82FA-08527213B660}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9D1922A-7337-4069-82FA-08527213B660}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9D1922A-7337-4069-82FA-08527213B660}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9D1922A-7337-4069-82FA-08527213B660}.Release|Any CPU.Build.0 = Release|Any CPU
+		{956064A1-3760-498A-A4FD-EA71A3B1EC33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{956064A1-3760-498A-A4FD-EA71A3B1EC33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{956064A1-3760-498A-A4FD-EA71A3B1EC33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{956064A1-3760-498A-A4FD-EA71A3B1EC33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B09D61BA-1A80-48BD-945F-75E7E6C57422}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B09D61BA-1A80-48BD-945F-75E7E6C57422}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B09D61BA-1A80-48BD-945F-75E7E6C57422}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B09D61BA-1A80-48BD-945F-75E7E6C57422}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4974FC9-AFC8-4187-9499-E86358ADE6D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4974FC9-AFC8-4187-9499-E86358ADE6D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4974FC9-AFC8-4187-9499-E86358ADE6D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4974FC9-AFC8-4187-9499-E86358ADE6D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3D42038-0F15-456C-A483-7EE3CA33D3C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3D42038-0F15-456C-A483-7EE3CA33D3C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3D42038-0F15-456C-A483-7EE3CA33D3C3}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3D42038-0F15-456C-A483-7EE3CA33D3C3}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{BBF29D41-B55C-40B2-9428-40C340E403E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBF29D41-B55C-40B2-9428-40C340E403E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBF29D41-B55C-40B2-9428-40C340E403E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBF29D41-B55C-40B2-9428-40C340E403E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E37EB9EB-3D9A-4890-ACAD-DFC0F751A34C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E37EB9EB-3D9A-4890-ACAD-DFC0F751A34C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E37EB9EB-3D9A-4890-ACAD-DFC0F751A34C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{E37EB9EB-3D9A-4890-ACAD-DFC0F751A34C}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="MasterPage_Education_Home.master.cs" Inherits="App_MasterPages_MasterPage_Education_Home" %>
+
+<%@ Register src="~/App_Controls/Page_Global_Login.ascx" tagname="Page_Global_Login" tagprefix="uc1" %>
+<%@ Register src="~/App_Controls/News_Controls/News_Menu.ascx" tagname="News_Menu" tagprefix="uc1" %>
+<%@ Register src="~/App_Controls/News_Controls/News_Navigator.ascx" tagname="News_Navigator" tagprefix="uc3" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder_Site_Login" runat="Server">
+    <div class="mainMenu">
+        <ul>
+                <uc1:News_Menu ID="News_Menu" runat="server" PageURL="Category.aspx" />
+        </ul>
+    </div>
+
+    <div id="globalNav">
+            <uc3:News_Navigator ID="News_Navigator1" runat="server" HomePageURL="Default.aspx"
+                TopicListURL="Category.aspx" />
+    </div>
+    <!-- /globalNav -->
+    
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder_MainContent"
+    runat="Server">
+    <div id="mainContent1">
+            <table class="contentWrap">
+            <tr>
+                <td class="LeftTop">
+                </td>
+                <td class="BorderTop">
+                </td>
+                <td class="RightTop">
+                </td>
+            </tr>
+            <tr>
+                <td class="BorderLeft">
+                </td>
+                <td class="Center">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder_MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+                </td>
+                <td class="BorderRight">
+                </td>
+            </tr>
+            <tr>
+                <td class="LeftBot">
+                </td>
+                <td class="BorderBot">
+                </td>
+                <td class="RightBot">
+                </td>
+            </tr>
+        </table>        
+    </div><!-- /BodyContainer -->
+</asp:Content>

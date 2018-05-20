@@ -1,0 +1,288 @@
+﻿/* CSS Document */
+
+body {
+	font:15px Trebuchet MS, Tahoma, Arial, Helvetica, sans-serif;
+	color:#1b320a;
+	background:#6fc103 url(Css_images/bg.gif) left top no-repeat;
+	margin:0px;
+	padding:0px;
+}
+
+.layout {
+	width:1000px;
+	text-align:justify;
+	background:url(Css_images/layout.gif) left top no-repeat;
+	margin:0px auto;
+}
+
+.header {
+	height:266px;
+}
+
+.topzone {
+	height:105px;
+}
+
+.header1 {
+	height:155px;	
+}
+
+.header1left {
+	float:left;
+	padding:0px 0px 0px 116px;
+}
+
+.header1right {
+	float:right;
+	padding:13px 58px 0px 0px;
+}
+
+.bodycontainer {
+	padding:116px 0px 0px 0px;
+}
+
+.leftcontainer {
+	width:558px;
+	float:left;
+	background:url(Css_images/line.gif) right top no-repeat;
+	padding:0px 35px 0px 97px;
+}
+
+.rightcontainer {
+	width:228px;
+	float:right;
+	padding:0px 40px 0px 41px;
+}
+
+.aboutuszone {
+	padding:0px 0px 30px 0px;
+}
+
+.servicezone {
+	padding:0px 0px 30px 0px;
+}
+
+.serviceleft {
+	width:150px;
+	float:left;
+}
+
+.serviceright {
+	width:390px;
+	float:right;
+}
+
+.servicefeature {
+}
+
+.servicefeature ul {
+	margin:0px;
+	padding:0px;
+}
+
+.servicefeature ul li {
+	display:block;
+	list-style:none;
+	background:url(Css_images/servicedisc.gif) 0px 5px no-repeat;
+	padding:0px 0px 15px 34px;
+}
+
+.footercontainer {
+	background:url(Css_images/footer.gif) left top repeat-x;
+	padding:0px 0px 0px 0px;
+	margin:20px 0px 0px 0px;
+}
+
+.footer {
+	font-size:11px;
+	width:1000px;
+	height:73px;
+	background:url(Css_images/footer1.gif) right top no-repeat;
+	padding:0px 0px 0px 0px;
+	margin:0px auto;
+}
+
+.footerleft {
+	float:left;
+	color:#fff;
+	font-weight:bold;
+	padding:30px 0px 0px 70px;
+}
+
+.footerright {
+	float:right;
+	color:#fff;			
+	padding:30px 50px 0px 0px;
+}
+
+.newsrow {
+	padding:0px 0px 25px 0px;
+}
+
+.viewall {
+	padding:15px 0px 0px 0px;
+}
+
+.clear {
+	clear:both;
+	margin:0px;
+	padding:0px;
+}
+
+
+/*	Img Style Start Here  */
+
+.aboutimg {
+	float:right;
+	margin:0px 0px 0px 28px;
+}
+
+/*	Img Style End Here  */
+
+
+/*	Text Style Start Here  */
+
+h1 {
+	font:25px Myriad Pro, Arial, Helvetica, sans-serif;
+	color:#307900;
+	background:url(Css_images/bullet.gif) 0px 2px no-repeat;
+	padding:0px 0px 25px 40px;
+	margin:0px 0px 0px 0px;
+	text-transform:uppercase;
+}
+
+h2 {
+	font:19px Trebuchet MS, Tahoma, Arial, Helvetica, sans-serif;
+	padding:0px;
+	margin:0px;
+}
+
+.bannertxt1 {
+	font:bold 33px Myriad pro, Arial, Helvetica, sans-serif;
+	color:#4ba1ff;
+}
+
+.bannertxt2 {
+	font:bold 33px Myriad pro, Arial, Helvetica, sans-serif;
+	color:#5dba00;
+}
+
+/*	Text Style End Here  */
+
+
+/*	Menu Style Start Here  */
+
+a {
+	color:#d0ff77;
+	text-decoration:underline;
+}
+
+a:hover {	
+	text-decoration:none;
+}
+
+.datelink {
+	background:url(Css_images/datedisc.gif) 0px 8px no-repeat;
+	padding:0px 0px 10px 14px;
+}
+
+.datelink a {
+	color:#fff;
+	text-decoration:none;
+}
+
+.datelink a:hover {
+	color:#e1e1e1;
+}
+
+.subscribe {
+	background:url(Css_images/rss.gif) 0px 0px no-repeat;
+	padding:10px 60px 10px 40px;
+	margin:10px 0px 0px 0px;
+	float:right;
+}
+
+.subscribe a {
+	font:bold 11px Trebuchet MS, Arial, Helvetica, sans-serif;
+	color:#fff;
+	text-decoration:none;
+	text-transform:uppercase;
+}
+
+.subscribe a:hover {
+	color:#e1e1e1;
+}
+
+.topmenu {
+	height:100px;
+	background:url(Css_images/topmenubg.gif) left top no-repeat;
+	padding:0px 0px 0px 0px;
+}
+
+.topmenu ul {
+	margin:2px 0px 0px 0px;
+	padding:25px 0px 20px 110px;
+	float:left;
+	background:url(Css_images/menudevider.gif) right top no-repeat;
+}
+
+.topmenu ul li {
+	display:inline;
+	background:url(Css_images/menudevider.gif) 0px 0px no-repeat;
+	padding:25px 15px 20px 17px;
+}
+
+
+.topmenu li a {
+	font:17px Myriad Pro, Arial, Helvetica, sans-serif;
+	color:#fff;
+	background:url(Css_images/topdisc.gif) 0px 2px no-repeat;
+	text-decoration:none;
+	padding:0px 0px 0px 20px;
+	text-transform:uppercase;
+}
+
+.topmenu li a:hover {
+	color:#e1e1e1;
+}
+
+.footer a {
+	color:#fff;
+	text-decoration:underline;
+}
+
+.footer a:hover {
+	text-decoration:none;
+}
+
+/*	Menu Style End Here  */
+
+
+
+
+
+
+/* inner pages css start */
+/*h1{font:30px "Times New Roman", Times, serif ;margin:0px; color:#fff;  padding:15px 0px 10px 10px;}
+h1 span{color:#fff}*/
+
+h5{font:15px Tahoma, Arial, Helvetica, sans-serif; color:#307900; font-weight:bold; padding:0px 0px 5px 0px; border-bottom:1px dotted #307900; margin:0px 0px 10px 0px;}
+h6{font:18px Tahoma, Arial, Helvetica, sans-serif; color:#307900; font-weight:bold; padding:0px 0px 5px 0px; margin:0px 0px 10px 0px;}
+
+.aboutus-img{float:right; border:4px solid #307900; margin:0 0px 10px 20px;}
+.aboutcolumnzone{padding:20px 0px 16px 0px;}
+.aboutcolumn1{width:48%; float:left; margin:0px 0px 10px 0px;}
+.aboutcolumn2{width:48%; float:right; margin:0px 0px 10px 0px;}
+.abouticon{float:left; margin:0px 20px 0px 0px;}
+.insidereadmore{padding:10px 0px 10px 0px;}
+input.button{color:#fff; background:#333; font:bold 11px Arial, Helvetica, sans-serif; text-decoration:none; padding:10px 10px; margin:0px 5px 5px 0;	border:1px solid #307900;}
+input.button:hover{cursor:pointer; color:#fff; background:#999}
+.project-img{float:right; margin-left:20px;	border: 6px solid #307900}
+.whiteheading{font:30px Myriad Pro, Arial; color:#CBD76B; font-weight:100;	padding:0px; margin:25px 0px 20px 0px;}
+.ourprojectrow{margin-bottom:20px; border-bottom:1px dotted #307900; padding-bottom:10px; padding-right:20px}
+.servicecolumnzone{padding:20px 0px 16px 0px;}
+.servicecolumn1{width:48%; float:left; margin:0px 0px 10px 0px;}
+.servicecolumn2{width:48%; float:right;	margin:0px 0px 10px 0px;}
+.blog-posted-row{padding:3px;}
+/* inner pages css ends */
+				

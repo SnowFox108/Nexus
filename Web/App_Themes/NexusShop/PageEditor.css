@@ -1,0 +1,26 @@
+﻿/*--  nexusCore_editor Layout ------------------------------------------------------------------------------------*/  
+
+
+/* 1.  nexusCore_editor Main panel */
+.nexusCore_Editor_MainPanel
+{
+		width:auto;
+		/*background-color:#FFF;		
+		border:1px solid #000;
+		padding:15px 20px;*/
+		margin-left: 290px;
+		float: left; 
+		
+}
+
+/* 2.  nexusCore_editor Tool panel */
+.nexusCore_Editor_ToolPanel{	/* Styling the help panel */		
+	background-color:#a0bad3;	/* Blue background color, may be 93b5bf */
+	color:#FFF;	/* White text color */
+	font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif; 
+	width: 200px;	
+	left:0px;
+	z-index:10;
+    position: fixed;	
+    height:100% !important; 
+}

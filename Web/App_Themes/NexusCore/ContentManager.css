@@ -1,0 +1,83 @@
+﻿/* NexusCore 1 - Content Manager Stylesheet */
+
+/*-- Wrapper discription in Global.css -- */
+/*-- Content manager inputs -- */
+
+
+.nexusCore_panel_contentManager
+{   
+    height:100% !important;
+    margin:10px;  
+    min-height:400px;   
+    width:80%; 
+}
+
+
+/*-----------control panel label and text input --------------------------*/
+.nexusCore_panel_contentManager input[type="text"], 
+.nexusCore_panel_contentManager textarea,
+.nexusCore_panel_contentManager input[type="file"]
+{ background: url(CSS_images/bg-input.gif)  top center repeat-x; border:#ccc 1px solid;}
+
+.nexusCore_panel_contentManager input[type="text"]:hover, 
+.nexusCore_panel_contentManager textarea:hover,
+.nexusCore_panel_contentManager input[type="file"]:hover
+{ border:1px solid #62abed; }
+ 
+.nexusCore_panel_contentManager input[type="checkbox"]
+{ margin-right: 10px;}
+
+.nexusCore_panel_contentManager select
+{ background: url(CSS_images/bg-input.gif)  top center repeat-x; }
+
+.nexusCore_panel_contentManager input[type="submit"]
+{ border:0; background: transparent;}
+
+.nexusCore_panel_contentManager input[type="image"]
+{ border:0; background: transparent;}
+
+.nexusCore_panel_contentManager img{}
+
+
+/*---- link buttons ----*/
+.nexusCore_panel_contentManager p a, 
+.nexusCore_panel_contentManager a.linkButton  { padding: 3px 10px; margin: 10px 10px 10px 0; background-color: #333;  background: #0e0b23 url(CSS_images/btn.gif) 50% 50% repeat-x; color:White; text-decoration:none;}
+.nexusCore_panel_contentManager p a:hover, 
+.nexusCore_panel_contentManager a:hover.nexusCore_link_btn  { padding: 3px 10px; margin: 10px 10px 10px 0; background-color: #333; text-decoration: none;  background: #7d9ab8 url(CSS_images/btn_over.gif) 50% 50% repeat-x; color:White;}
+
+
+
+/*---------  button  --------------------*/
+.nexusCore_panel_contentManager .UserControlBtns { width:100%; text-align:center; }
+.nexusCore_panel_contentManager .UserControlBtns input[type="submit"]{ width:120px; padding: 3px 10px; margin: 10px 10px 10px 0; background-color: #333;  background: #0e0b23 url(CSS_images/btn.gif) 50% 50% repeat-x; color:White; text-decoration:none;}
+.nexusCore_panel_contentManager .UserControlBtns input[type="submit"]:hover{ padding: 3px 10px; margin: 10px 10px 10px 0; background-color: #333; text-decoration: none;  background: #7d9ab8 url(CSS_images/btn_over.gif) 50% 50% repeat-x; color:White;}
+
+/*---------- lable and input solution  -----------*/
+.nexusCore_panel_contentManager label {margin:0 10px;} /* space for radio button and checkbox*/
+.nexusCore_panel_contentManager p.nexusCore_label {margin:0 10px; font-weight:bold;}  /* label and input in 2 lines */
+.nexusCore_panel_contentManager p.nexusCore_label_complex { width: 150px; float:left; display:block;background-color:Gray;} /* label and input in 1 lines */
+
+.nexusCore_panel_contentManager ol li { list-style: none;} /*---- a group of options using ol or ul ------*/
+.nexusCore_panel_contentManager ol li label {margin:0 10px; font-weight:bold;} /* label and input in 2 lines */
+.nexusCore_panel_contentManager ol li label.complex { width: 150px; float:left; display:block;background-color:Gray;} /* label and input in 1 lines */
+
+.nexusCore_panel_contentManager div.options {} /*---- a group of options using div------*/
+.nexusCore_panel_contentManager div.options label {margin:0 10px; font-weight:bold;} /* label and input in 2 lines */
+.nexusCore_panel_contentManager div.options label.complex { width: 150px; float:left; display:block;background-color:Gray;} /* label and input in 1 lines */
+
+
+
+/*--------- create news -----------------*/
+
+.nexusCore_panel_contentManager .select_category{ float: left; width: 400px;}
+.nexusCore_panel_contentManager .input_newsStatus{ float: left; margin-right:20px;}  /* select category section and news status section in same line*/
+
+.nexusCore_panel_contentManager .input_contentBrief{}
+
+.nexusCore_panel_contentManager .input_newsSource{ padding-top:10px;}
+.nexusCore_panel_contentManager .input_newsSource ol{ list-style:none;}
+.nexusCore_panel_contentManager .input_newsSource li {}
+.nexusCore_panel_contentManager .input_newsSource li label {margin:0 10px; font-weight:bold;} /* label and input in 2 lines */
+.nexusCore_panel_contentManager .input_newsSource li label.complex { width: 150px; float:left; display:block;background-color:Gray;} /* label and input in 1 lines */
+.nexusCore_panel_contentManager .input_newsSource li input[type="text"]
+{ background: url(CSS_images/bg-input.gif)  top center repeat-x; }

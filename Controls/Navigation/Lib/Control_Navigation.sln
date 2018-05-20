@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Control_Navigation_Lib", "Control_Navigation_Lib.csproj", "{C9021053-8811-400E-8C41-B5FC9E8E3B40}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Control_Navigation", "..\Control_Navigation\", "{A823F982-D5EC-4482-B7F0-8C7C22356C0F}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/Control_Navigation"
+		Debug.AspNetCompiler.PhysicalPath = "..\Control_Navigation\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Control_Navigation\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Control_Navigation"
+		Release.AspNetCompiler.PhysicalPath = "..\Control_Navigation\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Control_Navigation\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "6819"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9021053-8811-400E-8C41-B5FC9E8E3B40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9021053-8811-400E-8C41-B5FC9E8E3B40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9021053-8811-400E-8C41-B5FC9E8E3B40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9021053-8811-400E-8C41-B5FC9E8E3B40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A823F982-D5EC-4482-B7F0-8C7C22356C0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A823F982-D5EC-4482-B7F0-8C7C22356C0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A823F982-D5EC-4482-B7F0-8C7C22356C0F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{A823F982-D5EC-4482-B7F0-8C7C22356C0F}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

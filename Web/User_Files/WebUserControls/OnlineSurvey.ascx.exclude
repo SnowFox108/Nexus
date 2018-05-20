@@ -1,0 +1,894 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="OnlineSurvey.ascx.cs"
+    Inherits="Nexus.Core.User_Files_WebUserControls_OnlineSurvey" %>
+<asp:MultiView ID="MultiView_Question" runat="server" ActiveViewIndex="0">
+    <asp:View ID="SectionA" runat="server">
+        <ol class="step step-one">
+            <li class="current"><span>Step:1</span></li>
+            <li><span>Step:2</span></li>
+            <li><span>Step:3</span></li>
+            <li class="last"><span>Finish</span></li>
+        </ol>
+        <div class="left">
+            <h1>
+                A. General Information About You</h1>
+            <div>
+                <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="Question1" />
+            </div>
+            <div>
+                <strong>1. Company Name :</strong>
+                <asp:TextBox ID="tbx_CompanyName" runat="server" MaxLength="250" ValidationGroup="Question1"
+                    Width="300px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter a Company Name"
+                    ControlToValidate="tbx_CompanyName" Display="Dynamic" ValidationGroup="Question1">*</asp:RequiredFieldValidator>
+            </div>
+            <br />
+            <div>
+                <strong>2. Contact Email :</strong>
+                <asp:TextBox ID="tbx_ContactEmail" runat="server" MaxLength="250" Width="300px" ValidationGroup="Question1"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter a Contact Email"
+                    ControlToValidate="tbx_ContactEmail" Display="Dynamic" ValidationGroup="Question1">*</asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="tbx_ContactEmail"
+                    Display="Dynamic" ErrorMessage="Please enter a valid Email" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
+                    ValidationGroup="Question1">*</asp:RegularExpressionValidator>
+            </div>
+            <br />
+            <div>
+                <strong>3. How would you describe yourself?</strong>
+                <asp:RadioButtonList ID="rbtn_Q03" runat="server">
+                    <asp:ListItem Value="A">A) Hybrid Designer / Developer</asp:ListItem>
+                    <asp:ListItem Value="B">B) Developer</asp:ListItem>
+                    <asp:ListItem Value="C">C) Designer</asp:ListItem>
+                    <asp:ListItem Value="D" Selected="True">D) Website Owner, Client, Content Manager</asp:ListItem>
+                    <asp:ListItem Value="E">E) Project Manager</asp:ListItem>
+                </asp:RadioButtonList>
+            </div>
+            <br />
+            <div>
+                <strong>4. Do you own a website?</strong>
+                <asp:RadioButtonList ID="rbtn_Q04" runat="server" RepeatDirection="Horizontal">
+                    <asp:ListItem Selected="True">Yes</asp:ListItem>
+                    <asp:ListItem>No</asp:ListItem>
+                </asp:RadioButtonList>
+            </div>
+            <div class="survey_btns">
+                <asp:Button ID="btn_Step01_02" runat="server" Text="Next Step" ValidationGroup="Question1"
+                    OnClick="btn_Step01_02_Click" BorderWidth="1" BorderStyle="Solid" CssClass="survey_btn" />
+            </div>
+        </div>
+    </asp:View>
+    <asp:View ID="SectionB" runat="server">
+        <ol class="step step-two">
+            <li><span>Step:1</span></li>
+            <li class="current"><span>Step:2</span></li>
+            <li><span>Step:3</span></li>
+            <li class="last"><span>Finish</span></li>
+        </ol>
+        <div class="left">
+            <h1>
+                B. Questions for Website Owner</h1>
+            <div>
+                <strong>5. How many years have you owned a website?</strong>
+                <telerik:RadNumericTextBox ID="RadNumericTextBox_Q05" runat="server" Value="1" Width="75px"
+                    MaxValue="100" MinValue="1" ShowSpinButtons="True" DataType="System.Int32">
+                    <NumberFormat DecimalDigits="0" GroupSeparator="" />
+                </telerik:RadNumericTextBox>
+            </div>
+            <br />
+            <div>
+                <strong>6. How would you best describe types of your website?</strong>
+                <asp:RadioButtonList ID="rbtn_Q06" runat="server">
+                    <asp:ListItem Value="A" Selected="True">A) Fully Static content.</asp:ListItem>
+                    <asp:ListItem Value="B">B) Mostly Static content with some Dynamic functions</asp:ListItem>
+                    <asp:ListItem Value="C">C) Mostly Dynamic content with part of static parts.</asp:ListItem>
+                    <asp:ListItem Value="D">D) Fully Dynamic content</asp:ListItem>
+                    <asp:ListItem Value="E">E) I don&#39;t know</asp:ListItem>
+                </asp:RadioButtonList>
+            </div>
+            <br />
+            <div>
+                <strong>7. Do you know what technology build your website? (PHP, ASP.NET, XHTML etc)</strong>
+                <asp:RadioButtonList ID="rbtn_Q07" runat="server">
+                    <asp:ListItem Value="A">A) Yes we know</asp:ListItem>
+                    <asp:ListItem Value="B">B) Yes we used mixed technology.</asp:ListItem>
+                    <asp:ListItem Value="C" Selected="True">C) I don&#39;t know</asp:ListItem>
+                    <asp:ListItem Value="D">D) I don&#39;t care as long as it works for my website.</asp:ListItem>
+                </asp:RadioButtonList>
+            </div>
+            <br />
+            <div>
+                <strong>8. How would you best describe maintenance of your company website?</strong>
+                <asp:RadioButtonList ID="rbtn_Q08" runat="server">
+                    <asp:ListItem Selected="True" Value="A">A) My company understand everything in IT and maintenance website by ourself.</asp:ListItem>
+                    <asp:ListItem Value="B">B) My company has a basic understanding of website but still required out-source IT help for big change (programming, template etc).</asp:ListItem>
+                    <asp:ListItem Value="C">C) My company has no understanding at all about website and everything rely on out-source IT vendor.</asp:ListItem>
+                </asp:RadioButtonList>
+            </div>
+            <br />
+            <div>
+                <strong>9. How often would you need maintenance your website?</strong>
+                <asp:RadioButtonList ID="rbtn_Q09" runat="server">
+                    <asp:ListItem>Daily</asp:ListItem>
+                    <asp:ListItem>Weekly</asp:ListItem>
+                    <asp:ListItem Selected="True">Monthly</asp:ListItem>
+                    <asp:ListItem>Quarterly</asp:ListItem>
+                    <asp:ListItem>Yearly</asp:ListItem>
+                    <asp:ListItem>Other</asp:ListItem>
+                </asp:RadioButtonList>
+            </div>
+            <br />
+            <div>
+                <strong>10. Do you happy with your existing website?</strong>
+                <asp:RadioButtonList ID="rbtn_Q10" runat="server">
+                    <asp:ListItem Value="100">Very Satisfied</asp:ListItem>
+                    <asp:ListItem Value="75">Satisfied</asp:ListItem>
+                    <asp:ListItem Value="50" Selected="True">Neutral</asp:ListItem>
+                    <asp:ListItem Value="25">Dissatisfied</asp:ListItem>
+                    <asp:ListItem Value="0">Very Dissatisfied</asp:ListItem>
+                </asp:RadioButtonList>
+            </div>
+            <br />
+            <div>
+                <strong>11. Please briefly tell us the parts you happy and unhappy with (Optional).</strong>
+                <br />
+                <asp:TextBox ID="tbx_Q11" runat="server" TextMode="MultiLine" Width="500px" Rows="10"
+                    Text="Enter Your Text Here..." MaxLength="3000"></asp:TextBox>
+            </div>
+            <br />
+            <div>
+                <strong>Indicate the extent to which you agree with each statement</strong>
+                <table border="1" bordercolor="black">
+                    <tr>
+                        <th colspan="2" style="background-color: Highlight;">
+                            <h2>
+                                We use our website for...</h2>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td width="250px">
+                            12. Display Company Information
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q12" runat="server" Height="70px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Agree" Value="0" />
+                                    <telerik:RadSliderItem runat="server" Text="Agree" Value="25" />
+                                    <telerik:RadSliderItem runat="server" Text="Neutral" Value="50" />
+                                    <telerik:RadSliderItem runat="server" Text="Disagree" Value="75" />
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Disagree" Value="100" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            13. Product Information and Announcement
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q13" runat="server" Height="70px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Agree" Value="0" />
+                                    <telerik:RadSliderItem runat="server" Text="Agree" Value="25" />
+                                    <telerik:RadSliderItem runat="server" Text="Neutral" Value="50" />
+                                    <telerik:RadSliderItem runat="server" Text="Disagree" Value="75" />
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Disagree" Value="100" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            14. Collect Customer Enquiry
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q14" runat="server" Height="70px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Agree" Value="0" />
+                                    <telerik:RadSliderItem runat="server" Text="Agree" Value="25" />
+                                    <telerik:RadSliderItem runat="server" Text="Neutral" Value="50" />
+                                    <telerik:RadSliderItem runat="server" Text="Disagree" Value="75" />
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Disagree" Value="100" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            15. Online Help Desk
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q15" runat="server" Height="70px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Agree" Value="0" />
+                                    <telerik:RadSliderItem runat="server" Text="Agree" Value="25" />
+                                    <telerik:RadSliderItem runat="server" Text="Neutral" Value="50" />
+                                    <telerik:RadSliderItem runat="server" Text="Disagree" Value="75" />
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Disagree" Value="100" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            16. Shopping system / E-commerce
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q16" runat="server" Height="70px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Agree" Value="0" />
+                                    <telerik:RadSliderItem runat="server" Text="Agree" Value="25" />
+                                    <telerik:RadSliderItem runat="server" Text="Neutral" Value="50" />
+                                    <telerik:RadSliderItem runat="server" Text="Disagree" Value="75" />
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Disagree" Value="100" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            17. Integrate with Company Other System
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q17" runat="server" Height="70px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Agree" Value="0" />
+                                    <telerik:RadSliderItem runat="server" Text="Agree" Value="25" />
+                                    <telerik:RadSliderItem runat="server" Text="Neutral" Value="50" />
+                                    <telerik:RadSliderItem runat="server" Text="Disagree" Value="75" />
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Disagree" Value="100" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            18. Others (Please describe)
+                        </td>
+                        <td>
+                            <asp:TextBox ID="tbx_Q18" runat="server" TextMode="MultiLine" Width="370px" Rows="10"
+                                Text="Enter Your Text Here..." MaxLength="1000"></asp:TextBox>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <br />
+            <div>
+                <strong>19. What do you expect your current website to achieve but it didn't?</strong>
+                <br />
+                <asp:TextBox ID="tbx_Q19" runat="server" TextMode="MultiLine" Width="500px" Rows="10"
+                    Text="Enter Your Text Here..." MaxLength="3000"></asp:TextBox>
+            </div>
+            <br />
+            <div>
+                <strong>20. Do you use Content Management System to manage your website?</strong>
+                <asp:RadioButtonList ID="rbtn_Q20" runat="server" RepeatDirection="Horizontal">
+                    <asp:ListItem Selected="True">Yes</asp:ListItem>
+                    <asp:ListItem>No</asp:ListItem>
+                    <asp:ListItem Value="Unknow">I dont't Know</asp:ListItem>
+                </asp:RadioButtonList>
+            </div>
+            <div class="survey_btns">
+                <asp:Button ID="btn_Step02_Step01" runat="server" Text="Last Step" OnClick="btn_Step02_Step01_Click"
+                    BorderWidth="1" BorderStyle="Solid" CssClass="survey_btn" />
+                <asp:Button ID="btn_Step02_Step03" runat="server" Text="Next Step" OnClick="btn_Step02_Step03_Click"
+                    BorderWidth="1" BorderStyle="Solid" CssClass="survey_btn" />
+            </div>
+        </div>
+    </asp:View>
+    <asp:View ID="SectionC" runat="server">
+        <ol class="step step-three">
+            <li><span>Step:1</span></li>
+            <li><span>Step:2</span></li>
+            <li class="current"><span>Step:3</span></li>
+            <li class="last"><span>Finish</span></li>
+        </ol>
+        <div class="left">
+            <h1>
+                C. Questions for Content Management User</h1>
+            <div>
+                <strong>21. Which brand CMS do you currently use? (Optional)</strong>
+                <asp:TextBox ID="tbx_Q21" runat="server"></asp:TextBox>
+            </div>
+            <br />
+            <div>
+                <strong>Indicate the extent to which you agree with each statement</strong>
+                <table border="1" bordercolor="black">
+                    <tr>
+                        <th colspan="2" style="background-color: Highlight;">
+                            <h2>
+                                We learn how to manage CMS by...</h2>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td width="250px">
+                            22. Reading manuals
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q22" runat="server" Height="70px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Agree" Value="0" />
+                                    <telerik:RadSliderItem runat="server" Text="Agree" Value="25" />
+                                    <telerik:RadSliderItem runat="server" Text="Neutral" Value="50" />
+                                    <telerik:RadSliderItem runat="server" Text="Disagree" Value="75" />
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Disagree" Value="100" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            23. Asking family or friends
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q23" runat="server" Height="70px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Agree" Value="0" />
+                                    <telerik:RadSliderItem runat="server" Text="Agree" Value="25" />
+                                    <telerik:RadSliderItem runat="server" Text="Neutral" Value="50" />
+                                    <telerik:RadSliderItem runat="server" Text="Disagree" Value="75" />
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Disagree" Value="100" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            24. Asking customer service
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q24" runat="server" Height="70px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Agree" Value="0" />
+                                    <telerik:RadSliderItem runat="server" Text="Agree" Value="25" />
+                                    <telerik:RadSliderItem runat="server" Text="Neutral" Value="50" />
+                                    <telerik:RadSliderItem runat="server" Text="Disagree" Value="75" />
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Disagree" Value="100" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            25. Trying out yourself
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q25" runat="server" Height="70px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Agree" Value="0" />
+                                    <telerik:RadSliderItem runat="server" Text="Agree" Value="25" />
+                                    <telerik:RadSliderItem runat="server" Text="Neutral" Value="50" />
+                                    <telerik:RadSliderItem runat="server" Text="Disagree" Value="75" />
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Disagree" Value="100" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            26. Others (Please describe)
+                        </td>
+                        <td>
+                            <asp:TextBox ID="tbx_Q26" runat="server" TextMode="MultiLine" Width="370px" Rows="10"
+                                Text="Enter Your Text Here..." MaxLength="1000"></asp:TextBox>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <br />
+            <div>
+                <strong>27. What do you expect your current CMS should manage but it didn't?</strong>
+                <br />
+                <asp:TextBox ID="tbx_Q27" runat="server" TextMode="MultiLine" Width="500px" Rows="10"
+                    Text="Enter Your Text Here..." MaxLength="3000"></asp:TextBox>
+            </div>
+            <div class="survey_btns">
+                <asp:Button ID="btn_Step03_Step02" runat="server" Text="Last Step" OnClick="btn_Step03_Step02_Click"
+                    BorderWidth="1" BorderStyle="Solid" CssClass="survey_btn" />
+                <asp:Button ID="btn_Step03_Step04" runat="server" Text="Next Step" OnClick="btn_Step03_Step04_Click"
+                    BorderWidth="1" BorderStyle="Solid" CssClass="survey_btn" />
+            </div>
+        </div>
+    </asp:View>
+    <asp:View ID="SectionD" runat="server">
+        <ol class="step step-four">
+            <li><span>Step:1</span></li>
+            <li><span>Step:2</span></li>
+            <li><span>Step:3</span></li>
+            <li class="last-current"><span>Finish</span></li>
+        </ol>
+        <div class="left">
+            <h1>
+                D. Questions for Future Website</h1>
+            <div>
+                <strong>28. Would you consider adopt a CMS for your next website?</strong>
+                <asp:RadioButtonList ID="rbtn_Q28" runat="server" RepeatDirection="Horizontal">
+                    <asp:ListItem Selected="True">Yes</asp:ListItem>
+                    <asp:ListItem>No</asp:ListItem>
+                    <asp:ListItem Value="Unknow">I don't know</asp:ListItem>
+                </asp:RadioButtonList>
+            </div>
+            <br />
+            <div>
+                <strong>How would you change your mind to adopt a CMS? Consider following areas.</strong>
+                <table border="1" bordercolor="black">
+                    <tr>
+                        <th colspan="2" style="background-color: Highlight;">
+                            <h2>
+                                Areas of concerned</h2>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td width="250px">
+                            29. Cost
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q29" runat="server" Height="70px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Agree" Value="0" />
+                                    <telerik:RadSliderItem runat="server" Text="Agree" Value="25" />
+                                    <telerik:RadSliderItem runat="server" Text="Neutral" Value="50" />
+                                    <telerik:RadSliderItem runat="server" Text="Disagree" Value="75" />
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Disagree" Value="100" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            30. Ease of use
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q30" runat="server" Height="70px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Agree" Value="0" />
+                                    <telerik:RadSliderItem runat="server" Text="Agree" Value="25" />
+                                    <telerik:RadSliderItem runat="server" Text="Neutral" Value="50" />
+                                    <telerik:RadSliderItem runat="server" Text="Disagree" Value="75" />
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Disagree" Value="100" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            31. Flexibility
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q31" runat="server" Height="70px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Agree" Value="0" />
+                                    <telerik:RadSliderItem runat="server" Text="Agree" Value="25" />
+                                    <telerik:RadSliderItem runat="server" Text="Neutral" Value="50" />
+                                    <telerik:RadSliderItem runat="server" Text="Disagree" Value="75" />
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Disagree" Value="100" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            32. Integration Capabilities
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q32" runat="server" Height="70px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Agree" Value="0" />
+                                    <telerik:RadSliderItem runat="server" Text="Agree" Value="25" />
+                                    <telerik:RadSliderItem runat="server" Text="Neutral" Value="50" />
+                                    <telerik:RadSliderItem runat="server" Text="Disagree" Value="75" />
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Disagree" Value="100" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            33. Customization and Personalization
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q33" runat="server" Height="70px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Agree" Value="0" />
+                                    <telerik:RadSliderItem runat="server" Text="Agree" Value="25" />
+                                    <telerik:RadSliderItem runat="server" Text="Neutral" Value="50" />
+                                    <telerik:RadSliderItem runat="server" Text="Disagree" Value="75" />
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Disagree" Value="100" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            34. Reuse Content
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q34" runat="server" Height="70px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Agree" Value="0" />
+                                    <telerik:RadSliderItem runat="server" Text="Agree" Value="25" />
+                                    <telerik:RadSliderItem runat="server" Text="Neutral" Value="50" />
+                                    <telerik:RadSliderItem runat="server" Text="Disagree" Value="75" />
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Disagree" Value="100" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            35. Switch developer according to my satisfaction
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q35" runat="server" Height="70px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Agree" Value="0" />
+                                    <telerik:RadSliderItem runat="server" Text="Agree" Value="25" />
+                                    <telerik:RadSliderItem runat="server" Text="Neutral" Value="50" />
+                                    <telerik:RadSliderItem runat="server" Text="Disagree" Value="75" />
+                                    <telerik:RadSliderItem runat="server" Text="Strongly Disagree" Value="100" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            36. Others (Please describe)
+                        </td>
+                        <td>
+                            <asp:TextBox ID="tbx_Q36" runat="server" TextMode="MultiLine" Width="370px" Rows="10"
+                                Text="Enter Your Text Here..." MaxLength="1000"></asp:TextBox>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <br />
+            <div>
+                <strong>If you are going to create new website for your company, what following functions
+                    you wish to include?</strong>
+                <table border="1" bordercolor="black">
+                    <tr>
+                        <th colspan="2" style="background-color: Highlight;">
+                            <h2>
+                                Functions</h2>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td width="250px">
+                            37. HTML Editor
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q37" runat="server" Height="90px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="I dont't know what this is" Value="A" />
+                                    <telerik:RadSliderItem runat="server" Text="Only if it's easy to manage" Value="B" />
+                                    <telerik:RadSliderItem runat="server" Text="Never" Value="C" />
+                                    <telerik:RadSliderItem runat="server" Text="Possible" Value="D" />
+                                    <telerik:RadSliderItem runat="server" Text="Definitely" Value="E" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            38. Blog
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q38" runat="server" Height="90px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="I dont't know what this is" Value="A" />
+                                    <telerik:RadSliderItem runat="server" Text="Only if it is easy to manage" Value="B" />
+                                    <telerik:RadSliderItem runat="server" Text="Never" Value="C" />
+                                    <telerik:RadSliderItem runat="server" Text="Possible" Value="D" />
+                                    <telerik:RadSliderItem runat="server" Text="Definitely" Value="E" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            39. Calendar
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q39" runat="server" Height="90px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="I dont't know what this is" Value="A" />
+                                    <telerik:RadSliderItem runat="server" Text="Only if it is easy to manage" Value="B" />
+                                    <telerik:RadSliderItem runat="server" Text="Never" Value="C" />
+                                    <telerik:RadSliderItem runat="server" Text="Possible" Value="D" />
+                                    <telerik:RadSliderItem runat="server" Text="Definitely" Value="E" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            40. Content Rotators
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q40" runat="server" Height="90px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="I dont't know what this is" Value="A" />
+                                    <telerik:RadSliderItem runat="server" Text="Only if it is easy to manage" Value="B" />
+                                    <telerik:RadSliderItem runat="server" Text="Never" Value="C" />
+                                    <telerik:RadSliderItem runat="server" Text="Possible" Value="D" />
+                                    <telerik:RadSliderItem runat="server" Text="Definitely" Value="E" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            41. eCommerce
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q41" runat="server" Height="90px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="I dont't know what this is" Value="A" />
+                                    <telerik:RadSliderItem runat="server" Text="Only if it is easy to manage" Value="B" />
+                                    <telerik:RadSliderItem runat="server" Text="Never" Value="C" />
+                                    <telerik:RadSliderItem runat="server" Text="Possible" Value="D" />
+                                    <telerik:RadSliderItem runat="server" Text="Definitely" Value="E" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            42. Events
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q42" runat="server" Height="90px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="I dont't know what this is" Value="A" />
+                                    <telerik:RadSliderItem runat="server" Text="Only if it is easy to manage" Value="B" />
+                                    <telerik:RadSliderItem runat="server" Text="Never" Value="C" />
+                                    <telerik:RadSliderItem runat="server" Text="Possible" Value="D" />
+                                    <telerik:RadSliderItem runat="server" Text="Definitely" Value="E" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            43. Forms
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q43" runat="server" Height="90px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="I dont't know what this is" Value="A" />
+                                    <telerik:RadSliderItem runat="server" Text="Only if it is easy to manage" Value="B" />
+                                    <telerik:RadSliderItem runat="server" Text="Never" Value="C" />
+                                    <telerik:RadSliderItem runat="server" Text="Possible" Value="D" />
+                                    <telerik:RadSliderItem runat="server" Text="Definitely" Value="E" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            44. Forums
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q44" runat="server" Height="90px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="I dont't know what this is" Value="A" />
+                                    <telerik:RadSliderItem runat="server" Text="Only if it is easy to manage" Value="B" />
+                                    <telerik:RadSliderItem runat="server" Text="Never" Value="C" />
+                                    <telerik:RadSliderItem runat="server" Text="Possible" Value="D" />
+                                    <telerik:RadSliderItem runat="server" Text="Definitely" Value="E" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            45. Maps
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q45" runat="server" Height="90px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="I dont't know what this is" Value="A" />
+                                    <telerik:RadSliderItem runat="server" Text="Only if it is easy to manage" Value="B" />
+                                    <telerik:RadSliderItem runat="server" Text="Never" Value="C" />
+                                    <telerik:RadSliderItem runat="server" Text="Possible" Value="D" />
+                                    <telerik:RadSliderItem runat="server" Text="Definitely" Value="E" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            46. News
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q46" runat="server" Height="90px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="I dont't know what this is" Value="A" />
+                                    <telerik:RadSliderItem runat="server" Text="Only if it is easy to manage" Value="B" />
+                                    <telerik:RadSliderItem runat="server" Text="Never" Value="C" />
+                                    <telerik:RadSliderItem runat="server" Text="Possible" Value="D" />
+                                    <telerik:RadSliderItem runat="server" Text="Definitely" Value="E" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            47. RSS
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q47" runat="server" Height="90px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="I dont't know what this is" Value="A" />
+                                    <telerik:RadSliderItem runat="server" Text="Only if it is easy to manage" Value="B" />
+                                    <telerik:RadSliderItem runat="server" Text="Never" Value="C" />
+                                    <telerik:RadSliderItem runat="server" Text="Possible" Value="D" />
+                                    <telerik:RadSliderItem runat="server" Text="Definitely" Value="E" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            48. Social Media
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q48" runat="server" Height="90px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="I dont't know what this is" Value="A" />
+                                    <telerik:RadSliderItem runat="server" Text="Only if it is easy to manage" Value="B" />
+                                    <telerik:RadSliderItem runat="server" Text="Never" Value="C" />
+                                    <telerik:RadSliderItem runat="server" Text="Possible" Value="D" />
+                                    <telerik:RadSliderItem runat="server" Text="Definitely" Value="E" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            49. Video
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q49" runat="server" Height="90px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="I dont't know what this is" Value="A" />
+                                    <telerik:RadSliderItem runat="server" Text="Only if it is easy to manage" Value="B" />
+                                    <telerik:RadSliderItem runat="server" Text="Never" Value="C" />
+                                    <telerik:RadSliderItem runat="server" Text="Possible" Value="D" />
+                                    <telerik:RadSliderItem runat="server" Text="Definitely" Value="E" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            50. Integrate with our existing System
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q50" runat="server" Height="90px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="I dont't know what this is" Value="A" />
+                                    <telerik:RadSliderItem runat="server" Text="Only if it is easy to manage" Value="B" />
+                                    <telerik:RadSliderItem runat="server" Text="Never" Value="C" />
+                                    <telerik:RadSliderItem runat="server" Text="Possible" Value="D" />
+                                    <telerik:RadSliderItem runat="server" Text="Definitely" Value="E" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            51. Ability to change template
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q51" runat="server" Height="90px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="I dont't know what this is" Value="A" />
+                                    <telerik:RadSliderItem runat="server" Text="Only if it is easy to manage" Value="B" />
+                                    <telerik:RadSliderItem runat="server" Text="Never" Value="C" />
+                                    <telerik:RadSliderItem runat="server" Text="Possible" Value="D" />
+                                    <telerik:RadSliderItem runat="server" Text="Definitely" Value="E" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            52. Reuse and share content
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q52" runat="server" Height="90px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="I dont't know what this is" Value="A" />
+                                    <telerik:RadSliderItem runat="server" Text="Only if it is easy to manage" Value="B" />
+                                    <telerik:RadSliderItem runat="server" Text="Never" Value="C" />
+                                    <telerik:RadSliderItem runat="server" Text="Possible" Value="D" />
+                                    <telerik:RadSliderItem runat="server" Text="Definitely" Value="E" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            53. Drag and Drop all above elements to where I want on my website.
+                        </td>
+                        <td align="center">
+                            <telerik:RadSlider ID="RadSlider_Q53" runat="server" Height="90px" ItemType="item"
+                                Width="370px" Value="2">
+                                <Items>
+                                    <telerik:RadSliderItem runat="server" Text="I dont't know what this is" Value="A" />
+                                    <telerik:RadSliderItem runat="server" Text="Only if it is easy to manage" Value="B" />
+                                    <telerik:RadSliderItem runat="server" Text="Never" Value="C" />
+                                    <telerik:RadSliderItem runat="server" Text="Possible" Value="D" />
+                                    <telerik:RadSliderItem runat="server" Text="Definitely" Value="E" />
+                                </Items>
+                            </telerik:RadSlider>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            54. Others (Please describe)
+                        </td>
+                        <td>
+                            <asp:TextBox ID="tbx_Q54" runat="server" TextMode="MultiLine" Width="370px" Rows="10"
+                                Text="Enter Your Text Here..." MaxLength="1000"></asp:TextBox>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <br />
+            <div>
+                <strong>55. Is there anything else you want to add? (Optional)</strong>
+                <br />
+                <asp:TextBox ID="tbx_Q55" runat="server" TextMode="MultiLine" Width="500px" Rows="10"
+                    Text="Enter Your Text Here..." MaxLength="3000"></asp:TextBox>
+            </div>
+            <div class="survey_btns">
+                <asp:Button ID="btn_Step04_Step03" runat="server" Text="Last Step" OnClick="btn_Step04_Step03_Click"
+                    BorderWidth="1" BorderStyle="Solid" CssClass="survey_btn" />
+                <asp:Button ID="btn_Finish" runat="server" Text="Finish" OnClick="btn_Finish_Click"
+                    BorderWidth="1" BorderStyle="Solid" CssClass="survey_btn" />
+            </div>
+        </div>
+    </asp:View>
+    <asp:View ID="Complete" runat="server">
+        <div class="left">
+            <h2>
+                Thank you for your willingness to participate in our survey.
+            </h2>
+            <p>
+                We will contact winner by email when random drawing result is completed.</p>
+        </div>
+    </asp:View>
+</asp:MultiView>

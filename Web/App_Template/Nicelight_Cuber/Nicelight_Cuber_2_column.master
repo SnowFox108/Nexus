@@ -1,0 +1,102 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Nicelight_Cuber_2_column.master.cs" Inherits="App_Template_Nicelight_Cuber_Nicelight_Cuber_2_column" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<script type="text/javascript" src="/App_Template/Nicelight_Cuber/Scripts/swfobject/swfobject.js"></script>
+<script type="text/javascript">
+    var flashvars = {};
+    flashvars.xml = "/User_Files/Template_Images/Nicelight_Cuber/config.xml";
+    flashvars.font = "font.swf";
+    var attributes = {};
+    attributes.wmode = "transparent";
+    attributes.id = "slider";
+    swfobject.embedSWF("/User_Files/Template_Images/Nicelight_Cuber/cu3er.swf", "cu3er-container", "960", "400", "9", "/App_Template/Nicelight_Cuber/Scripts/swfobject/expressInstall.swf", flashvars, attributes);
+</script>
+
+</head>
+<body>
+    <form id="Form_NexusCore" runat="server">
+    <div id="pageWrapContainer" runat="server">
+        <div class="main">
+            <div class="block_header">
+                <div class="header">
+                    <div class="logo">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder_Logo" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    <div class="click">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder_Header" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="clr">
+                    </div>
+                </div>
+                <div class="clr">
+                </div>
+            </div>
+            <div class="clr">
+            </div>
+            <div class="header_text_bg">
+                <div class="header_text">
+                    <div class="header_text_resize">
+                        <div class="menu">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder_AdvTop" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                        <div class="clr">
+                        </div>
+                    </div>
+                </div>
+
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder_Adv" runat="server">
+                        </asp:ContentPlaceHolder>                    
+
+                <div class="clr">
+                </div>
+                <div class="body">
+                    <div class="mainContent">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder_PageContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="sideBar">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder_Side" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="clr">
+                    </div>
+                </div>
+                <div class="clr">
+                </div>
+                <div class="FBG_resize">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_PageContentBot" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <div class="clr">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer_resize">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder_Footer" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="clr">
+            </div>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder_Scripts" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
+
+

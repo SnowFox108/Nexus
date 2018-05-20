@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Control_Blog_Lib", "Lib\Control_Blog_Lib.csproj", "{6EAA3B25-C31E-44E5-AD51-3A00778DD17F}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Web_Blog_Single", "Web_Blog_Single\", "{B6FEB6A2-3464-4771-AF36-3FB8387A88AE}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/Web_Blog_Single"
+		Debug.AspNetCompiler.PhysicalPath = "Web_Blog_Single\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Web_Blog_Single\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Web_Blog_Single"
+		Release.AspNetCompiler.PhysicalPath = "Web_Blog_Single\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Web_Blog_Single\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "3346"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Web_Blog_Multi", "Web_Blog_Multi\", "{AE71855F-55B6-4261-92E2-C4BBE4C59BF4}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/Web_Blog_Multi"
+		Debug.AspNetCompiler.PhysicalPath = "Web_Blog_Multi\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Web_Blog_Multi\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Web_Blog_Multi"
+		Release.AspNetCompiler.PhysicalPath = "Web_Blog_Multi\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Web_Blog_Multi\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "3347"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EAA3B25-C31E-44E5-AD51-3A00778DD17F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EAA3B25-C31E-44E5-AD51-3A00778DD17F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EAA3B25-C31E-44E5-AD51-3A00778DD17F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EAA3B25-C31E-44E5-AD51-3A00778DD17F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6FEB6A2-3464-4771-AF36-3FB8387A88AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6FEB6A2-3464-4771-AF36-3FB8387A88AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6FEB6A2-3464-4771-AF36-3FB8387A88AE}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6FEB6A2-3464-4771-AF36-3FB8387A88AE}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{AE71855F-55B6-4261-92E2-C4BBE4C59BF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE71855F-55B6-4261-92E2-C4BBE4C59BF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE71855F-55B6-4261-92E2-C4BBE4C59BF4}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE71855F-55B6-4261-92E2-C4BBE4C59BF4}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

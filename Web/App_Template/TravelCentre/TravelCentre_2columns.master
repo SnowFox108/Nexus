@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="TravelCentre_2columns.master.cs" Inherits="App_Template_TravelCentre_TravelCentre_2columns" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <form id="Form_NexusCore" runat="server">
+    <div id="pageWrapContainer" runat="server">
+        <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_Logo" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_Header" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_Adv" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td>
+        <div class="header">
+            <div class="header_resize">
+                <div class="menu_nav">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_MainMenu" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+
+                </td>
+            </tr>
+        </table>
+        <table align="center" cellpadding="0" cellspacing="0" class="mainTable">
+            <tr>
+                <td class="column2Left">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_SideTop" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td class="column2Mid">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_PageContentTop" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_Side" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_PageContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_SideBot" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_PageContentBot" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+        <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td style="background-color:#E1F3FB; height:92px;">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_Footer" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder_Scripts" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!--/page -->
+    </div>
+    </form>
+</body>
+</html>

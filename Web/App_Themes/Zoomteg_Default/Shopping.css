@@ -1,0 +1,317 @@
+﻿/*
+
+eBay Shopping List Style 1
+
+*/
+
+.content .mainbar .shopping_style1 { margin:0 0 24px; padding:0; background-color:#FFFFFF;}
+.content .mainbar .shopping_style1 .itemlist { float:left; width:350px;}
+.content .mainbar .shopping_style1 .rightside { float:right; width:320px;}
+
+.content .mainbar .shopping_style1 table.eBayItemList { border-collapse:collapse;}
+.content .mainbar .shopping_style1 table.eBayItemList tr,td  { border:0px; padding:0px; }
+
+.content .mainbar .shopping_style1 .itemlist .ebayitem 
+{
+    float:left;
+    padding:2px 5px 2px 5px;
+    width:160px;
+    height:172px;
+	font-family:   Tahoma, Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	line-height:18px; 
+	text-decoration:none; 
+	font-weight:bold;
+    
+    }
+.content .mainbar .shopping_style1 .itemlist .ebayitem .picture  
+{
+    text-align:center;
+    padding:5px;
+    width:140px; 
+    height:140px; 
+    }
+.content .mainbar .shopping_style1 .itemlist .ebayitem .price1 { float:left; text-align:center; width:50px; height:22px; color:#BB4730;}
+.content .mainbar .shopping_style1 .itemlist .ebayitem .price2 { float:right; text-align:center; width:110px; height:22px; color:#135488;}
+.content .mainbar .shopping_style1 a  	
+{
+    text-decoration:none; 
+    font-weight:bold;
+    color:#135488; 
+    }
+
+.content .mainbar .shopping_style1 .rightside h2 { background-color:#da664f;}
+
+/*
+
+eBay Shopping List Style 2
+
+*/
+
+.content .mainbar .shopping_style2 { margin:0 0 24px; padding:0; background-color:#FFFFFF;}
+.content .mainbar .shopping_style2 .itemlist { float:left; width:670px;}
+
+.content .mainbar .shopping_style2 table.eBayItemList { border-collapse:collapse;}
+.content .mainbar .shopping_style2 table.eBayItemList tr,td  { border:0px; padding:0px; }
+
+.content .mainbar .shopping_style2 .itemlist .ebayitem 
+{
+    float:left;
+    padding:2px 5px 2px 5px;
+    width:160px;
+    height:172px;
+	font-family:   Tahoma, Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	line-height:18px; 
+	text-decoration:none; 
+	font-weight:bold;
+    
+    }
+.content .mainbar .shopping_style2 .itemlist .ebayitem .picture  
+{
+    text-align:center;
+    padding:5px;
+    width:140px; 
+    height:140px; 
+    }
+.content .mainbar .shopping_style2 .itemlist .ebayitem .price1 { float:left; text-align:center; width:50px; height:22px; color:#BB4730;}
+.content .mainbar .shopping_style2 .itemlist .ebayitem .price2 { float:right; text-align:center; width:110px; height:22px; color:#135488;}
+.content .mainbar .shopping_style2 a  	
+{
+    text-decoration:none; 
+    font-weight:bold;
+    color:#135488; 
+    }
+
+/*
+
+eBay Shopping List Style 3
+
+*/
+
+.content .mainbar .shopping_style3 { margin:0 0 24px; padding:0; background-color:#FFFFFF;}
+.content .mainbar .shopping_style3 .itemlist { float:left; width:510px;}
+.content .mainbar .shopping_style3 .rightside { float:right; width:160px;}
+
+.content .mainbar .shopping_style3 table.eBayItemList { border-collapse:collapse;}
+.content .mainbar .shopping_style3 table.eBayItemList tr,td  { border:0px; padding:0px; }
+
+.content .mainbar .shopping_style3 .itemlist .ebayitem 
+{
+    float:left;
+    padding:2px 5px 2px 5px;
+    width:160px;
+    height:172px;
+	font-family:   Tahoma, Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	line-height:18px; 
+	text-decoration:none; 
+	font-weight:bold;
+    
+    }
+.content .mainbar .shopping_style3 .itemlist .ebayitem .picture  
+{
+    text-align:center;
+    padding:5px;
+    width:140px; 
+    height:140px; 
+    }
+.content .mainbar .shopping_style3 .itemlist .ebayitem .price1 { float:left; text-align:center; width:50px; height:22px; color:#BB4730;}
+.content .mainbar .shopping_style3 .itemlist .ebayitem .price2 { float:right; text-align:center; width:110px; height:22px; color:#135488;}
+.content .mainbar .shopping_style3 a  	
+{
+    text-decoration:none; 
+    font-weight:bold;
+    color:#135488; 
+    }
+
+.content .mainbar .shopping_style3 .rightside h2 { background-color:#da664f;}
+
+/*
+
+eBay Shopping List Style 4
+
+*/
+
+.content .mainbar .shopping_style4 { margin:0 0 24px; padding:0; background-color:#FFFFFF;}
+.content .mainbar .shopping_style4 .itemlist { float:left; width:670px;}
+
+.content .mainbar .shopping_style4 table.eBayItemList { border-collapse:collapse;}
+.content .mainbar .shopping_style4 table.eBayItemList tr,td  { border:0px; padding:0px; }
+
+.content .mainbar .shopping_style4 .itemlist .ebayitem 
+{
+    float:left;
+    padding:2px;
+    margin-right:2px;
+    margin-top:1px;
+    margin-bottom:1px;
+    width:325px;
+    height:185px;
+    border:1px dashed #135488;
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	line-height:18px; 
+	text-decoration:none; 
+    }
+    
+.content .mainbar .shopping_style4 .itemlist .ebayitem .picture  
+{
+    float:left;
+    text-align:center;
+    padding:5px;
+    width:140px; 
+    height:140px; 
+    }
+    
+.content .mainbar .shopping_style4 .itemlist .ebayitem .content  
+{
+    float:left;
+    padding:5px;
+    width:160px;
+    height:140px; 
+    }
+    
+.content .mainbar .shopping_style4 .itemlist .ebayitem .content .title
+{
+    color:#135488;
+	font-weight:bold;
+    
+}
+
+.content .mainbar .shopping_style4 .itemlist .ebayitem .content .price
+{
+    color:#BB4730;
+	font-weight:bold;
+    
+}
+
+    
+.content .mainbar .shopping_style4 .itemlist .ebayitem a.button
+{
+    float:left;
+    padding:7px 2px;
+    width:150px;
+    margin-left:5px;
+    height:16px;
+    font-size:12px;
+    line-height:16px;
+    font-weight:bold;
+    text-decoration:none;
+    text-align:center;
+    color:#fff;
+    background-color:#135488;
+}  
+
+.content .mainbar .shopping_style4 .itemlist .ebayitem a.button.buy
+{
+    background-color:#BB4730;
+}
+
+    
+.content .mainbar .shopping_style4 .itemlist .ebayitem a.button:hover { text-decoration:none; background-color:#a1331d;}
+
+/*
+
+eBay Shopping Detail Style 1
+
+*/
+
+.content .mainbar .shopping_detail1 { margin:0 0 5px; padding:0; background-color:#FFFFFF;}
+.content .mainbar .shopping_detail1 .itemdetail { float:left; width:670px;}
+
+.content .mainbar .shopping_detail1 .itemdetail .ebayitem 
+{
+    float:left;
+    padding:2px;
+    margin-right:2px;
+    margin-top:1px;
+    margin-bottom:1px;
+    width:664px;
+    border:1px dashed #135488;
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif; 
+	font-size: 11px; 
+	line-height:18px; 
+	text-decoration:none; 
+	text-align:justify;
+    }
+
+.content .mainbar .shopping_detail1 .itemdetail .ebayitem h3
+{
+    color:#135488;
+	font-weight:bold;    
+}
+
+.content .mainbar .shopping_detail1 .itemdetail .ebayitem .description
+{
+    padding:10px;
+}
+
+.content .mainbar .shopping_detail1 .itemdetail .ebayitem .description ul
+{
+    margin-left:40px; 
+}
+
+.content .mainbar .shopping_detail1 .itemdetail .ebayitem .description ul li
+{
+    color:#135488; 
+}
+
+
+.content .mainbar .shopping_detail1 .itemdetail .ebayitem .picture  
+{
+    float:left;
+    text-align:center;
+    padding:5px;
+    width:140px; 
+    height:140px; 
+    }
+    
+.content .mainbar .shopping_detail1 .itemdetail .ebayitem .content  
+{
+    float:left;
+    padding:5px;
+    width:504px;
+
+}
+    
+.content .mainbar .shopping_detail1 .itemdetail .ebayitem .content .title
+{
+    color:#135488;
+	font-weight:bold;
+    
+}
+
+.content .mainbar .shopping_detail1 .itemdetail .ebayitem .content .price
+{
+    color:#BB4730;
+	font-weight:bold;
+    
+}
+
+    
+.content .mainbar .shopping_detail1 .itemdetail .ebayitem a.button
+{
+    float:right;
+    padding:7px 2px;
+    width:150px;
+    margin-right:10px;
+    margin-left:5px;
+    height:16px;
+    font-size:12px;
+    line-height:16px;
+    font-weight:bold;
+    text-decoration:none;
+    text-align:center;
+    color:#fff;
+    background-color:#135488;
+}  
+
+.content .mainbar .shopping_detail1 .itemdetail .ebayitem a.button.buy
+{
+    background-color:#BB4730;
+}
+
+    
+.content .mainbar .shopping_detail1 .itemdetail .ebayitem a.button:hover { text-decoration:none; background-color:#a1331d;}
+

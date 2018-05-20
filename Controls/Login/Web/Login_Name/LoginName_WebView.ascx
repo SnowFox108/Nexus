@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="LoginName_WebView.ascx.cs" Inherits="Nexus.Controls.Login.LoginName.WebView" ClassName="Nexus.Controls.Login.LoginName.LoginName_WebView" %>
+<asp:Label ID="lbl_UserName" runat="server"></asp:Label>

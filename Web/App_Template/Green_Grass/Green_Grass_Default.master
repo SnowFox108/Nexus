@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Green_Grass_Default.master.cs" Inherits="App_Template_Green_Grass_Green_Grass_Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
+</head>
+<body>
+    <form id="Form_NexusCore" runat="server">
+    <div id="pageWrapContainer" runat="server">
+        <div class="layout">
+            <div class="header">
+                <div class="topzone">
+                    <div class="subscribe">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder_Header" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+                <div class="header1">
+                    <div class="header1left">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder_Logo" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="bannertxt1 header1right">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder_HeaderBot" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="topmenu">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder_MainMenu" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="bodycontainer">
+                <div class="leftcontainer">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_PageContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div class="rightcontainer">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_Side" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div class="footercontainer">
+            <div class="footer">
+                <div class="footerleft">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_Footer" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div class="footerright">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_FooterBot" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder_Scripts" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>        
+    </div>
+    </form>
+</body>
+</html>

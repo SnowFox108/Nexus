@@ -1,0 +1,102 @@
+﻿/* NexusShop 1 - Product Variant Stylesheet */
+ .nexusCore_variant_list 
+{
+    padding: 10px;
+    height: 100% !important;      
+    min-height: 535px;
+    background:#fff;
+    border-top: 3px #cccccc solid;  
+    border-left:1px #e6e6e6 solid; 
+    border-right:1px #e6e6e6 solid; 
+    border-bottom:1px #e6e6e6 solid;
+}
+
+.nexusCore_variant_list .spliter { border-bottom: #cccccc 2px dotted; padding-top: 10px; }
+.nexusCore_variant_list h4 span { font: 12px/25px "Segoe UI", Arial, sans-serif; cursor: pointer; }
+
+ .nexusCore_variant_create h3
+{
+  margin: 20px 0;
+}
+
+/*----- Variant Create Form ---------*/
+.nexusCore_panel_sideVariant 
+{
+    padding: 10px;
+    width: 200px;
+    background:#fff;
+    border-top: 3px #cccccc solid;  
+    border-left:1px #e6e6e6 solid; 
+    border-right:1px #e6e6e6 solid; 
+    border-bottom:1px #e6e6e6 solid;
+
+}
+
+
+.nexusCore_panel_sideVariant .spliter { border-bottom: #cccccc 2px dotted; padding-top: 10px; }
+.nexusCore_panel_sideVariant h4 { padding: 5px 0px 5px 0px; }
+
+/*-------- Create variant -----------------------*/
+.nexusCore_create_variantParent {float:left;}
+.nexusCore_create_variantName  {float:left;}
+
+/*-------- Create variant link -----------------------*/
+a:hover.nexusCore_link_createVariant { text-decoration:none;}
+
+
+/*-----------  iframe Control Panel  -----------------*/
+
+.nexusCore_iframe_Variant_Wrapper { height: 100% !important;  margin:0px;}
+.nexusCore_iframe_Variant_Wrapper iframe {  width:100%; margin: 0; position: relative;  height: 100% !important; min-height:560px;    border-top: 3px #cccccc solid;  
+    border-left:1px #e6e6e6 solid; 
+    border-right:1px #e6e6e6 solid; 
+    border-bottom:1px #e6e6e6 solid;}
+
+.nexusCore_variantPanel { background-color:#f2f6f9;}
+
+
+/*----- master page command buttons ---------*/
+.nexusCore_variantCommand {border-top: #fff 2px dotted; padding-top: 10px;}
+.nexusCore_variantCommand .nexusCore_createVariant_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:200px; height:30px;  background: url(buttons/createVariant_btn.png)  left top no-repeat; color: White;  margin: 2px 0px;  }
+.nexusCore_variantCommand .nexusCore_createVariant_btn:hover { background: url(buttons/createVariant_btn_over.png) left top no-repeat; }
+.nexusCore_variantCommand .nexusCore_editVariant_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:200px; height:30px;  background: url(buttons/editVariant_btn.png)  left top no-repeat; color: White;  margin: 2px 0px;  }
+.nexusCore_variantCommand .nexusCore_editVariant_btn:hover { background: url(buttons/editVariant_btn_over.png) left top no-repeat; }
+.nexusCore_variantCommand .nexusCore_deleteVariant_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:200px; height:30px;  background: url(buttons/deleteVariant_btn.png)  left top no-repeat; color: White; margin: 2px 0 30px 0;  }
+.nexusCore_variantCommand .nexusCore_deleteVariant_btn:hover { background: url(buttons/deleteVariant_btn_over.png) left top no-repeat; }
+.nexusCore_variantCommand .nexusCore_return_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:200px; height:30px;  background: url(buttons/return_btn.png)  left top no-repeat; color: White; margin: 2px 0 30px 0;  }
+.nexusCore_variantCommand .nexusCore_return_btn:hover { background: url(buttons/return_btn_over.png) left top no-repeat; }
+
+/*----- general 120x command buttons ---------*/
+.nexusCore_variantCommand .nexusCore_create_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:120px; height:30px;  background: url(buttons/create_btn.png)  left top no-repeat; color: White; margin: 2px 0 10px 0;  }
+.nexusCore_variantCommand .nexusCore_create_btn:hover { background: url(buttons/create_btn_over.png) left top no-repeat; }
+.nexusCore_variantCommand .nexusCore_edit_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:120px; height:30px;  background: url(buttons/edit_btn.png)  left top no-repeat; color: White; margin: 2px 0 10px 0;  }
+.nexusCore_variantCommand .nexusCore_edit_btn:hover { background: url(buttons/edit_btn_over.png) left top no-repeat; }
+.nexusCore_variantCommand .nexusCore_cancel_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:120px; height:30px;  background: url(buttons/cancel_btn.png)  left top no-repeat; color: White; margin: 2px 0 10px 0;  }
+.nexusCore_variantCommand .nexusCore_cancel_btn:hover { background: url(buttons/cancel_btn_over.png) left top no-repeat; }
+
+/*---------- Variant property modify ---------*/
+.nexusCore_variant_multiView_Modify { margin-bottom: 10px;}
+
+/*-------------- text inupt  -----------------*/
+
+.nexusCore_create_variantName input[type="text"],
+.nexusCore_variant_multiView_Modify input[type="text"]{font: 12px "Segoe UI", Arial, sans-serif;}
+
+
+/*-------------- Property editor pop window  -----------------*/
+ .nexusCore_variant_property_editor 
+{
+    padding: 10px;
+    height: 100% !important;      
+    min-height: 535px;
+    background:#fff;
+    border-top: 3px #cccccc solid;  
+    border-left:1px #e6e6e6 solid; 
+    border-right:1px #e6e6e6 solid; 
+    border-bottom:1px #e6e6e6 solid;
+}
+
+.nexusCore_variant_property_editor .spliter { border-bottom: #cccccc 2px dotted; padding-top: 10px; }
+.nexusCore_variant_property_editor .form { border-collapse: collapse; padding:10px; margin-bottom:15px; width:650px; }     
+.nexusCore_variant_property_editor .form tr th{ text-align:right; vertical-align:top; background-color: #a0bad3;  color:#28385a; padding:10px 10px; font-weight:bold; font-size:12px; width: 150px; }
+.nexusCore_variant_property_editor .form tr td{ text-align:left; padding:2px 5px; }

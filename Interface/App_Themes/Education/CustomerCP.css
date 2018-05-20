@@ -1,0 +1,129 @@
+@charset "utf-8";
+/*----------------------------------------------------------------------------
+
+
++ ************************************************************************************* +
+*																						*
+*	Description: chinasense.com									                     	*
+*	Last Modified:	06. 8. 2009														    *
+*																						*
++ ************************************************************************************* +
+
+
+	==[ TOC ]==
+  1. sidebar-hotel    
+  2. Content    
+
+	==[ Colors ]==
+	2. #fe7e01  - side-h2	, h1 f
+	3. #a5d900  - a:hov 
+
+----------------------------------------------------------------------------*/
+
+
+
+
+
+/*----------------------------------------------------------------------------------*/
+
+
+#sidebar h4 { font-size:100%; width:213px; height:18px;  margin-bottom:0.3em; color:#26a; background-color:#ebebeb; padding:3px 0px 3px 10px; }
+#sidebar .side-menu {display:block; padding: 10px 25px 25px 10px; margin:0px; background:url(CSS_images/sidemenu-middle.gif) top left repeat-y;}
+
+
+
+#sidebar .bg{background:url(CSS_images/side-back-middle.png) top left repeat-y;  }
+#sidebar .bg h3, #sidebar .bg1 h3 {display:inline;}
+#sidebar .bg span, #sidebar .bg1 span {font-size:85%; color:#333; margin-left:5px;}
+#sidebar .bg p, #sidebar .bg1 p {margin:1em 0 1em; line-height:180%;}
+#sidebar .bg a:hover, #sidebar .bg1 a:hover {color:#333;}
+#sidebar .bg-top {height:53px; background:url(CSS_images/side-back-top.png) top left no-repeat;}
+#sidebar .bg-top h2 {font-size:150%; padding:5px 0px 0px 20px;}
+#sidebar .bg-bottom {height:28px; background:url(CSS_images/side-back-bottom.png) top left no-repeat;}
+
+/*menu*/
+#sidebar .side-menu ul.menu {list-style:none; margin:0; padding:0;}
+#sidebar .side-menu ul.menu li {border-bottom:1px solid #ccc; padding:0; margin:0; font-size:95%;}
+#sidebar .side-menu ul.menu li a {
+	display:block;
+	border-top:1px solid #fff;
+	text-decoration:none;
+	color:#4e565f;
+	padding:9px 5px 12px 30px;
+	margin:0 0 0 5px;
+	background:url(CSS_images/side-menu-odrazka.png) top left no-repeat;
+}
+#sidebar .side-menu ul.menu li a:hover {text-decoration:underline; color:#fe7e01;}
+#sidebar .side-menu ul.menu li.selected {font-weight:bold; text-decoration:none; color:#4e565f; background:url(CSS_images/sidemenu-selected-back.gif) top right repeat-y;}
+
+
+/*-- [ 2. Content ] -----------------------------------------------*/
+
+/* heading, anchor and paragraph margins*/
+#mainContent-admin h1 {margin-bottom: 0.6em; padding-bottom:5px;} 
+#mainContent-admin h2 {margin: 25px 0px 15px 0px; padding-bottom:5px; border-bottom:dotted 1px #0b1435;}  
+#mainContent-admin h3 {margin:20px 0px 5px 0px; padding:0px, 20px, 20px,0px; } 
+#mainContent-admin p {line-height:155%; margin:5px 0px 15px 0px;} 
+#mainContent-admin a {color:#fe6613;}
+#mainContent-admin a:hover {color:#333;}
+
+#mainContent-admin ul,li{
+margin: 0px; padding: 0px;
+list-style:none;
+display:block;
+}
+#mainContent-admin ul{margin: 5px 0px 5px 5px;  line-height:180%; vertical-align:middle;}
+#mainContent-admin li{
+padding-left:20px;
+background: url(CSS_images/li1.gif) 5px 7px  no-repeat;
+}
+
+
+/*contents*/
+#mainContent-admin .content
+{
+    margin-left:8px;
+    margin-bottom:10px;
+	width:700px;
+	padding:10px;
+	background-color:#ebebeb;
+}
+#mainContent-admin .content1
+{
+    margin-left:8px;
+    margin-bottom:10px;
+	width:700px;
+	padding:10px;
+}
+#mainContent-admin .content h5, .content1 h5
+{
+	width:150px;
+    margin-bottom:10px;
+	color:#fff;
+	padding:3px;
+	background-color:#8a8a8a;
+}
+#mainContent-admin .content .title-place
+{
+    margin-bottom:10px;
+	padding:3px;
+}
+#mainContent-admin .content .holder, content1 .holder{
+	width:675px;
+	padding:10px;
+	background-color:#fff;
+	border:1px solid #ccc; 
+}
+
+
+
+/*enquiry*/
+#mainContent-admin .enquiry 
+{
+    overflow: hidden;
+    padding:20px;
+	background:url(CSS_images/enquiry-bg.gif) left top repeat-y; 
+}
+#mainContent-admin.enquiry .txt{ padding:10px; width:150px;}
+#mainContent-admin.enquiry-top {display:block; position:relative; margin-top:10px; height:15px; background:url(CSS_images/enquiry-top.gif) top left no-repeat;}
+#mainContent-admin.enquiry-bottom {display:block; height:15px; background:url(CSS_images/enquiry-bottom.gif) top left no-repeat;}

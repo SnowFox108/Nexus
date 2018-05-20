@@ -1,0 +1,391 @@
+﻿<%@ WebHandler Language="C#" Class="e2Tech.PhotoMgr.ImgShow" %>
+
+using System;
+using System.Web;
+using System.Data;
+using System.Xml;
+using System.IO;
+
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.Drawing.Drawing2D;
+using System.Drawing.Text;
+
+
+namespace e2Tech.PhotoMgr
+{
+
+    public class ImgShow : IHttpHandler
+    {
+        
+        public bool IsReusable
+        {
+            get
+            {
+                return false;
+            }
+        }
+
+        public void ProcessRequest(HttpContext context)
+        {
+            //context.Response.ContentType = "text/plain";
+            //context.Response.Write("Hello World");
+
+            
+            string SetNums = context.Request.QueryString["SetNums"];
+            
+            // 获取图片路径
+            
+            string myImgUrl;
+
+            if (System.Configuration.ConfigurationManager.AppSettings["PhotoBased"] == "DataBased")
+            {
+                string PhotoID = context.Request.QueryString["PhotoID"];
+                if (PhotoID == null || PhotoID == "")
+                {
+                    myImgUrl = context.Request.QueryString["ImgUrl"];
+                }
+                else
+                {
+                    try
+                    {
+                        DataConn myDP = new DataConn(System.Configuration.ConfigurationManager.ConnectionStrings["CHSMS"].ConnectionString);
+
+                        switch (context.Request.QueryString["PhotoType"])
+                        {
+                            case "Product":
+                                myImgUrl = myDP.Get_Page_PhotoUrl(PhotoID);
+                                break;
+
+                            case "Place":
+                                myImgUrl = myDP.Get_Place_Page_PhotoUrl(PhotoID);
+                                break;
+
+                            default:
+                                myImgUrl = null;
+                                break;
+                        }
+
+                    }
+                    catch
+                    {
+                        myImgUrl = null;
+                    }
+                }
+                    
+            }
+            else
+            {
+                myImgUrl = context.Request.QueryString["ImgUrl"];
+            }
+             
+
+            if (myImgUrl == null)
+            {
+                myImgUrl = "";
+            }
+
+            // 获取图片显示模式
+            int SetNum;
+
+            switch (SetNums)
+            {
+                case "Full":
+                    SetNums = System.Configuration.ConfigurationManager.AppSettings["Full"];
+                    break;
+                case "Thumb":
+                    SetNums = System.Configuration.ConfigurationManager.AppSettings["Thumb"];
+                    break;
+                case "Poster":
+                    SetNums = System.Configuration.ConfigurationManager.AppSettings["Poster"];
+                    break;
+                    
+                default:
+                    SetNums = System.Configuration.ConfigurationManager.AppSettings[SetNums];
+                    break;
+
+            }
+
+            if (SetNums == null || SetNums == "")
+            {
+                SetNum = 0;
+            }
+            else
+            {
+                try
+                {
+                    SetNum = Convert.ToInt16(SetNums);
+                }
+                catch
+                {
+                    SetNum = 0;
+                }
+            }
+            
+            // Load XML Setting 
+            XmlDataDocument mydata = new XmlDataDocument();
+            DataSet myDS;
+            mydata.DataSet.ReadXml(System.Web.HttpContext.Current.Server.MapPath("ImgShow.xml"));
+            myDS = mydata.DataSet;
+
+            DataRow myDR;
+
+            try
+            {
+                myDR = myDS.Tables["Album"].Rows[SetNum];
+            }
+            catch
+            {
+                myDR = myDS.Tables["Album"].Rows[0];
+
+            }
+
+            string myAct = myDR["ImgType"].ToString();
+            
+            // 检测文件是否存在
+            if (!File.Exists(System.Web.HttpContext.Current.Server.MapPath(myDR["ImgBaseUrl"].ToString() + myImgUrl)))
+            {
+                myDR = myDS.Tables["Album"].Rows[0];
+                myAct = "None";
+            }
+
+
+            switch (myAct.ToLower())
+            {
+                case "normal":
+                    ShowImg(myDR["ImgBaseUrl"].ToString() + myImgUrl);
+                    break;
+                case "resizeonly":
+                    ResizeOnly(myDR, myImgUrl);
+                    break;
+                case "overlayonly":
+                    OverLayOnly(myDR, myImgUrl);
+                    break;
+                case "minwidthonly":
+                    break;
+                case "minwidthoverlay":
+                    MinWidthOverLay(myDR, myImgUrl);
+                    break;
+                case "none":
+                    ShowImg(myDR["ImgBaseUrl"].ToString());
+                    break;
+                default:
+                    ShowImg(myDR["ImgBaseUrl"].ToString());
+                    break;
+            }
+
+            return;
+
+        }
+
+        public void ShowImg(string srcLink)
+        {
+
+            //Load the Image to be written on.
+            Bitmap bitMapImage = new Bitmap(System.Web.HttpContext.Current.Server.MapPath(srcLink));
+
+            ShowImg(bitMapImage);
+
+            bitMapImage.Dispose();
+
+        }
+
+        public void ShowImg(Bitmap Img2Show)
+        {
+
+            Graphics graphicImage;
+
+            try
+            {
+                graphicImage = Graphics.FromImage(Img2Show);
+            }
+            catch
+            {
+                Img2Show = ImgLib.ImgLib.ConvertBitmapToJpeg(Img2Show,100);
+                graphicImage = Graphics.FromImage(Img2Show);
+
+            }
+
+            //Smooth graphics is nice.
+            graphicImage.SmoothingMode = SmoothingMode.AntiAlias;
+
+
+            //			graphicImage.PageScale = 0.5F;
+            //I am drawing a oval around my text.
+            //			graphicImage.DrawArc(new Pen(Color.Red, 3), 90, 235, 150, 50, 0, 360);
+
+            //Set the content type
+            System.Web.HttpContext.Current.Response.ContentType = "image/jpeg";
+
+            //Save the new image to the response output stream.
+            Img2Show.Save(System.Web.HttpContext.Current.Response.OutputStream, ImageFormat.Jpeg);
+
+            //Clean house.
+            graphicImage.Dispose();
+            Img2Show.Dispose();
+
+        }
+
+        public void ResizeOnly(DataRow myDR, string ImgUrl)
+        {
+
+            Bitmap originalBitmap = new Bitmap(System.Web.HttpContext.Current.Server.MapPath(myDR["ImgBaseUrl"].ToString() + ImgUrl));
+
+            originalBitmap = ImgLib.ImgLib.ResizeBitmap(originalBitmap,
+                Convert.ToInt32(myDR["ImgSizeX"]),
+                Convert.ToInt32(myDR["ImgSizeY"]));
+
+            ShowImg(originalBitmap);
+
+            originalBitmap.Dispose();
+
+        }
+
+        public void OverLayOnly(DataRow myDR, string ImgUrl)
+        {
+
+            Bitmap originalBitmap = new Bitmap(System.Web.HttpContext.Current.Server.MapPath(myDR["ImgBaseUrl"].ToString() + ImgUrl));
+            Bitmap OverlayBitmap = new Bitmap(System.Web.HttpContext.Current.Server.MapPath(myDR["OverLaySource"].ToString()));
+
+            int alpha = Convert.ToInt16(myDR["OverlayType"]);
+
+            ImgLib.ImgLib.ImageCornerEnum corner = ImgLib.ImgLib.ImageCornerEnum.BottomRight;
+
+            corner = (ImgLib.ImgLib.ImageCornerEnum)Enum.Parse(corner.GetType(),
+                myDR["OverLayPosition"].ToString());
+
+            originalBitmap = ImgLib.ImgLib.OverlayBitmap(originalBitmap,
+                OverlayBitmap,
+                alpha,
+                corner);
+
+            ShowImg(originalBitmap);
+
+            originalBitmap.Dispose();
+            OverlayBitmap.Dispose();
+
+        }
+
+        public void MinWidthOverLay(DataRow myDR, string ImgUrl)
+        {
+            Bitmap originalBitmap = new Bitmap(System.Web.HttpContext.Current.Server.MapPath(myDR["ImgBaseUrl"].ToString() + ImgUrl));
+
+            if (originalBitmap.Width > Convert.ToInt32(myDR["ImgSizeX"]))
+            {
+                Single ratio = Convert.ToSingle(myDR["ImgSizeX"])/Convert.ToSingle(originalBitmap.Width);
+                int x = Convert.ToInt32(originalBitmap.Width * ratio);
+                int y = Convert.ToInt32(originalBitmap.Height * ratio);
+
+                originalBitmap = ImgLib.ImgLib.ResizeBitmap(originalBitmap,x,y);
+
+            }
+
+            Bitmap OverlayBitmap = new Bitmap(System.Web.HttpContext.Current.Server.MapPath(myDR["OverLaySource"].ToString()));
+
+            int alpha = Convert.ToInt16(myDR["OverlayType"]);
+
+            ImgLib.ImgLib.ImageCornerEnum corner = ImgLib.ImgLib.ImageCornerEnum.BottomRight;
+
+            corner = (ImgLib.ImgLib.ImageCornerEnum)Enum.Parse(corner.GetType(),
+                myDR["OverLayPosition"].ToString());
+
+            originalBitmap = ImgLib.ImgLib.OverlayBitmap(originalBitmap,
+                OverlayBitmap,
+                alpha,
+                corner);
+
+            ShowImg(originalBitmap);
+
+            originalBitmap.Dispose();
+            OverlayBitmap.Dispose();
+            
+        }
+
+    }
+
+}
+
+
+
+<?xml version="1.0" standalone="yes"?>
+<PhotoSetting>
+  <Album>
+    <id>0</id>
+    <ImgType>None</ImgType>
+    <ImgSizeX>0</ImgSizeX>
+    <ImgSizeY>0</ImgSizeY>    
+    <OverlayType>None</OverlayType>
+    <OverLaySource>None</OverLaySource>
+    <OverLayPosition>None</OverLayPosition>
+    <OverLayX>0</OverLayX>
+    <OverLayY>0</OverLayY>  
+    <ImgBaseUrl>/PhotoMgr/NoImg.jpg</ImgBaseUrl>    
+    <Descriptions>No Image shows</Descriptions>    
+  </Album>
+  <Album>
+    <id>1</id>
+    <ImgType>Normal</ImgType>
+    <ImgSizeX>0</ImgSizeX>
+    <ImgSizeY>0</ImgSizeY>    
+    <OverlayType>0</OverlayType>
+    <OverLaySource>0</OverLaySource>
+    <OverLayPosition>0</OverLayPosition>
+    <OverLayX>0</OverLayX>
+    <OverLayY>0</OverLayY>    
+    <ImgBaseUrl></ImgBaseUrl>    
+    <Descriptions>Normal Image shows</Descriptions>    
+  </Album>
+  <Album>
+    <id>2</id>
+    <ImgType>ResizeOnly</ImgType>
+    <ImgSizeX>190</ImgSizeX>
+    <ImgSizeY>152</ImgSizeY>    
+    <OverlayType>0</OverlayType>
+    <OverLaySource>0</OverLaySource>
+    <OverLayPosition>0</OverLayPosition>
+    <OverLayX>0</OverLayX>
+    <OverLayY>0</OverLayY>    
+    <ImgBaseUrl></ImgBaseUrl>    
+    <Descriptions>100x100 resize</Descriptions>    
+  </Album>
+   <Album>
+    <id>3</id>
+    <ImgType>OverlayOnly</ImgType>
+    <ImgSizeX>0</ImgSizeX>
+    <ImgSizeY>0</ImgSizeY>    
+    <OverlayType>90</OverlayType>
+    <OverLaySource>/PhotoMgr/logo.png</OverLaySource>
+    <OverLayPosition>BottomRight</OverLayPosition>
+    <OverLayX>0</OverLayX>
+    <OverLayY>0</OverLayY>    
+    <ImgBaseUrl></ImgBaseUrl>    
+    <Descriptions>100x100 resize</Descriptions>    
+  </Album>
+  <Album>
+    <id>4</id>
+    <ImgType>MinWidthOnly</ImgType>
+    <ImgSizeX>0</ImgSizeX>
+    <ImgSizeY>0</ImgSizeY>
+    <OverlayType>0</OverlayType>
+    <OverLaySource>0</OverLaySource>
+    <OverLayPosition>0</OverLayPosition>
+    <OverLayX>0</OverLayX>
+    <OverLayY>0</OverLayY>
+    <ImgBaseUrl></ImgBaseUrl>
+    <Descriptions>Minimium Width no less than ImgSizeX</Descriptions>
+  </Album>
+  <Album>
+    <id>5</id>
+    <ImgType>MinWidthOverlay</ImgType>
+    <ImgSizeX>680</ImgSizeX>
+    <ImgSizeY>0</ImgSizeY>
+    <OverlayType>80</OverlayType>
+    <OverLaySource>/PhotoMgr/logo.png</OverLaySource>
+    <OverLayPosition>BottomRight</OverLayPosition>
+    <OverLayX>0</OverLayX>
+    <OverLayY>0</OverLayY>
+    <ImgBaseUrl></ImgBaseUrl>
+    <Descriptions>Minimium Width no less than ImgSizeX and Overlay by Pic</Descriptions>
+  </Album>
+
+</PhotoSetting>

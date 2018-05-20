@@ -1,0 +1,131 @@
+﻿/* Common Layout */
+
+/* Table */
+.admin_common_MainTable {
+	width:900px;
+    background-color: #FFFFFF;
+	vertical-align:top;
+	border:0px;			
+	}
+	
+.admin_common_MenuTable {
+	width:200px;
+    background-color: #FFFFFF;
+	vertical-align:top;	
+	border:0px;			
+	}
+	
+.admin_common_ContentTable {
+	width:700px;
+    background-color: #FFFFFF;
+	vertical-align:top;
+	border:0px;			
+	}
+
+.admin_common_SectionTable {
+	width:700px;
+    background-color: #FFFFFF;
+	vertical-align:top;
+	border:0px;			
+	}
+
+
+/* Header */
+.admin_common_MainHeader {
+    background-color: #FFFFFF;
+	}
+
+/* SubHeader */
+.admin_common_SubHeader {
+    background-color: #FFFFFF;
+	}
+
+/* Title */
+.admin_common_MainTitle {
+    background-color: #FFFFFF;
+	}
+
+/* SubTitle */
+.admin_common_SubTitle {
+    background-color: #FFFFFF;
+	}
+
+/* ColumTitle */
+.admin_common_ColumTitle {
+    background-color: #FFFFFF;
+	}
+
+.admin_common_ColumTitle02 {
+    background-color: #FFFFFF;
+	}
+
+/* RowTitle */
+.admin_common_RowTitle {
+    background-color: #FFFFFF;
+	}
+
+.admin_common_RowTitle02 {
+    background-color: #FFFFFF;
+	}
+
+/* InputName */
+.admin_common_InputTitle {
+	background-color:#F1EEEE;
+	text-align:right;
+	vertical-align:top;
+	padding:4px;
+	border:#E1DFDF dashed 1px;
+	}
+
+.admin_common_InputTextBox {
+	
+	}
+
+.admin_common_InputDropDownList {
+	
+	}
+
+.admin_common_InputRadioButton {
+	
+	}
+
+.admin_common_InputCheckBox {
+	
+	}
+
+
+/* MainText */
+.admin_common_TextContent {
+	border-top:0px;
+	border-bottom:0px;
+	border-left:0px;
+	border-right:0px;
+	padding-left:20px;
+	padding-right:20px;
+	text-align:left;
+    vertical-align:top;
+	font: normal normal normal 10pt, Arial, Helvetica, sans-serif;
+	}
+	
+/* SubMainText */
+.admin_common_TextContent02 {
+    background-color: #FFFFFF;
+	}
+
+
+/* QuoteText */
+.admin_common_QuoteText {
+    background-color: #FFFFFF;
+	}
+
+/* ColumText */
+.admin_common_ColumText {
+    background-color: #FFFFFF;
+	}
+
+
+/* RowText */
+.admin_common_RowText {
+    background-color: #FFFFFF;
+	}
+

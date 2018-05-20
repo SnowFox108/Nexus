@@ -1,0 +1,67 @@
+﻿/* NexusCore 1 - Default Stylesheet */
+
+/* table tr th{ text-align:left;} */
+
+/*----------- Error Message  ---------------------------------------*/
+.nexusCore_failure {    
+    margin: 0 0 10px 0; 
+    font-weight:bold;      
+    color: #ff0000; 
+    font: 12px/25px "Segoe UI", Arial, sans-serif;
+    /*padding-left:35px;
+    background: url(CSS_Images/validator.gif)  left top no-repeat;    */
+    }
+
+.nexusCore_validator, .nexusCore_error_message {
+    background: url(CSS_Images/validator.gif)  left top no-repeat;    
+    padding-left:50px;
+    color: #ff0000; 
+	font: 12px/25px "Segoe UI", Arial, sans-serif;
+    }
+ .nexusCore_error_message { margin: 10px;}
+ 
+/*----------- label text and symbol   ---------------------------------------*/
+.nexusCore_star {    color: #ff0000; }    
+.nexusCore_label{ font-weight:bold; font-size:12px;}  /* same size as h5, can use with <p>, <span>. If need inline with following text or textbox use <span>, in different line use <h5> or <p>*/
+
+
+/*------------ nexusCore templatePages Location ------------------*/
+
+.nexusCore_templatePages_URL { font-weight: normal; padding: 5px 10px;}
+
+/*------------ Buttons -----------------------------*/
+
+.nexusCore_btn_editPage { clear:both; padding: 2px 10px;  height: 25px; width: 100%; background: url(CSS_images/btn.gif) 50% 50% repeat-x; margin:10px 0 0 0;  color:#fff;  font: 12px/25px "Segoe UI", Arial, sans-serif; }
+.nexusCore_btn_goRight { text-align: right;  margin:0 10px 10px 0;}
+.nexusCore_btn{ clear:both;  padding: 0 10px; width: auto; background: url(CSS_images/btn.gif) 50% 50% repeat-x; color:White;  font: 12px/20px "Segoe UI", Arial, sans-serif; }
+.nexusCore_btn:hover{ background: #7d9ab8 url(CSS_images/btn_over.gif) 50% 50% repeat-x; }
+
+/*------------ table for list pages & templates ---------------------------*/
+table.nexusCore_itemPlaceholderContainer,
+table.nexusCore_panel_Privacy { border-collapse: collapse; padding:10px; margin-bottom:15px; width:100%; }
+table.nexusCore_itemPlaceholderContainer tr th, 
+table.nexusCore_panel_Privacy tr th{ text-align:center; background-color: #a0bad3;  color:#28385a; padding:10px 0; font-weight:bold; font-size:12px;  }
+table.nexusCore_itemPlaceholderContainer tr td, 
+table.nexusCore_panel_Privacy tr td{ padding:2px 5px; text-align:center; }
+
+table.nexusCore_itemPlaceholderContainer tr.nexusCore_itemPlaceholderContainer_row1{}
+table.nexusCore_itemPlaceholderContainer tr.nexusCore_itemPlaceholderContainer_row2{background-color: #f2f6f9;}
+
+/* pager*/
+.nexusCore_pager { width:100%; text-align: right;}
+.nexusCore_pager .nexusCore_page_btn { margin:10px;}
+.nexusCore_pager .nexusCore_current_pageNo{ background-color: #a0bad3; color:White;}
+
+/* hyperlinks*/
+.nexusCore_link { margin: 0 6px;}
+
+/* link button*/
+a.nexusCore_link_btn  { padding: 3px 10px; margin: 10px 10px 10px 0; background-color: #333;  background: #0e0b23 url(CSS_images/btn.gif) 50% 50% repeat-x; color:White;}
+a:hover.nexusCore_link_btn  { padding: 3px 10px; margin: 10px 10px 10px 0; background-color: #333; text-decoration: none;  background: #7d9ab8 url(CSS_images/btn_over.gif) 50% 50% repeat-x; color:White;}
+
+/* panel */
+.nexusCore_panel{ padding: 10px;}
+
+/* space for radio*/
+input[type="radio"]{}
+label{margin:10px;}

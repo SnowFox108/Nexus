@@ -1,0 +1,151 @@
+﻿/*----------- editor box, title, buttons ---------------------------------------------------------*/
+
+#nexusCore_Editor_ToolBar { height: 28px; width: 100%; min-width: 50px; background-color: #e2e2e2; border: #333 1px solid;}	
+#nexusCore_Editor_ToolBar .editor_title_bar
+{
+    font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif; 
+    color: #015cfe;
+    font-variant:normal; 
+    font-weight:bold; 
+    font-size:12px;
+    font-style: normal; 
+    text-decoration: none;
+    vertical-align: middle;
+    padding: 2px 5px 2px 5px;   
+ }
+
+#nexusCore_Editor_ToolBar .editor_title_bar .editor_title
+{
+    width:auto;
+    float: left; 
+}
+
+#nexusCore_Editor_ToolBar .editor_title_bar .editor_buttons
+{
+    width: auto; 
+    float: right; 
+    /* border:1px solid #000; */
+}
+
+#nexusCore_Editor_ToolBar .editor_title_bar .editor_title .editor_buttontext,
+#nexusCore_Editor_ToolBar .editor_title_bar .editor_buttons .editor_buttontext
+{
+    height: 24px;
+    padding: 3px 0px 3px 0px;
+}
+
+
+#nexusCore_Editor_ToolBar .editor_title_bar .editor_title ul,
+#nexusCore_Editor_ToolBar .editor_title_bar .editor_buttons ul 
+{
+    display: inline;
+    margin: 0;
+    padding: 0px 0px 0px 0px;
+    list-style: none;
+    
+    /* override default class */
+    background: none;
+    font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif; 
+    color: #015cfe;
+    font-variant:normal; 
+    font-weight:bold; 
+    font-size:12px;
+    font-style: normal; 
+    text-transform: none;    
+}
+
+#nexusCore_Editor_ToolBar .editor_title_bar .editor_title li,
+#nexusCore_Editor_ToolBar .editor_title_bar .editor_buttons li
+{
+    height:24px;    
+    /* background-color: #FAFAFA; */
+    float: left;
+    margin: 0px 0px 0px 5px;
+    display:inline-block;
+    vertical-align:middle;
+    overflow:hidden;
+
+    /* override default class */
+    background: none;
+    padding: 0px 0px 0px 0px;        
+    font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif; 
+    color: #015cfe;
+    font-variant:normal; 
+    font-weight:bold; 
+    font-size:12px;
+    font-style: normal;     
+    text-transform: none;        
+}
+
+#nexusCore_Editor_ToolBar .editor_title_bar .editor_buttons .editor_buttontext a  
+{
+    color: #015cfe;
+    text-decoration: none;  
+
+    /* override default class */
+    background: none;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;            
+    font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif; 
+    font-variant:normal; 
+    font-weight:bold; 
+    font-size:12px;
+    font-style: normal;    
+    text-transform: none;         
+}
+
+#nexusCore_Editor_ToolBar .editor_title_bar .editor_buttons .editor_buttontext a:hover
+{
+    color: #d91f7b;  
+    text-decoration: none;      
+    
+    /* override default class */
+    background: none;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;            
+    font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif; 
+    font-variant:normal; 
+    font-weight:bold; 
+    font-size:12px;
+    font-style: normal;     
+    text-transform: none;        
+}
+
+/*clear*/
+.nexusCore_Editor_clear
+{
+    clear:both;
+	height:1px;
+	font-size:1px;
+	line-height:1px;
+	border:none;
+	margin:0; 
+	padding:0;
+	background:transparent;
+}
+
+#nexusCore_Editor_ToolBar .nexusCore_Editor_clear
+{
+    clear:both;
+	height:1px;
+	font-size:1px;
+	line-height:1px;
+	border:none;
+	margin:0; 
+	padding:0;
+	background:transparent;
+}
+/* 
+#nexusCore_Editor_ToolBar .editor_content { width:100%; background-color:Aqua; border: #000 1px solid;}
+*/
+
+/*----------- editor box, content ---------------------------------------------------------*/
+.nexusCore_Editor_Content 
+{
+    clear:both;
+}
+
+.nexusCore_Editor_Content .inner
+{
+    padding: 15px;
+}

@@ -1,0 +1,15 @@
+/*Telerik RadFile Explorer Skin*/
+
+/*global*/
+
+.fileExplorer .inner
+{
+    background-color:#f2f6f9;
+    padding:3px;
+}
+
+.fileExplorer
+{
+    background-color:Black;
+    padding:1px;
+}

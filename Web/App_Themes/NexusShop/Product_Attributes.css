@@ -1,0 +1,55 @@
+﻿/* NexusShop - Product Attributes Stylesheet */
+ .nexusCore_attribute_list 
+{
+    padding: 10px;
+    height: 100% !important;      
+    min-height: 535px;
+    background:#fff;
+    border-top: 3px #cccccc solid;  
+    border-left:1px #e6e6e6 solid; 
+    border-right:1px #e6e6e6 solid; 
+    border-bottom:1px #e6e6e6 solid;
+}
+
+.nexusCore_attribute_list .spliter { border-bottom: #cccccc 2px dotted; padding-top: 10px; }
+.nexusCore_attribute_list h4 span { font: 12px/25px "Segoe UI", Arial, sans-serif; cursor: pointer; }
+
+ .nexusCore_attribute_create h3
+{
+  margin: 20px 0;
+}
+
+/*----- Attribute Create Form ---------*/
+.nexusCore_panel_sideAttribute 
+{
+    padding: 10px;
+    width: 200px;
+    background:#fff;
+    border-top: 3px #cccccc solid;  
+    border-left:1px #e6e6e6 solid; 
+    border-right:1px #e6e6e6 solid; 
+    border-bottom:1px #e6e6e6 solid;
+
+}
+
+.nexusCore_panel_sideAttribute .spliter { border-bottom: #cccccc 2px dotted; padding-top: 10px; }
+.nexusCore_panel_sideAttribute h4 { padding: 5px 0px 5px 0px; }
+
+/*----- master page command buttons ---------*/
+.nexusCore_attributeCommand {border-top: #fff 2px dotted; padding-top: 10px;}
+.nexusCore_attributeCommand .nexusCore_createAttribute_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:200px; height:30px;  background: url(buttons/createVariant_btn.png)  left top no-repeat; color: White;  margin: 2px 0px;  }
+.nexusCore_attributeCommand .nexusCore_createAttribute_btn:hover { background: url(buttons/createVariant_btn_over.png) left top no-repeat; }
+.nexusCore_attributeCommand .nexusCore_editAttribute_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:200px; height:30px;  background: url(buttons/editVariant_btn.png)  left top no-repeat; color: White;  margin: 2px 0px;  }
+.nexusCore_attributeCommand .nexusCore_editAttribute_btn:hover { background: url(buttons/editVariant_btn_over.png) left top no-repeat; }
+.nexusCore_attributeCommand .nexusCore_deleteAttribute_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:200px; height:30px;  background: url(buttons/deleteVariant_btn.png)  left top no-repeat; color: White; margin: 2px 0 30px 0;  }
+.nexusCore_attributeCommand .nexusCore_deleteAttribute_btn:hover { background: url(buttons/deleteVariant_btn_over.png) left top no-repeat; }
+.nexusCore_attributeCommand .nexusCore_return_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:200px; height:30px;  background: url(buttons/return_btn.png)  left top no-repeat; color: White; margin: 2px 0 30px 0;  }
+.nexusCore_attributeCommand .nexusCore_return_btn:hover { background: url(buttons/return_btn_over.png) left top no-repeat; }
+
+/*----- general 120x command buttons ---------*/
+.nexusCore_attributeCommand .nexusCore_create_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:120px; height:30px;  background: url(buttons/create_btn.png)  left top no-repeat; color: White; margin: 2px 0 10px 0;  }
+.nexusCore_attributeCommand .nexusCore_create_btn:hover { background: url(buttons/create_btn_over.png) left top no-repeat; }
+.nexusCore_attributeCommand .nexusCore_edit_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:120px; height:30px;  background: url(buttons/edit_btn.png)  left top no-repeat; color: White; margin: 2px 0 10px 0;  }
+.nexusCore_attributeCommand .nexusCore_edit_btn:hover { background: url(buttons/edit_btn_over.png) left top no-repeat; }
+.nexusCore_attributeCommand .nexusCore_cancel_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:120px; height:30px;  background: url(buttons/cancel_btn.png)  left top no-repeat; color: White; margin: 2px 0 10px 0;  }
+.nexusCore_attributeCommand .nexusCore_cancel_btn:hover { background: url(buttons/cancel_btn_over.png) left top no-repeat; }

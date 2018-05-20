@@ -1,0 +1,22 @@
+﻿.body h1 { font: normal 24px Arial, Helvetica, sans-serif; color:#1d2024; padding:15px 0 5px 0; margin:0 0 10px 0; color:#2d7be9;}
+.body strong { font: bold 14px Arial, Helvetica, sans-serif; color:#1d2024; padding:15px 15px 5px 0; margin:0 0 10px 0;}
+.body {  font:12px/24px Arial, Helvetica, sans-serif; }
+.body .step{width:auto;margin:20px 0 0 -40px; overflow:hidden;}
+.body .step ol { list-style: none;}
+.body .step li, .step li span{ list-style: none; background-image:url('/User_Files/WebUserControls/bg-step.png');background-repeat:no-repeat;text-align:center;}
+.body .step li{width:130px;height:29px;line-height:29px;padding-left:20px;float:left;overflow:hidden;text-align:center;position:relative;background-position:right -108px;border:none;color:#605F5F;}
+.body .step li span{width:100%;font-size:14px;line-height:27px;line-height:29px;display:block;position:absolute;left:-17px;background-position:0 -108px;text-indent:17px;}
+.body .step li.finished{background-position:-4px -108px;}
+.body .step li.finished span{left:0;background-position:0 -108px;}
+.body .step li.current{height:29px;background-position:right -51px;border:none;width:130px}
+.body .step li.current span{background-position:17px -51px;font-weight:bold;color:#AB4400;}
+.body .step li.last{border-right:1px #DBDBDB solid;background-position:right -406px;}
+.body .step li.last span{background:none;left:0;}
+.body .step li.last-current{height:29px;background-position:right -166px;border:none;border-right:1px solid #ffab0a;}
+.body .step li.last-current span{background-position:15px -166px;font-weight:bold;color:#AB4400;left:-15px;}
+.body .step-two li{width:130px;}
+.body .step-three li{width:130px;}
+.body .step-four li{width:130px;}
+.body .survey_btns{ text-align: center; margin:15px;}
+.body .survey_btn { background-image:url('/User_Files/WebUserControls/bg-step.png'); background-position: right -167px; height:29px; border: #ffab0a 1px solid; margin: 0 10px; color:#AB4400;}
+.body .survey_btn:hover { background-position:0 -108px; border: #ffab0a 1px solid; margin: 0 10px; color:#605F5F;}

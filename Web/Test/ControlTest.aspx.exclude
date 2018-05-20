@@ -1,0 +1,64 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ControlTest.aspx.cs" Inherits="ControlTest" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Register TagPrefix="Nexus" Namespace="Nexus.Controls.General.HTML" Assembly="Nexus.Controls.General" %>
+<%@ Register TagPrefix="Nexus" Namespace="Nexus.Controls.General.Script" Assembly="Nexus.Controls.General" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
+        </telerik:RadScriptManager>
+
+        <telerik:RadWindowManager ID="RadWindowManager1" runat="server">
+        </telerik:RadWindowManager>
+
+1 <br />
+        <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument="CA" 
+            CommandName="CN" onclientclick="return confirm('Are you sure you want to postback?');" 
+            >LinkButton</asp:LinkButton>
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+        <hr />
+        2 
+        <br />
+        <telerik:RadComboBox ID="RadComboBox1" runat="server" DataSourceID="ObjectDataSource1"
+            DataTextField="MasterPage_Name" DataValueField="MasterPageIndexID" 
+            DropDownWidth="300px" AutoPostBack="True" 
+            onselectedindexchanged="RadComboBox1_SelectedIndexChanged">
+            <ItemTemplate>
+                <div>
+                    <span>
+                        <img src='<%# Eval("MasterPage_PreviewURL")%>' width="100" /></span>
+                    <span>
+                        <%# Eval("MasterPage_Name")%></span></div>
+            </ItemTemplate>
+        </telerik:RadComboBox>
+        <telerik:RadTabStrip ID="RadTabStrip1" runat="server" Enabled="False">
+            <Tabs>
+                <telerik:RadTab runat="server" Owner="RadTabStrip1" Text="Root RadTab1">
+                </telerik:RadTab>
+                <telerik:RadTab runat="server" Owner="RadTabStrip1" Text="Root RadTab2">
+                </telerik:RadTab>
+                <telerik:RadTab runat="server" Owner="RadTabStrip1" Text="Root RadTab3">
+                </telerik:RadTab>
+                <telerik:RadTab runat="server" Owner="RadTabStrip1" Text="Root RadTab4">
+                </telerik:RadTab>
+            </Tabs>
+        </telerik:RadTabStrip>
+        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" 
+            OldValuesParameterFormatString="original_{0}" 
+            SelectMethod="sGet_Template_MasterPage_DropList" 
+            TypeName="Nexus.Core.Templates.MasterPageMgr">
+            <SelectParameters>
+                <asp:Parameter Name="SortOrder" Type="String" />
+            </SelectParameters>
+        </asp:ObjectDataSource>
+
+</div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,86 @@
+/* NexusCore 1 - Login Stylesheet */
+
+body.nexusCore_loginPage_bg {
+    background: #0d0a21;
+    color: #273538; 
+}
+
+.nexusCore_loginBox {
+    background: url(CSS_Images/loginBg.jpg) top left no-repeat;     
+    width: 100%;
+    height:580px;
+    position: absolute;
+    top:0;
+    left:50%;
+    margin-left: -362px;
+}
+    
+.nexusCore_loginBox fieldset
+{
+    margin-left: 395px;
+    margin-right: 41px;    
+    margin-top: 90px;
+    padding:0;
+    border:0;      
+}        
+
+.nexusCore_loginBox .nexusCore_login{ text-align:left; margin: 50px 0 0 10px; border-collapse:separate; width:310px;}
+
+
+/* special define, password textbox*/
+.nexusCore_loginBox .nexusCore_login input[type="text"],
+.nexusCore_loginBox .nexusCore_login input[type="password"],
+.nexusCore_loginBox .nexusCore_login select 
+{
+    padding:2px;
+	margin:2px 0px 2px 0px;
+	background: #fff url(CSS_images/bg-input.gif) left top no-repeat;
+	border:1px solid #ccc;
+	font-size: 1em;
+}
+
+.nexusCore_loginBox .nexusCore_login input[type="text"]:hover,
+.nexusCore_loginBox .nexusCore_login input[type="password"]:hover,
+.nexusCore_loginBox .nexusCore_login select :hover
+{border:1px solid #7aaec6; }
+
+
+/* list items in the fieldset*/
+
+.nexusCore_loginBox .nexusCore_login ol {
+    padding:0;
+    margin:0;
+    list-style:none;
+    }
+.nexusCore_loginBox .nexusCore_login li {
+    margin:4px 0;
+    padding:0;
+    clear:both;
+    position:relative !important;
+    }
+.nexusCore_loginBox .nexusCore_login p.nexusCore_label{ float:left; width: 90px; color:#95a4bb;}
+.nexusCore_loginBox .nexusCore_login span.nexusCore_star { color: #ff0000;} 
+.nexusCore_loginBox .nexusCore_login input[type="checkbox"] { margin:0 5px 0 90px;}
+
+
+
+.nexusCore_loginBox address { margin-left: 20px; }
+.nexusCore_loginBox address.nexusCore {
+    background: url() top left repeat-x;
+    font-style: normal;
+    font-size: 11px;
+    margin-top: 100px;
+    color: #989EA0;
+    padding-top: 15px;
+    position: absolute;
+    bottom: 20px;
+    display: block;
+    width: 295px;    
+    }
+
+
+.nexusCore_loginBox .nexusCore_validator {margin-bottom: 20px;}
+.nexusCore_loginBox p.nexusCore_failure { color: #ff0000;}
+
+.nexusCore_loginBox .nexusCore_login .nexusCore_loginBtn { width:90px; height:27px;  background: url(buttons/login_btn.png)  left top repeat-x; padding-right:25px; color:#fff; margin: 10px 15px 0 0;  }
+.nexusCore_loginBox .nexusCore_login .nexusCore_loginBtn:hover{ background: url(buttons/login_btn_over.png) left top no-repeat;color:#fff;  }

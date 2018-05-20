@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Default_Left_Column.master.cs" Inherits="App_Template_Default_Default_Left_Column" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <form id="Form_NexusCore" runat="server">
+    <div id="pageWrapContainer" runat="server">
+        <div class="main2">
+            <div class="header">
+                <div class="head_line">
+                    <div class="logo">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder_Logo" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="head">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder_Header" runat="server">
+                        </asp:ContentPlaceHolder>
+                     <div class="clr">
+                    </div>
+                   </div>
+                     <div class="clr">
+                    </div>
+                </div>
+                <div class="menu">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_MainMenu" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div class="clr">
+                </div>
+            </div>
+            <div class="body">
+                <div class="left">
+                    <div class="sidebar1">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder_Side" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="mainContent">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder_PageContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+            <div class="clr">
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder_Footer" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div class="clr">
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder_Scripts" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿/* NexusCore 1 - Header Stylesheet */
+
+
+/*--   NexusCore Logo and MainMenu   ------------------------------------------- */
+.nexusCore_logo { position: relative;  top:5px; left:5px; float: left; color:#ffffff;}
+.nexusCore_login_bar { margin:15px 30px 0 0; right:0; float:right; position:absolute; color:#fff; font-weight:bold; }
+.nexusCore_login_bar a{ color:#f154a6;}
+
+
+.nexusCore_mainMenu {z-index:2;	width:auto; /*border: 1px #76d4cc solid;*/ float:right; margin-top: 55px; right:0px; position:relative; }
+
+
+/*-- NexusCore Publish Bar ---------------------------------------------*/
+.nexusCore_publish_bar{ float:right; margin: 5px 0 0 0;  background-color: #a0bad3; height:85px; padding:0 5px; }
+.nexusCore_publish_bar_templateDesign{ height:auto; padding: 10px; margin-top: 30px;}
+.nexusCore_publish_bar span{ margin:0; float: left;}
+.nexusCore_publish_bar table tr td{ color: Black;}
+.nexusCore_publish_bar table tr th{ color: Black; padding: 9px 5px 10px 5px;}

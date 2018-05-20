@@ -1,0 +1,2 @@
+﻿<%@ control language="C#" autoeventwireup="true" inherits="Nexus.Controls.General.HTML.WebView, App_Web_veejyosl" classname="Nexus.Controls.General.HTML.HTML_WebView" %>
+<asp:Literal ID="Literal_TextContent" runat="server"></asp:Literal>

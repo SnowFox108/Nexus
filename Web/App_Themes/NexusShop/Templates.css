@@ -1,0 +1,61 @@
+﻿/* NexusCore 1 - Templates Stylesheet */
+.nexusCore_templates_templatesList, .nexusCore_templates_create 
+{
+    padding: 10px;
+    height: 100% !important;      
+    min-height: 535px;
+    background:#fff;
+    border-top: 3px #cccccc solid;  
+    border-left:1px #e6e6e6 solid; 
+    border-right:1px #e6e6e6 solid; 
+    border-bottom:1px #e6e6e6 solid;
+}
+
+.nexusCore_templates_templatesShow
+{
+    margin: 5px;  
+    background:#fff;
+    height: 100% !important;  
+
+}
+
+    
+.nexusCore_templates_templatesShow .nexusCore_designMode_iframeWrapper { margin:0;  height:100% !important; }
+.nexusCore_templates_templatesShow .nexusCore_designMode_iframeWrapper iframe {  width:100%; margin: 0; position: relative;  height:100% !important; min-height:540px; border:1px #e6e6e6 solid;}
+
+.nexusCore_templateProperty, 
+.nexusCore_templates_templatesVersion,
+.nexusCore_createTemplate{  border:1px solid #7aaec6; margin: 10px; padding:10px;}
+.nexusCore_templateProperty table, 
+.nexusCore_createTemplate table{ border-collapse:separate;  padding:10px;}
+.nexusCore_templateProperty table tr th, 
+.nexusCore_createTemplate table tr th{ padding:0 20px 0 0; width: 180px; text-align:right;}
+
+.nexusCore_templates_templatesVersion h3 { margin-bottom:10px;}
+
+
+/*------------ table for list pages & templates ---------------------------*/
+.nexusCore_templates_templatesVersion table.nexusCore_itemPlaceholderContainer,
+.nexusCore_templates_templatesVersion table.nexusCore_panel_Privacy { border-collapse: collapse; padding:10px; margin-bottom:15px; width:100%; }
+.nexusCore_templates_templatesVersion table.nexusCore_itemPlaceholderContainer tr th, 
+.nexusCore_templates_templatesVersion table.nexusCore_panel_Privacy tr th{ text-align:center; background-color: #a0bad3;  color:#28385a; padding:10px 0; font-weight:bold; font-size:12px;  }
+.nexusCore_templates_templatesVersion table.nexusCore_itemPlaceholderContainer tr td, 
+.nexusCore_templates_templatesVersion table.nexusCore_panel_Privacy tr td{ padding:2px 5px; text-align:center; }
+
+.nexusCore_templates_templatesVersion table.nexusCore_itemPlaceholderContainer tr.nexusCore_itemPlaceholderContainer_row1{}
+.nexusCore_templates_templatesVersion table.nexusCore_itemPlaceholderContainer tr.nexusCore_itemPlaceholderContainer_row2{background-color: #f2f6f9;}
+
+
+/*----- Site Menu List ---------*/
+.nexusCore_templateList a.nexusCore_side_link{ color:#fff; padding-left:10px; font: 12px/25px "Segoe UI", Arial, sans-serif; }
+
+
+/*-------------- text inupt  -----------------*/
+.nexusCore_templateProperty input[type="text"], 
+.nexusCore_createTemplate input[type="text"], 
+.nexusCore_templateProperty textarea, 
+.nexusCore_createTemplate textarea
+{ font: 12px "Segoe UI", Arial, sans-serif; }
+
+.nexusCore_templateProperty select, 
+.nexusCore_createTemplate select{ font: 12px "Segoe UI", Arial, sans-serif; }

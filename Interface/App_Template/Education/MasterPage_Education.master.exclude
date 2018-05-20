@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="MasterPage_Education.master.cs" Inherits="App_MasterPages_MasterPage_Education" %>
+
+<%@ Register src="~/App_Controls/News_Controls/News_Menu.ascx" tagname="News_Menu" tagprefix="uc1" %>
+<%@ Register src="~/App_Controls/News_Controls/News_TopicList.ascx" tagname="News_TopicList" tagprefix="uc2" %>
+<%@ Register src="~/App_Controls/News_Controls/News_Navigator.ascx" tagname="News_Navigator" tagprefix="uc3" %>
+<%@ Register src="~/App_Controls/Page_Global_Login.ascx" tagname="Page_Global_Login" tagprefix="uc4" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder_Site_Login" runat="Server">
+    <div class="mainMenu">
+        <ul>
+                <uc1:News_Menu ID="News_Menu" runat="server" PageURL="Category.aspx" />
+        </ul>
+    </div>
+
+    <div id="globalNav">
+            <uc3:News_Navigator ID="News_Navigator1" runat="server" HomePageURL="Default.aspx"
+                TopicListURL="Category.aspx" />
+    </div>
+    <!-- /globalNav -->
+    
+</asp:Content>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder_MainContent"
+    runat="Server">
+        <!--SIDEBAR-->
+        <asp:Panel ID="Panel_SideBar" runat="server">
+            <div id="sidebar">
+                <div class="bg-top">
+                    <!--bgImage-->
+                </div>
+                <div class="bg-mid">
+                    <!--bg-menu-->
+                    <asp:Panel ID="Panel_SubMenu" runat="server">
+                        <div class="submenu">
+                            <ul>
+                                    <uc1:News_Menu ID="News_SubMenu" runat="server" PageURL="Category.aspx" />
+                            </ul>
+                        </div>
+                    </asp:Panel>
+                    <div class="title">
+                        <asp:Label ID="lbl_SubMenu" runat="server"></asp:Label>
+                    </div>
+                    <div class="bg-menu">
+                        <ul class="menu">
+                                <uc2:News_TopicList ID="News_TopicList" runat="server" IsSticky="0" News_PageURL="Details.aspx"
+                                    Pager_Visible="False" Read_QueryString="True" />
+                        </ul>
+                    </div>
+                    <!--bg-menu-->
+                </div>    
+                <div class="bg-bot">
+                </div>
+                      <div class="enquiryButton"><a href="/ContactForm.aspx"><img src="/User_Files/Images/Companys/enquirybutton.jpg" alt="Make an enquiry." /></a></div>
+
+            </div>
+        </asp:Panel>
+        <!-- end #sidebar -->
+     <div id="mainContent">
+        <div class="bg-top">
+        </div>
+        <div class="bg-mid">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder_MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+        </div>
+        <div class="bg-bot">
+        </div>
+    </div>
+        <div class="clear">
+        </div>
+    <!-- /BodyContainer -->
+</asp:Content>

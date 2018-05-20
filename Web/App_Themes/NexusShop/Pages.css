@@ -1,0 +1,236 @@
+﻿/* NexusCore 1 - Pages Stylesheet */
+
+/*--------  pages layout -----------------------------------------------------------------*/
+
+.nexusCore_pages_pageList, .nexusCore_pages_create 
+{
+    padding: 10px;
+    height: 100% !important;      
+    min-height: 535px;
+    background:#fff;
+    border-top: 3px #cccccc solid;  
+    border-left:1px #e6e6e6 solid; 
+    border-right:1px #e6e6e6 solid; 
+    border-bottom:1px #e6e6e6 solid;
+}
+
+.nexusCore_pages_pageShow
+{
+    margin: 5px;  
+    padding-bottom:10px;
+    background:#fff;    
+}
+
+.nexusCore_pages_MasterPage_List
+{
+    padding: 5px;  
+}
+
+.nexusCore_pages_URL { font-weight: normal;}
+    
+.nexusCore_pages_pageShow .nexusCore_pages_iframeWrapper { margin:0;  height:100% !important; }
+.nexusCore_pages_pageShow .nexusCore_pages_iframeWrapper iframe {  width:100%; margin: 0; position: relative;  height:100% !important; min-height:540px; border:1px #e6e6e6 solid;}
+
+
+/*----- Site Menu Tree and List ---------*/
+.nexusCore_panel_Menu 
+{
+    width:100%;
+    height:420px;
+    padding: 5px 0px 5px 0px;
+}
+
+/*----- buttons on pages and page properties ---------*/
+.nexusCore_pages_iframeButtons input[type="submit"] 
+{
+    font: 12px/25px "Segoe UI", Arial, sans-serif;
+    color: White;
+}
+
+.nexusCore_pagesSide_droplist {  font: 12px/25px "Segoe UI", Arial, sans-serif;}
+
+.nexusCore_pages_iframeButtons .nexusCore_preview_btn{  width:110px; height:33px;  background: url(buttons/Preview_btn.png)  left top no-repeat; padding-left:15px;  }
+.nexusCore_pages_iframeButtons .nexusCore_preview_btn:hover { background: url(buttons/Preview_btn_over.png) left top no-repeat; }
+.nexusCore_pages_iframeButtons .nexusCore_preview_btn_selected{  width:110px; height:33px;  background: url(buttons/Preview_btn_over.png)  left top no-repeat; padding-left:15px;  }
+.nexusCore_pages_iframeButtons .nexusCore_preview_btn_selected:hover { background: url(buttons/Preview_btn_over.png) left top no-repeat; }
+
+.nexusCore_pages_iframeButtons .nexusCore_modify_btn{  width:110px; height:33px;  background: url(buttons/modify_btn.png)  left top no-repeat; padding-left:15px;  }
+.nexusCore_pages_iframeButtons .nexusCore_modify_btn:hover{ background: url(buttons/modify_btn_over.png) left top no-repeat; }
+.nexusCore_pages_iframeButtons .nexusCore_modify_btn_selected{  width:110px; height:33px;  background: url(buttons/modify_btn_over.png)  left top no-repeat; padding-left:15px;  }
+.nexusCore_pages_iframeButtons .nexusCore_modify_btn_selected:hover{ background: url(buttons/modify_btn_over.png) left top no-repeat; }
+
+.nexusCore_pages_iframeButtons .nexusCore_designerMode_btn{ width:200px; height:33px;  background: url(buttons/designerMode_btn.png)  left top repeat-x; padding-left:25px;  }
+.nexusCore_pages_iframeButtons .nexusCore_designerMode_btn:hover{ background: url(buttons/designerMode_btn_over.png) left top no-repeat; }
+.nexusCore_pages_iframeButtons .nexusCore_properties_btn{ width:110px; height:33px;  background: url(buttons/Properties_btn.png)  right top no-repeat; padding-right:20px;  }
+.nexusCore_pages_iframeButtons .nexusCore_properties_btn:hover{ background: url(buttons/Properties_btn_over.png) left top no-repeat; }
+.nexusCore_pages_iframeButtons .nexusCore_pagePreview_btn{ width:110px; height:33px;  background: url(buttons/pagePreview_btn.png)  left top no-repeat; padding-left:25px;  }
+.nexusCore_pages_iframeButtons .nexusCore_pagePreview_btn:hover { background: url(buttons/pagePreview_btn_over.png) left top no-repeat; }
+.nexusCore_pages_iframeButtons .nexusCore_masterpagePreview_btn{ width:200px; height:33px;  background: url(buttons/masterpagePreview_btn.png)  left top no-repeat; padding-left:25px;  }
+.nexusCore_pages_iframeButtons .nexusCore_masterpagePreview_btn:hover { background: url(buttons/masterpagePreview_btn_over.png) left top no-repeat; }
+
+.nexusCore_pages_iframeButtons .nexusCore_property_btn{ width:110px; height:33px;  background: url(buttons/Property_btn.png)  right top no-repeat; padding-left:15px; }
+.nexusCore_pages_iframeButtons .nexusCore_property_btn:hover{ background: url(buttons/Property_btn_over.png) left top no-repeat; }
+.nexusCore_pages_iframeButtons .nexusCore_property_btn_selected{ width:110px; height:33px;  background: url(buttons/Property_btn_over.png)  right top no-repeat; padding-left:15px; }
+.nexusCore_pages_iframeButtons .nexusCore_property_btn_selected:hover{ background: url(buttons/Property_btn_over.png) left top no-repeat; }
+
+.nexusCore_pages_iframeButtons .nexusCore_metatag_btn{ width:110px; height:33px;  background: url(buttons/MetaTag_btn.png)  right top no-repeat; padding-left:15px; }
+.nexusCore_pages_iframeButtons .nexusCore_metatag_btn:hover{ background: url(buttons/MetaTag_btn_over.png) left top no-repeat; }
+.nexusCore_pages_iframeButtons .nexusCore_metatag_btn_selected{ width:110px; height:33px;  background: url(buttons/MetaTag_btn_over.png)  right top no-repeat; padding-left:15px; }
+.nexusCore_pages_iframeButtons .nexusCore_metatag_btn_selected:hover{ background: url(buttons/MetaTag_btn_over.png) left top no-repeat; }
+
+.nexusCore_pages_iframeButtons .nexusCore_privacy_btn{ width:110px; height:33px;  background: url(buttons/privacy_btn.png)  left top no-repeat; padding-left:15px;  }
+.nexusCore_pages_iframeButtons .nexusCore_privacy_btn:hover { background: url(buttons/privacy_btn_over.png) left top no-repeat; }
+.nexusCore_pages_iframeButtons .nexusCore_privacy_btn_selected{ width:110px; height:33px;  background: url(buttons/privacy_btn_over.png)  left top no-repeat; padding-left:15px;  }
+.nexusCore_pages_iframeButtons .nexusCore_privacy_btn_selected:hover { background: url(buttons/privacy_btn_over.png) left top no-repeat; }
+
+.nexusCore_pages_iframeButtons .nexusCore_version_btn{ width:110px; height:33px;  background: url(buttons/version_btn.png)  left top no-repeat; padding-left:15px;  }
+.nexusCore_pages_iframeButtons .nexusCore_version_btn:hover { background: url(buttons/version_btn_over.png) left top no-repeat;  }
+.nexusCore_pages_iframeButtons .nexusCore_version_btn_selected{ width:110px; height:33px;  background: url(buttons/version_btn_over.png)  left top no-repeat; padding-left:15px;  }
+.nexusCore_pages_iframeButtons .nexusCore_version_btn_selected:hover { background: url(buttons/version_btn_over.png) left top no-repeat;  }
+
+/*----- buttons on live and normal command panel ---------*/
+/* Command Layout */
+.nexusCore_panel_command { border-top: #fff 2px dotted; padding-top: 10px;} 
+.nexusCore_panel_command ul{ list-style:none; margin-bottom: 6px;} 
+.nexusCore_panel_command ul li{ margin-bottom:-7px;} 
+
+
+.nexusCore_panel_command input[type="submit"]
+{
+    font: 12px/25px "Segoe UI", Arial, sans-serif;
+    color: White;
+}
+
+
+.nexusCore_panel_command .nexusCore_createPage_btn{ width:200px; height:30px;  background: url(buttons/createPage_btn.png)  left top no-repeat; margin: 2px 0 0 0; }
+.nexusCore_panel_command .nexusCore_createPage_btn:hover { background: url(buttons/createPage_btn_over.png) left top no-repeat; }
+
+
+.nexusCore_panel_command a.nexusCore_delete_link { color: White;  font: 12px/25px "Segoe UI", Arial, sans-serif;   background: url(icons/delete.png) left top no-repeat; padding-left: 35px; margin-left: 7px;}
+.nexusCore_panel_command a.nexusCore_duplicate_link{ color: White;  font: 12px/25px "Segoe UI", Arial, sans-serif;  background: url(icons/duplicate.png) left top no-repeat; padding-left: 35px; margin-left: 7px;}
+.nexusCore_panel_command a.nexusCore_asHomepage_link{ color: White;  font: 12px/25px "Segoe UI", Arial, sans-serif;   background: url(icons/asHomepage.png) left top no-repeat; padding-left: 35px; margin-left: 7px;}
+.nexusCore_panel_command a.nexusCore_moveToFolder_link{ color: White;  font: 12px/25px "Segoe UI", Arial, sans-serif;  background: url(icons/moveToFolder.png) left top no-repeat; padding-left: 18px; margin-left: 0px;}
+.nexusCore_panel_command a:hover.nexusCore_delete_link {text-decoration: underline;}
+.nexusCore_panel_command a:hover.nexusCore_duplicate_link{text-decoration: underline;}
+.nexusCore_panel_command a:hover.nexusCore_asHomepage_link{text-decoration: underline;}
+.nexusCore_panel_command a:hover.nexusCore_moveToFolder_link{text-decoration: underline;}
+
+
+/*----- master page command buttons ---------*/
+.nexusCore_createMasterPage_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:200px; height:30px;  background: url(buttons/createMasterPage_btn.png)  left top no-repeat; color: White;  margin: 2px 0px;  }
+.nexusCore_createMasterPage_btn:hover { background: url(buttons/createMasterPage_btn_over.png) left top no-repeat; }
+.nexusCore_listMasterPages_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:200px; height:30px;  background: url(buttons/listMasterPages_btn.png)  left top no-repeat; color: White; margin: 2px 0 30px 0;  }
+.nexusCore_listMasterPages_btn:hover { background: url(buttons/listMasterPages_btn_over.png) left top no-repeat; }
+
+
+/*--------  pages property -----------------------------------------------------------------*/
+.nexusCore_panel_pageLink, 
+.nexusCore_panel_headContent, 
+.nexusCore_panel_moreOptions,
+.nexusCore_panel_pageSecurities, 
+.nexusCore_panel_pagePermissions,
+.nexusCore_panel_pageMetaTag,
+.nexusCore_panel_pageType,
+.nexusCore_panel_pageVersion,
+.nexusCore_panel_pageWizard{ border:1px solid #7aaec6; margin:5px 10px; padding: 5px 10px; }
+
+
+.nexusCore_panel_pageLink h3, 
+.nexusCore_panel_headContent h3, 
+.nexusCore_panel_moreOptions h3,
+.nexusCore_panel_pageSecurities h3, 
+.nexusCore_panel_pagePermissions h3,
+.nexusCore_panel_pageMetaTag h3,
+.nexusCore_panel_pageType h3,
+.nexusCore_panel_pageVersion h3,
+.nexusCore_panel_pageWizard h3{ margin-bottom:10px;}
+
+
+.nexusCore_panel_pageLink table, 
+.nexusCore_panel_headContent table,
+.nexusCore_panel_moreOptions table,
+.nexusCore_panel_pageSecurities table,
+.nexusCore_panel_pageTemplates table,
+.nexusCore_panel_pageURLs table, 
+.nexusCore_panel_pageType table,
+.nexusCore_panel_pageWizard table{ border-collapse:separate;}
+
+.nexusCore_panel_pageLink table tr th,
+.nexusCore_panel_headContent table tr th, 
+.nexusCore_panel_moreOptions table tr th, 
+.nexusCore_panel_pageSecurities table tr th, 
+.nexusCore_panel_pageTemplates table tr th,
+.nexusCore_panel_pageURLs table tr th,
+.nexusCore_panel_pageType table tr th,
+.nexusCore_panel_pageWizard table tr th{ padding-right:30px; width: 180px; text-align:right;}
+
+.nexusCore_panel_pageTemplates, 
+.nexusCore_panel_pageURLs, 
+.nexusCore_panel_pageSecurities_createPage { /*border:1px solid #7aaec6;*/ padding: 10px 0;}
+
+/*------------- Page List ------------------------------------------------------------*/
+
+.nexusCore_pages_PageList table { width: 100%;}
+.nexusCore_pages_PageList table tr td { text-align:center; }
+.nexusCore_pages_PageList table tr td.pageName { text-align:left; }
+
+/*------------ table for list pages & templates ---------------------------*/
+.nexusCore_panel_pageVersion table.nexusCore_itemPlaceholderContainer,
+.nexusCore_panel_pageVersion table.nexusCore_panel_Privacy { border-collapse: collapse; padding:10px; margin-bottom:15px; width:100%; }
+.nexusCore_panel_pageVersion table.nexusCore_itemPlaceholderContainer tr th, 
+.nexusCore_panel_pageVersion table.nexusCore_panel_Privacy tr th{ text-align:center; background-color: #a0bad3;  color:#28385a; padding:10px 0; font-weight:bold; font-size:12px;  }
+.nexusCore_panel_pageVersion table.nexusCore_itemPlaceholderContainer tr td, 
+.nexusCore_panel_pageVersion table.nexusCore_panel_Privacy tr td{ padding:2px 5px; text-align:center; }
+
+.nexusCore_panel_pageVersion table.nexusCore_itemPlaceholderContainer tr.nexusCore_itemPlaceholderContainer_row1{}
+.nexusCore_panel_pageVersion table.nexusCore_itemPlaceholderContainer tr.nexusCore_itemPlaceholderContainer_row2{background-color: #f2f6f9;}
+
+/*------------- Page Privacy ------------------------------------------------------------*/
+.nexusCore_panel_pagePermissions h3{ margin-bottom:20px;}
+.nexusCore_panel_pagePermissions table { border-collapse:separate; width: 100%; margin-top:10px;}
+.nexusCore_panel_pagePermissions table tr th,
+.nexusCore_panel_pagePermissions table tr td{ width:85px; padding: 2px 5px; text-align:center;}
+.nexusCore_panel_pagePermissions table tr td.userGroup { text-align:left; width:200px; }
+.nexusCore_panel_pagePermissions table tr th.actions { text-align:left; width:200px; }
+.nexusCore_panel_pagePermissions table tr td.actions { text-align:left; width:200px; }
+
+/*------------- Page MetaTag ------------------------------------------------------------*/
+.nexusCore_panel_pageMetaTag h3{ margin-bottom:20px;}
+.nexusCore_panel_pageMetaTag table { border-collapse:separate; width: 100%; margin-top:10px;}
+.nexusCore_panel_pageMetaTag table tr th,
+.nexusCore_panel_pageMetaTag table tr td{ width:85px; padding: 2px 5px; text-align:center;}
+.nexusCore_panel_pageMetaTag table tr td.URL { text-align:left; width:350px; }
+.nexusCore_panel_pageMetaTag table tr th.actions { text-align:left; width:200px; }
+.nexusCore_panel_pageMetaTag table tr td.actions { text-align:left; width:200px; }
+
+
+/*------------- Collapse Panel ------------------------------------------------------------*/
+.nexusCore_collapsePanel { margin:0px;}
+
+.nexusCore_collapsePanelHeader{	
+	padding:5px 0; 
+	cursor: pointer; 
+	vertical-align: middle;
+	/* border-bottom: 1px solid #7aaec6; */
+	background:  url(/App_Control_Style/NexusCore/images/expand.jpg) right center no-repeat;
+}
+
+/*-------------- text inupt  -----------------*/
+
+.nexusCore_panel_command select
+{
+    font: 12px "Segoe UI", Arial, sans-serif;
+}
+
+.nexusCore_collapsePanel select, 
+.nexusCore_panel_pagePermissions select, 
+.nexusCore_panel_pageWizard select, 
+.nexusCore_panel_pageType select
+{
+    font: 12px "Segoe UI", Arial, sans-serif;
+}
+
+.nexusCore_panel_pageLink input[type="text"], 
+.nexusCore_panel_headContent input[type="text"], 
+.nexusCore_panel_moreOptions input[type="text"],
+.nexusCore_panel_pageSecurities input[type="text"]{ font: 12px "Segoe UI", Arial, sans-serif; }

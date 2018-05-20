@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage_Site.master" AutoEventWireup="true" CodeFile="Education_Default.master.cs" Inherits="Education_Default" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder_Header" Runat="Server">
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder_PageContent" Runat="Server">
+    <!--main container-->
+
+    <div id="pageContainer">
+        <div id="headerContainer">
+            <div id="logo">
+                <a href="/Default.aspx" title="Homepage">
+                    <img src="/User_Files/Template_Images/Education/logo.png" alt="Click here to go to Homepage" /></a>
+            </div>
+            <asp:ContentPlaceHolder ID="PlaceHolder_Header" runat="server"></asp:ContentPlaceHolder>
+            <div id="topPhoto">
+                <img src="/User_Files/Template_Images/Education/topPhoto.jpg" /></div>
+        </div>
+        <!-- /headerContainer -->
+        <div id="bodyContainer">
+                    <!--SIDEBAR-->
+            <div id="sidebar">
+                <div class="bg-top">
+                    <!--bgImage-->
+                </div>
+                    <asp:ContentPlaceHolder ID="PlaceHolder_SideTop" runat="server"></asp:ContentPlaceHolder>
+                <div class="bg-mid">
+                    <!--bg-menu-->
+                    <div class="title">
+                    </div>
+                    <div class="bg-menu">
+                    <asp:ContentPlaceHolder ID="PlaceHolder_SideMiddle" runat="server"></asp:ContentPlaceHolder>
+                    </div>
+                    <!--bg-menu-->
+                </div>    
+                <div class="bg-bot">
+                </div>
+                <asp:ContentPlaceHolder ID="PlaceHolder_SideBot" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        <!-- end #sidebar -->
+     <div id="mainContent">
+        <div class="bg-top">
+        </div>
+        <div class="bg-mid">
+            <asp:ContentPlaceHolder ID="PlaceHolder_PageContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <div class="bg-bot">
+        </div>
+    </div>
+        <div class="clear">
+        </div>
+    <!-- /BodyContainer -->
+
+        </div>
+        <br class="clearfloat" />
+        <!--clear floats-->
+    </div>
+    <!-- /pageContainer -->
+    <div id="footerContainer">
+        <asp:ContentPlaceHolder ID="PlaceHolder_Footer" runat="server"></asp:ContentPlaceHolder>
+    </div>
+    <!-- end #footer -->    
+</asp:Content>
+

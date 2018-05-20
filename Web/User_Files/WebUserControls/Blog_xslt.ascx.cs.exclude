@@ -1,0 +1,43 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Xml;
+using System.Xml.Xsl;
+using Nexus.Core;
+
+
+public partial class User_Files_WebUserControls_Blog_xslt : System.Web.UI.UserControl
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+        }
+
+        Control_Init();
+    }
+
+    private void Control_Init()
+    {
+        string _onwership_userid = Request["NexusBlogUserID"];
+
+        if (!DataEval.IsEmptyQuery(_onwership_userid))
+        {
+            Nexus.Controls.Blog.Lib.BlogMgr myBlogMgr = new Nexus.Controls.Blog.Lib.BlogMgr();
+            XmlDocument myBlog_Post = myBlogMgr.Get_Blog_Posts_XML(
+                _onwership_userid,
+                StringEnum.GetStringValue(Nexus.Controls.Blog.Lib.Post_Status.Publish)
+                );
+
+            XslTransform myXsl = new XslTransform();
+
+            myXsl.Load(Server.MapPath("~/User_Files/WebUserControls/myBlog.xslt"));
+            Xml_BlogPosts.Document = myBlog_Post;
+            Xml_BlogPosts.Transform = myXsl;
+
+        }
+    }
+}

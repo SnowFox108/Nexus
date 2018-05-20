@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="CleanCorp_2columns.master.cs" Inherits="App_Template_CleanCorp_CleanCorp_2columns" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <form id="Form_NexusCore" runat="server">
+    <div id="pageWrapContainer" runat="server">
+        <div id="page">
+            <div id="header">
+                <div class="logo">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_Logo" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <!--/logo -->
+                <div class="topnav">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_MainMenu" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <!--/topnav -->
+                <div class="header_bg_border">
+                </div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder_Header" runat="server">
+                </asp:ContentPlaceHolder>
+                <div class="clr">
+                </div>
+                <div class="bg">
+                </div>
+            </div>
+            <!--/header -->
+            <div id="columns">
+                <div id="centercol">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_PageContentTop" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_PageContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_PageContentBot" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <!--/centercol -->
+                <div id="rightcol">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_SideTop" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_Side" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_SideBot" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <!--/rightcol -->
+                <div class="clr">
+                </div>
+            </div>
+            <!--/columns -->
+            <div id="footer">
+                <div class="footer_resize">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_FooterTop" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <div class="clr">
+                    </div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_Footer" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <div class="clr">
+                    </div>
+                </div>
+            </div>
+            <!--/footer -->
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder_Scripts" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!--/page -->
+    </div>
+    </form>
+</body>
+</html>

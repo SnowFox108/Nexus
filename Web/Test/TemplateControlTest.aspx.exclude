@@ -1,0 +1,35 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage_TestTemplate.master" AutoEventWireup="true" CodeFile="TemplateControlTest.aspx.cs" Inherits="TemplateControlTest" Title="无标题页" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <telerik:RadWindowManager ID="RadWindowManager1" runat="server">
+    </telerik:RadWindowManager>
+<p>Dock Info<asp:LinkButton ID="Linkbtn_Edit_Customer" runat="server" 
+        oncommand="Linkbtn_Edit_Command">LinkButton</asp:LinkButton>
+                </p>                
+    <asp:Label ID="lbl_Dock" runat="server" Text=""></asp:Label>
+    <hr />
+    tool
+    box
+    <hr />
+    <telerik:RadDockLayout ID="RadDockLayout1" Runat="server" 
+        onsavedocklayout="RadDockLayout1_SaveDockLayout" 
+        onloaddocklayout="RadDockLayout1_LoadDockLayout">
+        <telerik:RadDockZone ID="RadDockZone1" Runat="server" 
+    Height="300px" Width="300px" BorderWidth="0px">
+            <telerik:RadDock ID="RadDock1" runat="server" DefaultCommands="None"
+                Skin="Office2007" Title="Test Dock" oncommand="RadDock1_Command" 
+                AutoPostBack="True">
+                <TitlebarTemplate>
+                Test Title<asp:Button ID="Button2" runat="server" Text="Button" />
+                </TitlebarTemplate>
+                <ContentTemplate>
+                My Text Normal
+                    <asp:Button ID="Button1" runat="server" Text="Button" />
+                </ContentTemplate>
+            </telerik:RadDock>
+        </telerik:RadDockZone>
+        <telerik:RadDockZone ID="RadDockZone2" runat="server" Height="300px" Width="300px">
+        </telerik:RadDockZone>
+                </telerik:RadDockLayout>
+</asp:Content>
+

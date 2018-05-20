@@ -1,0 +1,5 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="CategoryTreeTest.ascx.cs"
+    Inherits="Nexus.Core.UI.App_AdminCP_ShopAdmin_Products_CategoryTreeTest" %>
+<telerik:RadTreeView ID="RadTreeView_Category" runat="server" OnNodeClick="RadTreeView_Category_NodeClick"
+    OnNodeDrop="RadTreeView_Category_NodeDrop" Skin="Black" ForeColor="Black">
+</telerik:RadTreeView>

@@ -1,0 +1,73 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Education_Homepage.master.cs" Inherits="App_Template_Education_Education_Homepage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form_NexusCore" runat="server">
+
+    <div id="pageWrapContainer" runat="server">
+        <!--main container-->
+        <div id="pageContainer">
+            <div id="headerContainer">
+                <div id="logo">
+                    <a href="/Default.aspx" title="Homepage">
+                        <img src="/User_Files/Template_Images/Education/logo.png" alt="Click here to go to Homepage" /></a>
+                </div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder_Header" runat="server">
+                </asp:ContentPlaceHolder>
+                <div id="topPhoto">
+                    <img src="/User_Files/Template_Images/Education/topPhoto.jpg" /></div>
+            </div>
+            <!-- /headerContainer -->
+            <div id="bodyContainer">
+                <div id="mainContent">
+                    <table class="contentWrap">
+                        <tr>
+                            <td class="LeftTop">
+                            </td>
+                            <td class="BorderTop">
+                            </td>
+                            <td class="RightTop">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="BorderLeft">
+                            </td>
+                            <td class="Center">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder_PageContent" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                            <td class="BorderRight">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="LeftBot">
+                            </td>
+                            <td class="BorderBot">
+                            </td>
+                            <td class="RightBot">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- /BodyContainer -->
+            </div>
+            <br class="clearfloat" />
+            <!--clear floats-->
+        </div>
+        <!-- /pageContainer -->
+        <div id="footerContainer">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder_Footer" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- end #footer -->
+    </div>
+    </form>
+</body>
+</html>

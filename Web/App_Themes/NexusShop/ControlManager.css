@@ -1,0 +1,81 @@
+﻿/* NexusCore 1 - Control Manager Stylesheet */
+
+body.nexusCorePop_window_bg { background-color:#f2f6f9; margin:0; font: 12px sans-serif, Arial, Verdana; min-width:700px;  min-height: 300px;}
+
+/*-- Wrapper discription in Global.css -- */
+/*-- Control Manager and Control Panel PoPup Main Content -- */
+#nexusCorePop_wrapper
+{ padding: 10px; }
+
+/*-- Control Panel PoPup Main Content -- */
+.nexusCore_panel_controlManager{}
+
+
+/*-----------control panel imgae and title--------------------------*/
+.nexusCorePop_title { text-align:center; width:100%;}
+.nexusCorePop_title .image {float:left; margin-right:20px;}
+.nexusCorePop_title h3 {float:left; line-height:50px;}
+.nexusCorePop_title hr { clear:both;}
+
+
+/*-----------control panel label and text input --------------------------*/
+.nexusCore_panel_controlManager input[type="text"], 
+.nexusCore_panel_controlManager textarea,
+.nexusCore_panel_controlManager input[type="file"]
+{ background: url(CSS_images/bg-input.gif)  top center repeat-x; border:#ccc 1px solid;}
+
+.nexusCore_panel_controlManager input[type="text"]:hover, 
+.nexusCore_panel_controlManager textarea:hover,
+.nexusCore_panel_controlManager input[type="file"]:hover
+{ border:1px solid #62abed; }
+ 
+.nexusCore_panel_controlManager input[type="checkbox"]
+{ margin-right: 10px;}
+
+.nexusCore_panel_controlManager select
+{ background: url(CSS_images/bg-input.gif)  top center repeat-x; }
+
+.nexusCore_panel_controlManager input[type="submit"]
+{ border:0; background: transparent;}
+
+.nexusCore_panel_controlManager input[type="image"]
+{ border:0; background: transparent;}
+
+.nexusCore_panel_controlManager img{}
+
+
+/*---- link buttons ----*/
+.nexusCore_panel_controlManager p a, 
+.nexusCore_panel_controlManager a.linkButton  { padding: 8px; margin: 10px 10px 10px 0;  /*background: #0e0b23 url(Buttons/control_linkBtn.png) 50% 50% no-repeat; color:White; text-decoration:none;*/}
+.nexusCore_panel_controlManager p a:hover, 
+.nexusCore_panel_controlManager a.nexusCore_link_btn:hover  { padding: 8px; margin: 10px 10px 10px 0; /*text-decoration: none;  background: #7d9ab8 url(Buttons/control_linkBtn_over.png) 50% 50% no-repeat; color:White;*/}
+
+
+
+/*---------  button  --------------------*/
+.nexusCore_panel_controlManager .UserControlBtns { width:100%; text-align:center; }
+.nexusCore_panel_controlManager .UserControlBtns input[type="submit"]{ width:130px; padding: 3px 10px; margin: 10px 10px 10px 0;  background: #0e0b23 url(CSS_images/btn.gif) 50% 50% repeat-x; color:White; text-decoration:none;}
+.nexusCore_panel_controlManager .UserControlBtns input[type="submit"]:hover{ padding: 3px 10px; margin: 10px 10px 10px 0;  text-decoration: none;  background: #7d9ab8 url(CSS_images/btn_over.gif) 50% 50% repeat-x; color:White;}
+
+/*---------- lable and input solution  -----------*/
+.nexusCore_panel_controlManager label {margin:0 10px;} /* space for radio button and checkbox*/
+.nexusCore_panel_controlManager p.nexusCore_label {margin:0 10px; font-weight:bold;}  /* label and input in 2 lines */
+.nexusCore_panel_controlManager p.nexusCore_label_complex { width: 150px; float:left; display:block;background-color:Gray;} /* label and input in 1 lines */
+
+.nexusCore_panel_controlManager ol li { list-style: none;} /*---- a group of options using ol or ul ------*/
+.nexusCore_panel_controlManager ol li label {margin:0 10px; font-weight:bold;} /* label and input in 2 lines */
+.nexusCore_panel_controlManager ol li label.complex { width: 150px; float:left; display:block;background-color:Gray;} /* label and input in 1 lines */
+
+.nexusCore_panel_controlManager div.options {} /*---- a group of options using div------*/
+.nexusCore_panel_controlManager div.options label {margin:0 10px; font-weight:bold;} /* label and input in 2 lines */
+.nexusCore_panel_controlManager div.options label.complex { width: 150px; float:left; display:block;background-color:Gray;} /* label and input in 1 lines */
+
+/*---- tabel---------*/
+
+.nexusCore_panel_controlManager table { border-collapse:separate; }
+.nexusCore_panel_controlManager table tr th { text-align:left; padding-right:30px;}
+
+/*----- Notes  ---------*/
+
+.nexusCore_panel_controlManager h6.note{font-size:10px; float:left; font-weight:normal; margin:0 10px 0 0; line-height:20px;}
+.nexusCore_panel_controlManager h6{font-size:10px; font-weight:normal; margin:0 10px 0 0; line-height:20px;}

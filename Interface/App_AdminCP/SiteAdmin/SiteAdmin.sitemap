@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="" title=""  description="">
+        <siteMapNode url="~/App_AdminCP/SiteAdmin/Default.aspx" title="Home"  description="Homepage of Site Admin" />
+        <siteMapNode url="~/App_AdminCP/SiteAdmin/Pages.aspx" title="Pages"  description="" />
+        <siteMapNode url="~/App_AdminCP/SiteAdmin/Templates.aspx" title="Templates"  description="" />
+        <siteMapNode url="~/App_AdminCP/SiteAdmin/Modules.aspx" title="Modules"  description="" />
+    </siteMapNode>
+</siteMap>

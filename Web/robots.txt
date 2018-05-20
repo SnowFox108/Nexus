@@ -1,0 +1,12 @@
+﻿User-agent: *
+Disallow: /App_AdminCP/
+Disallow: /App_Code/
+Disallow: /App_Control_Style/
+Disallow: /App_Data/
+Disallow: /App_GlobalResources/
+Disallow: /App_Sytle/
+Disallow: /App_Template/
+Disallow: /App_Themes/
+Disallow: /aspnet_client/
+Disallow: /bin/
+Disallow: /Web.config

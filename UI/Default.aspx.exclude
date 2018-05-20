@@ -1,0 +1,25 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
+<%@ Register src="Modules/CategoryTree.ascx" tagname="CategoryTree" tagprefix="uc1" %>
+
+<%@ Register src="Modules/TextEditor.ascx" tagname="TextEditor" tagprefix="uc2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
+        </telerik:RadScriptManager>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="TextEditor1"></asp:RequiredFieldValidator>
+                <uc2:TextEditor ID="TextEditor1" runat="server" Toolbar_Status="Default" />
+        <asp:Button ID="Button1" runat="server" Text="Button" />
+    
+    </div>
+    </form>
+</body>
+</html>

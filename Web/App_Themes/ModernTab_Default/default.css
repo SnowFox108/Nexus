@@ -1,0 +1,95 @@
+@charset "utf-8";
+body { margin:0; padding:0; background: none; width:100%; background:#fafbfb url(CSS_images/bg.gif) top repeat-x;}
+html { padding:0; margin:0;}
+.clr {clear:both;}
+
+/* main */
+.main {width:900px; padding:0; margin:0 auto; }
+
+/* header */
+.header { width:900px; margin:0; padding:0; height:93px;}
+/* header_text */
+.header_text { height:93px; width:270px; margin:0; padding:0; border:none; float:left;}
+.header_text p { font: normal 11px Arial, Helvetica, sans-serif; color:#8a8a8a; padding:60px 0 0 20px; margin:0;}
+/* menu */
+.menu { width:593px; margin:56px 0 0 0; padding:0; float:right; height:30px;}
+.menu ul { margin:0; padding:0; list-style:none;}
+.menu li { margin:0; padding:0;  font:bold 12px Arial, Helvetica, sans-serif; color:#a6a6a6; float:left;}
+.menu a { float:left; font:bold 12px Arial, Helvetica, sans-serif; color:#fff; padding:11px 16px; margin:0; text-decoration:none;}
+.menu a:hover {color:#252525; background: url(CSS_images/hover.gif) top repeat-x; padding:10px 15px;border:1px solid #fff;}
+.menu a.active {color:#252525; background:url(CSS_images/hover.gif) top repeat-x; padding:10px 15px; border:1px solid #fff;}
+/* rss */
+.RSS_block { width:330px; height:35px; color:#a7a7a7; margin:25px 0 0 0; padding:0; float:right; border:none;}
+.rss { float:left; width:120px; height:20px; color:#a7a7a7; background:#1c1c1c url(CSS_images/RSS.gif) 5px 2px no-repeat; padding:5px 0 0 0; margin:0 5px; font:normal 11px Arial, Helvetica, sans-serif;}
+.rss a {font:normal 11px Arial, Helvetica, sans-serif; color:#a7a7a7; text-transform:uppercase; padding:0 0 0 30px; margin:0; text-decoration:none;}
+/* body */
+.body { width:900px; margin:0; padding:0;}
+.body h2 { font: normal 24px Arial, Helvetica, sans-serif; color:#181818; padding:10px 5px; margin:10px 0 10px 0; border-bottom:1px solid #e9ebec;}
+.body h3 { font: normal 18px Tahoma, Geneva, sans-serif; color:#282828; padding:10px 5px; margin:0 0 10px 0; border-bottom:1px solid #cccccc;}
+.body p {font:normal 11px Arial, Helvetica, sans-serif; color:#232323; padding:0; margin:10px 0;}
+.body a { color:#d34600; font:bold 12px Arial, Helvetica, sans-serif; text-decoration:none;}
+.body ul { margin:0; padding:0 0 0 100px; font:normal 11px Arial, Helvetica, sans-serif; color:#232323;}
+.body li { background:url(CSS_images/arrow.gif) left no-repeat; padding:0 0 0 20px; margin:0;}
+.body .screenimg { float:left; margin:0; padding:20px; max-width:173px; max-height:150px;}
+/*logo*/
+.logo { width:250px; margin:0 10px 10px 10px; padding:20px 0 0 0;}
+.logo img { margin:0; padding:0; max-height:107px; max-width:250px;}
+/* search */
+.search { width:271px; height:44px; padding:20px 0 0 0; margin:10px 10px; border:1px solid #eef0f1; background: url(CSS_images/bg_search.gif) top repeat-x;}
+.search input.keywords { width:150px; height:20px; background:#fff; color:#acacac; font:normal 11px Arial, Helvetica, sans-serif; margin:5px 15px 0 10px; padding:0; border:1px solid #d2d6d8; float:left;}
+.search input.button { width:32px; height:32px; margin:0; padding:0; background:url(CSS_images/search.gif) top no-repeat; float:left;}
+/*side_body*/
+.side_body { width:251px; padding:0 10px; margin:10px 10px; border:1px solid #eef0f1; background: #dde1e3 url(CSS_images/side_bg.gif) top repeat-x; float:left;}
+.side_body h2 { font:normal 18px Arial, Helvetica, sans-serif; color:#171717; border-bottom:1px solid #d2d6d8; margin:0 0 10px 0; padding:10px 5px;}
+.side_body ul { font:normal 12px Arial, Helvetica, sans-serif; color:#3a3c3c; padding:5px 0; margin:0;}
+.side_body li {padding:5px 0; margin:0;}
+.side_body p {font:normal 11px Arial, Helvetica, sans-serif; color:#666666; padding:0; margin:10px 0;}
+.side_body a { font: bold 12px Arial, Helvetica, sans-serif; color:#666666; margin:0; padding:0; text-decoration:none;}
+.side_body img { margin:0 0 20px 0; padding:0;}
+.side_body .data { float:left; font: bold 11px Arial, Helvetica, sans-serif; color:#0c9ec4; width:100px; margin:0 10px 0 0; padding:0;}
+.side_body .title { float: left; font: bold 11px Arial, Helvetica, sans-serif; color:#363636; margin:0; padding:0; width:220px; margin:0; padding:0;}
+/*Sub*/
+.Sub { width:251px; padding:0 10px; margin:10px 10px; border:1px solid #eef0f1; background: #dde1e3 url(CSS_images/side_bg.gif) top repeat-x; float:left;}
+.Sub h2 { font:normal 18px Arial, Helvetica, sans-serif; color:#171717; border-bottom:1px solid #d2d6d8; margin:0 0 10px 0; padding:10px 5px;}
+.Sub ul { font:normal 11px Arial, Helvetica, sans-serif; color:#3a3c3c; padding:5px 0; margin:0;}
+.Sub li { border-bottom:1px solid #ced3d6; list-style:none; padding:5px 0 5px 20px; margin:0; background: url(CSS_images/arrow_sub.gif) left no-repeat;}
+.Sub a {  font:normal 11px Arial, Helvetica, sans-serif; color:#3a3c3c;  margin:0; padding:0; text-decoration:none;}
+.Sub a:hover { font:bold 11px Arial, Helvetica, sans-serif; color:#0c9ec4; text-decoration: underline;}
+.Sub a.active { font:bold 11px Arial, Helvetica, sans-serif; color:#0c9ec4; text-decoration: none;}
+.Sub img { margin:0 0 20px 0; padding:0;}
+.Sub .data { float:left; font: bold 11px Arial, Helvetica, sans-serif; color:#0c9ec4; width:100px; margin:0 10px 0 0; padding:0;}
+.Sub .title { float: left; font: bold 11px Arial, Helvetica, sans-serif; color:#363636; margin:0; padding:0; width:220px; margin:0; padding:0;}
+/*main_body*/
+.main_body { width:553px; padding:0 20px; margin:0; float:right; background:#fff;}
+.main_body ul { margin:5px 5px; padding:0 0 0 20px; font:normal 11px Arial, Helvetica, sans-serif; color:#232323;}
+.main_body li  { background:url(CSS_images/arrow.gif) 0px 7px no-repeat; padding:5px 0 5px 20px; margin:0; list-style:none;}
+.main_body a { font:bold 11px Arial, Helvetica, sans-serif; color:#0c9ec4; text-decoration:none;}
+
+/* Conatct Form */
+.response { font:normal 12px Arial, Helvetica, sans-serif; color:red; text-align:center;}
+.loader { text-align:center; width:auto; padding:0; margin:0;}
+#contactform { margin:0; padding:5px;}
+#contactform * { font-family: Arial, Helvetica, sans-serif;; font-size:12px;}
+#contactform ol { margin:0; padding:0; list-style:none;}
+#contactform li { margin:0 0 5px 0; padding:10px; background:none;}
+#contactform li.buttons { margin:0; overflow:hidden;}
+#contactform label { margin:0; width:150px; display:block; float:left; padding:0 0 2px 0; font:bold 11px Arial, Helvetica, sans-serif; color:#666666;}
+#contactform label span { font:normal 10px Arial, Helvetica, sans-serif; color:#afafaf; margin:0; padding:0;}
+#contactform input.text { width:359px; border:1px solid #d6d6d6; margin:0; padding:5px 2px; height:16px; background:#fff;}
+#contactform textarea { width:359px; border:1px solid #d6d6d6; padding:2px; background:#fff;}
+#contactform li.buttons input { padding:2px 5px; margin:0 15px 0 0; background:#222222; border:1px solid #000; color:#FFF; float:right;}
+
+/* footer */
+.footer_block { width:100%; background:#aeb3b6 url(CSS_images/footer_blog.gif) top repeat-x;}
+.footer_block h2 { font: normal 18px  Arial, Helvetica, sans-serif; color:#fff; padding:10px 5px; margin:0 0 10px 0;  border-bottom:1px solid #fff;}
+.footer_block p {font:normal 11px Arial, Helvetica, sans-serif; color:#232323; padding:0; margin:0;}
+.footer_block .resize { width:900px; margin:15px auto; padding:0;}
+.footer_block .partners { width:539px; padding:0; margin:0 20px !important; margin:0 10px; float:right;}
+.footer_block .partners a { font:bold italic 11px Arial, Helvetica, sans-serif; color:#232323; float:right; text-decoration:none;}
+.footer_block .partners ul { margin:0; padding:0;}
+.footer_block .partners li { display: inline; margin:0; padding:0;}
+.footer_block .test { width:274px; padding:0; margin:0 10px; float:left;}
+.footer_block .test span { font:bold 11px Arial, Helvetica, sans-serif; color:#fff;}
+.footer_block .test a { font:italic 14px Arial, Helvetica, sans-serif; color:#6e6e6e; padding:0; margin:15px 10px; float:right;}
+.footer { background:#eceeef; text-align:center; font: normal 11px Arial, Helvetica, sans-serif; color:#99a0a3; margin:0; padding:10px 0; border-top:1px solid #fff;}
+.footer a {font: normal 11px Arial, Helvetica, sans-serif; color:#99a0a3;}

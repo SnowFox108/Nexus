@@ -1,0 +1,196 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+using MySql.Data.MySqlClient;
+
+namespace Nexus.Core
+{
+
+    public partial class User_Files_WebUserControls_OnlineSurvey : System.Web.UI.UserControl
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btn_Step01_02_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+                // Q04 4. Do you own a website?
+                if (rbtn_Q04.SelectedValue == "Yes")
+                {
+                    MultiView_Question.SetActiveView(SectionB);
+                }
+                else
+                {
+                    MultiView_Question.SetActiveView(SectionD);
+                }
+
+            }
+        }
+
+        protected void btn_Step02_Step01_Click(object sender, EventArgs e)
+        {
+            MultiView_Question.SetActiveView(SectionA);
+
+        }
+
+        protected void btn_Step02_Step03_Click(object sender, EventArgs e)
+        {
+            // Q20 20. Do you use Content Management System to manage your website?
+            if (rbtn_Q20.SelectedValue == "Yes")
+            {
+                MultiView_Question.SetActiveView(SectionC);
+            }
+            else
+            {
+                MultiView_Question.SetActiveView(SectionD);
+            }
+
+
+        }
+
+        protected void btn_Step03_Step02_Click(object sender, EventArgs e)
+        {
+            // Q04 4. Do you own a website?
+            if (rbtn_Q04.SelectedValue == "Yes")
+            {
+                MultiView_Question.SetActiveView(SectionB);
+            }
+            else
+            {
+                MultiView_Question.SetActiveView(SectionA);
+            }
+
+
+        }
+
+        protected void btn_Step03_Step04_Click(object sender, EventArgs e)
+        {
+            MultiView_Question.SetActiveView(SectionD);
+
+        }
+
+        protected void btn_Step04_Step03_Click(object sender, EventArgs e)
+        {
+            // Q04 4. Do you own a website?
+            if (rbtn_Q04.SelectedValue == "Yes")
+            {
+
+                // Q20 20. Do you use Content Management System to manage your website?
+                if (rbtn_Q20.SelectedValue == "Yes")
+                {
+                    MultiView_Question.SetActiveView(SectionC);
+                }
+                else
+                {
+                    MultiView_Question.SetActiveView(SectionB);
+                }
+
+            }
+            else
+            {
+                MultiView_Question.SetActiveView(SectionA);
+            }
+
+        }
+
+        protected void btn_Finish_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid)
+            {
+                e2Data[] UpdateData = {
+                                                    new e2Data("CompanyName", tbx_CompanyName.Text),
+                                                    new e2Data("Email", tbx_ContactEmail.Text),
+                                                    new e2Data("Q03", rbtn_Q03.SelectedValue),
+                                                    new e2Data("Q04", rbtn_Q04.SelectedValue),
+                                                    new e2Data("Q05", RadNumericTextBox_Q05.Value.ToString()),
+                                                    new e2Data("Q06", rbtn_Q06.SelectedValue),
+                                                    new e2Data("Q07", rbtn_Q07.SelectedValue),
+                                                    new e2Data("Q08", rbtn_Q08.SelectedValue),
+                                                    new e2Data("Q09", rbtn_Q09.SelectedValue),
+                                                    new e2Data("Q10", rbtn_Q10.SelectedValue),
+                                                    new e2Data("Q11", tbx_Q11.Text),
+                                                    new e2Data("Q12", RadSlider_Q12.SelectedValue),
+                                                    new e2Data("Q13", RadSlider_Q13.SelectedValue),
+                                                    new e2Data("Q14", RadSlider_Q14.SelectedValue),
+                                                    new e2Data("Q15", RadSlider_Q15.SelectedValue),
+                                                    new e2Data("Q16", RadSlider_Q16.SelectedValue),
+                                                    new e2Data("Q17", RadSlider_Q17.SelectedValue),
+                                                    new e2Data("Q18", tbx_Q18.Text),
+                                                    new e2Data("Q19", tbx_Q19.Text),
+                                                    new e2Data("Q20", rbtn_Q20.SelectedValue),
+                                                    new e2Data("Q21", tbx_Q21.Text),
+                                                    new e2Data("Q22", RadSlider_Q22.SelectedValue),
+                                                    new e2Data("Q23", RadSlider_Q23.SelectedValue),
+                                                    new e2Data("Q24", RadSlider_Q24.SelectedValue),
+                                                    new e2Data("Q25", RadSlider_Q25.SelectedValue),
+                                                    new e2Data("Q26", tbx_Q26.Text),
+                                                    new e2Data("Q27", tbx_Q27.Text),
+                                                    new e2Data("Q28", rbtn_Q28.SelectedValue),
+                                                    new e2Data("Q29", RadSlider_Q29.SelectedValue),
+                                                    new e2Data("Q30", RadSlider_Q30.SelectedValue),
+                                                    new e2Data("Q31", RadSlider_Q31.SelectedValue),
+                                                    new e2Data("Q32", RadSlider_Q32.SelectedValue),
+                                                    new e2Data("Q33", RadSlider_Q33.SelectedValue),
+                                                    new e2Data("Q34", RadSlider_Q34.SelectedValue),
+                                                    new e2Data("Q35", RadSlider_Q35.SelectedValue),
+                                                    new e2Data("Q36", tbx_Q36.Text),
+                                                    new e2Data("Q37", RadSlider_Q37.SelectedValue),
+                                                    new e2Data("Q38", RadSlider_Q38.SelectedValue),
+                                                    new e2Data("Q39", RadSlider_Q39.SelectedValue),
+                                                    new e2Data("Q40", RadSlider_Q40.SelectedValue),
+                                                    new e2Data("Q41", RadSlider_Q41.SelectedValue),
+                                                    new e2Data("Q42", RadSlider_Q42.SelectedValue),
+                                                    new e2Data("Q43", RadSlider_Q43.SelectedValue),
+                                                    new e2Data("Q44", RadSlider_Q44.SelectedValue),
+                                                    new e2Data("Q45", RadSlider_Q45.SelectedValue),
+                                                    new e2Data("Q46", RadSlider_Q46.SelectedValue),
+                                                    new e2Data("Q47", RadSlider_Q47.SelectedValue),
+                                                    new e2Data("Q48", RadSlider_Q48.SelectedValue),
+                                                    new e2Data("Q49", RadSlider_Q49.SelectedValue),
+                                                    new e2Data("Q50", RadSlider_Q50.SelectedValue),
+                                                    new e2Data("Q51", RadSlider_Q51.SelectedValue),
+                                                    new e2Data("Q52", RadSlider_Q52.SelectedValue),
+                                                    new e2Data("Q53", RadSlider_Q53.SelectedValue),
+                                                    new e2Data("Q54", tbx_Q54.Text),
+                                                    new e2Data("Q55", tbx_Q55.Text)
+                                                };
+
+                OnlineSurvey_MySQL_DataConn myDataConn = new OnlineSurvey_MySQL_DataConn(ConfigurationManager.ConnectionStrings["e2CMS"].ConnectionString);
+                string SurveyID = myDataConn.Add_OnlineSurvey(UpdateData);
+
+                Nexus.Core.Email.EmailMgr.SendMail(
+                    "service@e2tech.co.uk",
+                    string.Format("SurveyID {0} Complete \n Company Name:{1} \n Contact Email:{2}", SurveyID, tbx_CompanyName.Text, tbx_ContactEmail.Text),
+                    string.Format("SurveyID {0} Complete", SurveyID));
+
+                MultiView_Question.SetActiveView(Complete);
+            }
+        }
+    }
+
+    public class OnlineSurvey_MySQL_DataConn : e2Tech.MySQL.MySQL_DataProvider
+    {
+        public OnlineSurvey_MySQL_DataConn(string DataPath)
+            : base(DataPath)
+        {
+            //
+            // TODO: 在此处添加构造函数逻辑
+            //
+        }
+
+        public string Add_OnlineSurvey(e2Data[] UpdateData)
+        {
+            string Table_Name = "e2Tech_OnlineSurvey";
+
+            return Insert_Data_Field_returnID(Table_Name, UpdateData);
+        }
+
+    }
+}

@@ -1,0 +1,258 @@
+﻿/* NexusCore 1 - Global Stylesheet */
+
+* { margin: 0;  padding: 0;}
+html, body{ margin: 0;  padding: 0; height:100% !important; /*border: 1px #76d4cc solid;*/ min-width:800px; }
+
+iframe { /*position: absolute; border: 1px #76d4cc solid; */ height:100% !important; width: 100%; border: none;}
+
+body 
+{   
+	font: 12px/21px sans-serif, Arial, Verdana;
+}
+
+body.nexusCore_bg { background: #7e9bb9 url(CSS_images/bg.jpg)  top center repeat-x;}
+
+a { color:#015cfe; text-decoration:none;}
+a:hover { text-decoration: underline;}
+
+/* Remove border around linked images */
+img { border: 0;}
+a img { border:0;}
+a img:hover  { border:0;}
+
+h1, h2, h3, h4, h5, h6{ font-weight:bold; margin:0; color:#28385a;}
+h1 { font-size: 22px;}
+h2 { font-size: 18px;}
+h3 { font-size: 16px;}
+h4 { font-size: 14px;}
+h5 { font-size: 12px;}
+h6 { font-size: 10px;}
+
+.font85 { font-size:85%;}
+.font95 { font-size:95%;}
+
+/*clear*/
+.clear{
+	clear:both;
+	height:1px;
+	font-size:1px;
+	line-height:1px;
+	border:none;
+	margin:0; 
+	padding:0;
+	background:transparent;
+}
+	
+.clearfloat { 
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+    }
+
+
+/* --   Floats   ------------------------------------------------------------------- */
+
+.left {float: left;}
+.right {float: right;}
+
+/* End hide from IE-mac */
+input[type="hidden"] {display:none !important}
+
+/*--   NexusCore Site layout   ----------------------------------------------------- */
+#nexusCore_wrapper{ width: 100%; margin: 0 auto; /*border: 1px #76d4cc solid;*/ }
+#nexusCore_wrapper #header,
+#nexusCore_wrapper #templateDesign_header,
+#nexusCore_wrapper #pageDesign_header { height:100px; width:98%; margin: 0 auto; /*border: 1px #76d4cc solid;*/}
+
+#nexusCore_wrapper #mainWrapper { margin: 0 auto; height:100% !important;  min-height:550px; width:98%; }
+
+#nexusCore_wrapper #templateDesign_mainWrapper, #nexusCore_wrapper #pageDesign_mainWrapper
+{
+     position: absolute;
+     top: 100px; /* Change with Height of #nexusCore_nextusCore_header */
+     bottom: 0;      
+     width: 100%;     
+     height:600px;
+}
+
+/*-- Design Page Main Content -- */
+#nexusCore_wrapper #templateDesign_mainWrapper #single, #nexusCore_wrapper #pageDesign_mainWrapper #single  
+{
+    height: 100%;      
+    position: relative;   
+    /*background-color:Lime;  Maybe #e5f2f7*/       
+    padding: 0px; 
+}
+    
+
+/*-- Single Main Content -- */
+#nexusCore_wrapper #mainWrapper #singleMain  
+{
+    height: 100% !important;      
+    min-height: 560px;
+    position: relative;   
+   /* background-color:#f2f6f9; Maybe #e5f2f7*/       
+    padding: 10px; 
+}
+
+#nexusCore_wrapper #mainWrapper #singleMain .in
+{
+    padding: 20px;
+    height: 100% !important;      
+    min-height: 400px;
+    background:#fff;
+    border-top: 3px #cccccc solid;  
+    border-left:1px #e6e6e6 solid; 
+    border-right:1px #e6e6e6 solid; 
+    border-bottom:1px #e6e6e6 solid;
+}
+
+/*-- General Main Content -- */
+#nexusCore_wrapper #mainWrapper #main  
+{    height:100% !important;
+    float: right;
+    width: 100%;
+    margin-left: -240px;
+}
+#nexusCore_wrapper #mainWrapper #main .in  
+{
+    background-color:#f2f6f9; /*Maybe #e5f2f7*/       
+    margin-left: 240px;  
+    padding: 10px; 
+    height:100% !important;
+    min-height:560px;
+}
+
+/*-- General Side Content -- */
+#nexusCore_wrapper #mainWrapper #side  
+{
+    height:100% !important;
+    margin: 0;    
+    min-height:220px;
+    float: left;
+    position: relative;
+    width: 220px; 
+}
+#nexusCore_wrapper #mainWrapper #side .in
+{
+    background:transparent;    
+}
+
+/*-- Split Main Content at Pages -- */
+#nexusCore_wrapper #mainWrapper #pages_main  
+{    height:100% !important;
+    float: right;
+    width: 100%;
+    margin-left: -240px; }
+
+#nexusCore_wrapper #mainWrapper #pages_main .in  
+{
+    background-color:#f2f6f9; /*Maybe #e5f2f7*/       
+    margin-left: 240px;  
+    padding: 10px; 
+    height:100% !important;
+    min-height:560px;
+}
+
+/*-- Split Sidebar at Pages -- */
+#nexusCore_wrapper #mainWrapper #pages_side  
+{
+    height:100% !important;
+    margin: 0;    
+    min-height:220px;
+    float: left;
+    position: relative;
+    width: 220px; 
+}
+
+#nexusCore_wrapper #mainWrapper #pages_side .in
+{
+    background:transparent;    
+}
+
+
+/*-- Split Main Content at Pages -- */
+#nexusCore_wrapper #mainWrapper #templates_main  
+{
+    height:100% !important;
+    float: right;
+    width: 100%;
+    margin-left: -240px; 
+}
+
+#nexusCore_wrapper #mainWrapper #templates_main .in  
+{
+    background-color:#f2f6f9; /*Maybe #e5f2f7*/       
+    margin-left: 240px;  
+    padding: 10px; 
+    height:100% !important;
+    min-height:560px;
+}
+
+/*-- Split Sidebar at Pages -- */
+#nexusCore_wrapper #mainWrapper #templates_side  
+{
+    height:100% !important;
+    margin: 0;    
+    min-height:220px;
+    float: left;
+    position: relative;
+    width: 220px;
+}
+
+#nexusCore_wrapper #mainWrapper #templates_side .in
+{
+    background:transparent;    
+}
+
+/*-- Split Main Content at Content Manager -- */
+#nexusCore_wrapper #mainWrapper #contentManager_main  
+{
+    height:100% !important;
+    float: right;
+    width: 100%;
+    margin-left: -240px; 
+}
+#nexusCore_wrapper #mainWrapper #contentManager_main .in
+{
+    background-color:#f2f6f9; /*Maybe #e5f2f7*/       
+    margin-left: 240px;  
+    padding: 10px; 
+    height:100% !important;
+    min-height:560px;  
+}
+/*-- Split Sidebar at Content Manager -- */
+#nexusCore_wrapper #mainWrapper #contentManager_side  
+{
+    height:100% !important;
+    margin: 0;    
+    min-height:220px;
+    float: left;
+    position: relative;
+    width: 220px;
+}
+#nexusCore_wrapper #mainWrapper #contentManager_side .in
+{
+    background:transparent;    
+}
+
+/*--   NexusCore Popwindow and iframe layout   ------------------------------------------- */
+
+/*-- Control Manager and Control Panel PoPup Main Content -- */
+#nexusCorePop_wrapper
+{
+    margin:0px;    
+    min-width:600px;    
+}
+    
+/*-- Content Manager Content -- */
+#nexusCore_contentManager_wrapper
+{
+    background-color: White;    
+    margin:0px;    
+    min-width:600px;    
+}
+       
+
+

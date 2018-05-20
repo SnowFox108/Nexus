@@ -1,0 +1,79 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using System.Xml.Linq;
+
+public partial class App_MasterPages_MasterPage_Education : System.Web.UI.MasterPage
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            string Title = "";
+
+            chsms.Forum.Forum_PageView myForum_PageView = new chsms.Forum.Forum_PageView();
+
+            if (DataEval.IsEmptyQuery(ConfigurationManager.AppSettings["NewsCategoryID"]))
+            {
+                News_Menu.CategoryID = "-1";
+            }
+            else
+            {
+                News_Menu.CategoryID = ConfigurationManager.AppSettings["NewsCategoryID"];
+
+                chsms.Forum.Forum myForum = myForum_PageView.Get_ForumDetail(ConfigurationManager.AppSettings["NewsCategoryID"], "ALL");
+                Title = myForum.Forum_Title;
+
+            }
+
+            if (DataEval.IsEmptyQuery(Request.QueryString["CateID"]))
+            {
+                News_SubMenu.CategoryID = "-1";
+                News_TopicList.TopicID = "0";
+                Panel_SideBar.Visible = false;
+            }
+            else
+            {
+
+                List<chsms.Forum.Forum> list = myForum_PageView.Get_ForumList(Request.QueryString["CateID"], "6", "1");
+                if (list.Count > 0)
+                {
+                    Panel_SubMenu.Visible = true;
+                }
+                else
+                {
+                    Panel_SubMenu.Visible = false;
+                }
+
+                News_SubMenu.CategoryID = Request.QueryString["CateID"];
+
+                News_TopicList.TopicID = Request.QueryString["CateID"];
+                News_TopicList.News_PageURL = string.Format("{0}?CateID={1}", News_TopicList.News_PageURL, Request.QueryString["CateID"]);
+                Panel_SideBar.Visible = true;
+
+                chsms.Forum.Forum myForum = myForum_PageView.Get_ForumDetail(Request.QueryString["CateID"], "ALL");
+                Title = myForum.Forum_Title + " - " + Title;
+                lbl_SubMenu.Text = myForum.Forum_Title;
+            }
+
+            if (!DataEval.IsEmptyQuery(Request.QueryString["NewsID"]))
+            {
+                chsms.Forum.Thread myThread = myForum_PageView.Get_ThreadDetail(Request.QueryString["NewsID"]);
+                Title = myThread.Title + " - " + Title;
+            }
+
+            Page.Title = Title;
+
+        }
+
+    }
+}

@@ -1,0 +1,117 @@
+﻿/* NexusShop - Product Products Stylesheet */
+ .nexusCore_product_list, .nexusCore_product_create, .nexusCore_product_editor
+{
+    padding: 10px;
+    height: 100% !important;      
+    min-height: 535px;
+    background:#fff;
+    border-top: 3px #cccccc solid;  
+    border-left:1px #e6e6e6 solid; 
+    border-right:1px #e6e6e6 solid; 
+    border-bottom:1px #e6e6e6 solid;
+}
+
+.nexusCore_product_list .spliter { border-bottom: #cccccc 2px dotted; padding-top: 10px; }
+.nexusCore_product_list h4 span { font: 12px/25px "Segoe UI", Arial, sans-serif; cursor: pointer; }
+
+.nexusCore_product_editor .spliter { border-bottom: #cccccc 2px dotted; padding-top: 10px; }
+.nexusCore_product_editor .form { border-collapse: collapse; padding:10px; margin-bottom:15px; width:650px; }     
+.nexusCore_product_editor .form tr th{ text-align:right; vertical-align:top; background-color: #a0bad3;  color:#28385a; padding:10px 10px; font-weight:bold; font-size:12px; width: 150px; }
+.nexusCore_product_editor .form tr td{ text-align:left; padding:2px 5px; }
+
+ .nexusCore_product_create h3
+{
+  margin: 20px 0;
+}
+
+/*----- Product Create Form ---------*/
+.nexusCore_panel_sideProduct 
+{
+    padding: 10px;
+    width: 200px;
+    background:#fff;
+    border-top: 3px #cccccc solid;  
+    border-left:1px #e6e6e6 solid; 
+    border-right:1px #e6e6e6 solid; 
+    border-bottom:1px #e6e6e6 solid;
+
+}
+
+.nexusCore_panel_sideProduct .spliter { border-bottom: #cccccc 2px dotted; padding-top: 10px; }
+.nexusCore_panel_sideProduct h4 { padding: 5px 0px 5px 0px; }
+
+/*----- master page command buttons ---------*/
+.nexusCore_productCommand {border-top: #fff 2px dotted; padding-top: 10px;}
+.nexusCore_productCommand .nexusCore_createProduct_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:200px; height:30px;  background: url(buttons/createVariant_btn.png)  left top no-repeat; color: White;  margin: 2px 0px;  }
+.nexusCore_productCommand .nexusCore_createProduct_btn:hover { background: url(buttons/createVariant_btn_over.png) left top no-repeat; }
+.nexusCore_productCommand .nexusCore_editProduct_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:200px; height:30px;  background: url(buttons/editVariant_btn.png)  left top no-repeat; color: White;  margin: 2px 0px;  }
+.nexusCore_productCommand .nexusCore_editProduct_btn:hover { background: url(buttons/editVariant_btn_over.png) left top no-repeat; }
+.nexusCore_productCommand .nexusCore_deleteProduct_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:200px; height:30px;  background: url(buttons/deleteVariant_btn.png)  left top no-repeat; color: White; margin: 2px 0 30px 0;  }
+.nexusCore_productCommand .nexusCore_deleteProduct_btn:hover { background: url(buttons/deleteVariant_btn_over.png) left top no-repeat; }
+.nexusCore_productCommand .nexusCore_return_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:200px; height:30px;  background: url(buttons/return_btn.png)  left top no-repeat; color: White; margin: 2px 0px;  }
+.nexusCore_productCommand .nexusCore_return_btn:hover { background: url(buttons/return_btn_over.png) left top no-repeat; }
+.nexusCore_productCommand .nexusCore_general_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:200px; height:30px;  background: url(buttons/e2General_btn.png)  left top no-repeat; color: White; margin: 2px 0px; }
+.nexusCore_productCommand .nexusCore_general_btn:hover { background: url(buttons/e2General_btn_over.png) left top no-repeat; }
+.nexusCore_productCommand .nexusCore_general_btn_selected{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:200px; height:30px;  background: url(buttons/e2General_btn_over.png)  left top no-repeat; color: White; margin: 2px 0px; }
+.nexusCore_productCommand .nexusCore_refresh_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:200px; height:30px;  background: url(buttons/refresh_btn.png)  left top no-repeat; color: White; margin: 2px 0px; }
+.nexusCore_productCommand .nexusCore_refresh_btn:hover { background: url(buttons/refresh_btn_over.png) left top no-repeat; }
+
+/*----- general 120x command buttons ---------*/
+.nexusCore_productCommand .nexusCore_create_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:120px; height:30px;  background: url(buttons/create_btn.png)  left top no-repeat; color: White; margin: 2px 0 10px 0;  }
+.nexusCore_productCommand .nexusCore_create_btn:hover { background: url(buttons/create_btn_over.png) left top no-repeat; }
+.nexusCore_productCommand .nexusCore_edit_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:120px; height:30px;  background: url(buttons/edit_btn.png)  left top no-repeat; color: White; margin: 2px 0 10px 0;  }
+.nexusCore_productCommand .nexusCore_edit_btn:hover { background: url(buttons/edit_btn_over.png) left top no-repeat; }
+.nexusCore_productCommand .nexusCore_cancel_btn{ font: 12px/25px "Segoe UI", Arial, sans-serif; width:120px; height:30px;  background: url(buttons/cancel_btn.png)  left top no-repeat; color: White; margin: 2px 0 10px 0;  }
+.nexusCore_productCommand .nexusCore_cancel_btn:hover { background: url(buttons/cancel_btn_over.png) left top no-repeat; }
+
+/*-------------- Product Search Form  -----------------*/
+.nexusCore_product_list .form { border-collapse: collapse; padding:10px; margin-bottom:15px; width:650px; }     
+.nexusCore_product_list .form tr th{ text-align:right; vertical-align:top; background-color: #a0bad3;  color:#28385a; padding:10px 10px; font-weight:bold; font-size:12px; width: 150px; }
+.nexusCore_product_list .form tr td{ text-align:left; vertical-align:top; padding:2px 5px; }
+
+/*--------  Product property -----------------------------------------------------------------*/
+.nexusCore_panel_productVariant, 
+.nexusCore_panel_productIndexSelect, 
+.nexusCore_panel_productIndexCreate,
+.nexusCore_panel_productCreate,
+.nexusCore_panel_productEditor { border:1px solid #7aaec6; margin:5px 10px; padding: 5px 10px; }
+
+
+.nexusCore_panel_productVariant h3, 
+.nexusCore_panel_productIndexSelect h3, 
+.nexusCore_panel_productIndexCreate h3,
+.nexusCore_panel_productCreate h3,
+.nexusCore_panel_productEditor h3 { margin-bottom:10px;}
+
+
+.nexusCore_panel_productVariant table, 
+.nexusCore_panel_productIndexSelect table,
+.nexusCore_panel_productIndexCreate table,
+.nexusCore_panel_productCreate table,
+.nexusCore_panel_productEditor table { border-collapse:separate;}
+
+.nexusCore_panel_productVariant table tr th,
+.nexusCore_panel_productIndexSelect table tr th, 
+.nexusCore_panel_productIndexCreate table tr th, 
+.nexusCore_panel_productCreate table tr th,
+.nexusCore_panel_productEditor table tr th { padding-right:30px; width: 180px; text-align:right; vertical-align:top;}
+
+/*--------  Product Index Table List ----------------------------------------------------------*/
+.nexusCore_panel_productIndexSelect table.nexusCore_itemPlaceholderContainer,
+.nexusCore_panel_productEditor table.nexusCore_itemPlaceholderContainer
+{ border-collapse: collapse; padding:10px; margin-bottom:15px; width:100%; }
+
+.nexusCore_panel_productIndexSelect table.nexusCore_itemPlaceholderContainer tr th,
+.nexusCore_panel_productEditor table.nexusCore_itemPlaceholderContainer tr th
+{ text-align:center; background-color: #a0bad3;  color:#28385a; padding:10px 0; font-weight:bold; font-size:12px;  }
+
+.nexusCore_panel_productIndexSelect table.nexusCore_itemPlaceholderContainer tr td
+.nexusCore_panel_productEditor table.nexusCore_itemPlaceholderContainer tr td
+{ padding:2px 5px; text-align:center; }
+
+/*
+.nexusCore_panel_pageTemplates, 
+.nexusCore_panel_pageURLs, 
+.nexusCore_panel_pageSecurities_createPage { padding: 10px 0;}
+*/
+

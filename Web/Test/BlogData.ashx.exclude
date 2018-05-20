@@ -1,0 +1,60 @@
+﻿<%@ WebHandler Language="C#" Class="BlogData" %>
+
+using System;
+using System.Text;
+using System.Web;
+using System.Xml;
+using System.Xml.Xsl;
+using Nexus.Core;
+
+public class BlogData : IHttpHandler
+{
+
+    public bool IsReusable
+    {
+        get
+        {
+            return false;
+        }
+    }
+
+    public void ProcessRequest(HttpContext context)
+    {
+        context.Response.ContentType = "text/xml";
+        context.Response.ContentEncoding = Encoding.UTF8;
+        context.Response.Write("<?xml-stylesheet type=\"text/xsl\" href=\"/User_Files/WebUserControls/myBlog.xslt\"?>");
+
+
+        Control_Init(context);
+        context.Response.End();
+
+    }
+
+    private void Control_Init(HttpContext context)
+    {
+        //string _onwership_userid = context.Request["NexusBlogUserID"];
+
+        string _postid = context.Request["NexusBlogPostID"];
+
+        if (!DataEval.IsEmptyQuery(_postid))
+        {
+            Nexus.Controls.Blog.Lib.BlogMgr myBlogMgr = new Nexus.Controls.Blog.Lib.BlogMgr();
+
+            XmlDocument myBlog_Post = myBlogMgr.Get_Blog_Post_XML(_postid);
+            
+            //XmlDocument myBlog_Post = myBlogMgr.Get_Blog_Posts_XML(
+            //    _onwership_userid,
+            //    StringEnum.GetStringValue(Nexus.Controls.Blog.Lib.Post_Status.Publish)
+            //    );
+
+            XslTransform myXsl = new XslTransform();
+
+            myXsl.Load(context.Server.MapPath("~/User_Files/WebUserControls/myBlog.xslt"));
+
+            context.Response.Write(myBlog_Post.InnerXml);
+
+        }
+    }
+
+
+}

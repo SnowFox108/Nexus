@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="" title=""  description="">
+        <siteMapNode url="~/App_AdminCP/SiteAdmin/Default.aspx" title="Home"  description="Homepage of Site Admin" />
+        <siteMapNode url="~/App_AdminCP/SiteAdmin/Pages.aspx" title="Pages"  description="">
+            <siteMapNode url="~/App_AdminCP/SiteAdmin/PageProperties.aspx" title="Page Properties"  description="" />
+        </siteMapNode>
+        <siteMapNode url="~/App_AdminCP/SiteAdmin/Templates.aspx" title="Masterpages"  description="">
+            <siteMapNode url="~/App_AdminCP/SiteAdmin/TemplateProperties.aspx" title="Masterpage Properties"  description="" />
+        </siteMapNode>
+        <siteMapNode url="~/App_AdminCP/SiteAdmin/WebsiteSetting.aspx" title="Website"  description="" />
+        <siteMapNode url="~/App_AdminCP/SiteAdmin/ContentManager.aspx" title="Modules"  description="">
+            <siteMapNode url="~/App_AdminCP/SiteAdmin/Categories.aspx" title="Categories"  description="" />
+            <siteMapNode url="~/App_AdminCP/SiteAdmin/Installed_Modules.aspx" title="Module Viewer"  description="" />
+            <siteMapNode url="~/App_AdminCP/SiteAdmin/Installed_Templates.aspx" title="Template Viewer"  description="" />
+        </siteMapNode>
+        <siteMapNode url="~/App_AdminCP/SiteAdmin/Files.aspx" title="Files"  description="" />
+    </siteMapNode>
+</siteMap>

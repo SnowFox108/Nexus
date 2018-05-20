@@ -1,0 +1,25 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
+<%@ Register src="mBlog_Posts/mBlogPosts_WebView.ascx" tagname="mBlogPosts_WebView" tagprefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
+    </telerik:RadScriptManager>
+
+    <div>
+        
+        <uc1:mBlogPosts_WebView ID="mBlogPosts_WebView1" runat="server" 
+            BlogPostsID="123" MaxNumberPosts="50" NumberPerPage="5" PostViewURL="/" 
+            ReturnURL="/" ShowContent="True" ShowPublicPosts="True" />
+        
+    </div>
+    </form>
+</body>
+</html>

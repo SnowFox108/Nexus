@@ -1,0 +1,8 @@
+@charset "utf-8";
+/*-- Nexus Core CSS Site Admin pages -- */
+
+body.UserControlManagerPanel_bg{ text-align:left; margin:10px; width:auto; background: #7e9bb9; /*url(CSS_images/bg.jpg)  top center repeat-x;*/}
+
+fieldset.UserControlProperties{ text-align:left; margin:10px; padding: 20px;}
+legend{ padding:10px; color:#FFF; font-size: 12px;}
+.UserControlBtns {  clear:both;  text-align: right; width:100%; margin-top: 20px; }

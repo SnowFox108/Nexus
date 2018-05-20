@@ -1,0 +1,76 @@
+@charset "utf-8";
+/*-- Nexus Core CSS Site Admin pages -- */
+
+.iFrameWrapper iframe { width:98%; margin: 0px 10px 10px 10px; position: relative; height: 550px; border-top: 3px #cccccc solid;  border-left:1px #e6e6e6 solid; border-right:1px #e6e6e6 solid; border-bottom:1px #e6e6e6 solid;/* --background-color: #d7d7d7;  clear:both; --*/}
+.Panel_Page_Label { margin: 25px 0;}
+
+.NexusCore_PageProperty{ background: #fff /* url(CSS_images/title_bg.png)  top left no-repeat*/; border-top: 3px #cccccc solid;  border-left:1px #e6e6e6 solid; border-right:1px #e6e6e6 solid; border-bottom:1px #e6e6e6 solid; padding:20px; margin: 10px 10px;}
+.NexusCore_PageProperty2{ background: #fff /* url(CSS_images/title_bg.png)  top left no-repeat*/; border-top: 3px #cccccc solid;  border-left:1px #e6e6e6 solid; border-right:1px #e6e6e6 solid; border-bottom:1px #e6e6e6 solid; padding:20px; margin: 15px 10px;}
+.NexusCore_PageProperty h3, .NexusCore_PageProperty2 h3 { color: #fff; padding-left:10px; width: 100%; background-color: #a0bad3; padding:8px; font-weight:bold; }
+.NexusCore_PageProperty h2, .NexusCore_PageProperty2 h2 { color: #28385a; padding-left:10px;}
+.NexusCore_PageProperty table tr, td { /* border: 1px #000 solid;*/ color: Black;}
+.NexusCore_PageProperty table th{width: 200px; padding: 10px;}
+
+
+.NexusCore_Modules{  padding:0px; margin: 10px 0px; /*background: #fff  url(CSS_images/title_bg.png)  top left no-repeat; border-top: 3px #cccccc solid;  border-left:1px #e6e6e6 solid; border-right:1px #e6e6e6 solid; border-bottom:1px #e6e6e6 solid;*/}
+.NexusCore_Modules h2 { color: #fff; margin: 10px 0;}
+.NexusCore_ModuleList  { padding: 0 10px;}
+.NexusCore_ModuleTemplateList  { padding: 0 10px;}
+.NexusCore_ModuleList_Components { /*border: 1px #333 solid;*/ width: 200px;}
+.NexusCore_ModuleList_Templates { /*border: 1px #333 solid;*/ width: 600px; }
+.NexusCore_ModuleList_Components_inner, .NexusCore_ModuleList_Templates_inner { margin: 10px; text-align:center; /*border: 1px #333 solid;*/ width: 100px; }
+.NexusCore_ModuleList_Components_inner img { width: 64px;}
+.NexusCore_ModuleList table.ListModuleInstalled th, .NexusCore_ModuleTemplateList table.ListTemplateInstalled th
+{width: 130px; vertical-align: top; color: #fff; padding-top: 10px; font-size: 12px; font-weight:bold;  }
+.NexusCore_ModuleList fieldset, .NexusCore_ModuleTemplateList fieldset { width: auto;  border: #a0bad3 0px solid; background:#f2f6f9;}
+.NexusCore_ModuleList legend, .NexusCore_ModuleTemplateList legend { margin:10px; padding: 0 5px; font-weight: bold;}
+
+
+
+.Panel_Page_Type table{width:65%;}
+.Panel_PageLink table{ width:100%;}
+.Panel_HeadContent table{ width:100%;}
+.Panel_More_options{ clear:both; /*border: 1px #333 solid;*/}
+.Panel_More_options h2{ width:100%; padding: 15px 0; border-bottom: 1px #000 dashed;}
+.Panel_Page_URLs{ clear:both; width:100%; }
+.Panel_Page_Templates{ width:100%;}
+.Panel_Page_Securities{ width:100%;}
+
+.Panel_Page_Type table tr, td,
+.Panel_Page_Securities table tr, td, 
+.Panel_PageLink table tr, td , 
+.Panel_HeadContent table tr, td ,
+.Panel_Page_URLs table tr, td,
+.Panel_Page_Templates table tr, td{ /*border: 1px #000 solid;*/color: Black; padding: 5px; }
+
+.Panel_Page_Type table th,
+.Panel_Page_Securities table th, 
+.Panel_PageLink table th , 
+.Panel_HeadContent table th,
+.Panel_Page_URLs table th,
+.Panel_Page_Templates table th{ width: 200px; padding: 10px;}
+
+
+.collapsePanel { margin:0px;}
+
+.collapsePanelHeader{	
+	padding:5px; 
+	cursor: pointer; 
+	vertical-align: middle;
+}
+.collapsePanelHeader img{	
+      float: right;
+}
+
+.UpdatePanel_Template img{ margin: 0 0 0 -5px;}
+
+table.itemPlaceholderContainer { border-collapse: collapse; padding:10px; margin-bottom:30px;   }
+table.itemPlaceholderContainer th{ background-color: #a0bad3;  color:#28385a; padding:10px 0; font-weight:bold; font-size:12px; }
+
+
+
+.View_ListPage, .View_ListTemplate, .TemplateCreate { background-color: #ffffff; margin:10px; padding:10px; border-top: 3px #cccccc solid;  border-left:1px #e6e6e6 solid; border-right:1px #e6e6e6 solid; border-bottom:1px #e6e6e6 solid;}
+.View_ListPage a, .View_ListTemplate a{ margin-right:10px;}
+.View_ListPage table, .View_ListTemplate table, .TemplateCreate table { width: 100%; }
+.View_ListPage table th, .View_ListTemplate table th, .TemplateCreate table th { width: 200px; padding: 10px;}
+ 

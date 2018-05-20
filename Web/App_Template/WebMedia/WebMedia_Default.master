@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="WebMedia_Default.master.cs"
+    Inherits="App_Template_WebMedia_WebMedia_Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <form id="Form_NexusCore" runat="server">
+    <div id="pageWrapContainer" runat="server">
+        <div id="page">
+            <div id="header">
+                <div id="nav1">
+                    <ul class="sf-menu">
+                        <li>&nbsp;</li>
+                    </ul>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_Header" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <div class="clr">
+                    </div>
+                </div>
+                <!--/nav1 -->
+                <div class="clr">
+                </div>
+                <div class="logo">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_Logo" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <!--/logo -->
+                <div class="topnav">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_MainMenu" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <div class="clr">
+                    </div>
+                </div>
+                <!--/topnav -->
+                <div class="clr">
+                </div>
+            </div>
+            <!--/header -->
+            <div class="header_h2">
+                <div class="flash_slider">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_Adv" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <!--/header_h2 -->
+            <div class="clr">
+            </div>
+            <div class="menu">
+                <div class="menu_resize">
+                    <div class="search">
+                    &nbsp;
+                    </div>
+                    <div class="clr">
+                    </div>
+                </div>
+            </div>
+            <div id="columns">
+                <div id="centercol">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_PageContentTop" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_PageContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_PageContentBot" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <!--/centercol -->
+                <div id="rightcol">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_SideTop" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_Side" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder_SideBot" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <!--/rightcol -->
+                <div class="clr">
+                </div>
+            </div>
+            <!--/columns -->
+            <div class="clr">
+            </div>
+        </div>
+        <!--/page -->
+        <div id="page_bottom">
+            <div id="footer">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder_Footer" runat="server">
+                </asp:ContentPlaceHolder>
+                <div class="clr">
+                </div>
+            </div>
+            <div class="clr">
+            </div>
+            <!--/footer -->
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder_Scripts" runat="server">
+            </asp:ContentPlaceHolder>        
+        </div>
+        <!--/page-bot -->
+    </div>
+    </form>
+</body>
+</html>

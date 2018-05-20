@@ -1,0 +1,110 @@
+/*
+Author: TemplateAccess.com (DT/TS)
+*/
+@charset "utf-8";
+body { margin:0; padding:0; width:100%; background:#ffffff url(css_images/header_line_bg.gif) repeat-x top;}
+html { padding:0; margin:0;}
+
+.main { margin:0 auto; padding:0; background:url(css_images/header_bg.jpg) center 126px no-repeat;}
+.main2 { margin:0 auto; padding:0; background:url(css_images/header_bg2.jpg) center 126px no-repeat;}
+/********** header **********/
+.header { padding:0; margin:0 auto; width:962px;}
+/* logo */
+.logo {padding:0; margin:0; width:335px; float:left;}
+/* rss */
+.rss { text-align:right; width:215px; margin:0; padding:10px 10px 10px 0; float:left; font: normal 11px Arial, Helvetica, sans-serif; color:#7e7e7e; line-height:1.8em;}
+.rss_img { float:left; margin:0; padding:20px 0 0 0;}
+.rss_img img { margin:5px; padding:0;}
+/*menu*/
+.menu { padding:0; margin:0; float:right; width:530px;}
+.menu ul { text-align:left; padding:30px 0 0; margin:0; list-style:none; border:0; float:right; height:33px;}
+.menu ul li { float:left; margin:0; padding:0 5px; border:0; height:33px;}
+.menu ul li a { float:left; margin:0; padding:10px 0; color:#ffffff; font:normal 11px/13px Arial, Helvetica, sans-serif; text-decoration:none; }
+.menu ul li a span { padding:12px 15px; background:none; }
+.menu ul li a:hover, .menu ul li a.active { color:#393939; background:url(css_images/menu_r.png) no-repeat right; }
+.menu ul li a:hover span, .menu ul li a.active span {color:#393939; background:url(css_images/menu_l.png) no-repeat left; }
+/* body */
+.body { width:960px; padding:0; margin:0 auto;}
+.body h2 { font: normal 16px Arial, Helvetica, sans-serif; color:#1d2024; padding:15px 0 5px 0; margin:0 0 10px 0;}
+.body h2 span { display:block; font: normal 11px Arial, Helvetica, sans-serif; color:#b1b1b1; padding:0; margin:0;}
+.body p { font:normal 12px Arial, Helvetica, sans-serif; color:#848484; line-height:1.8em; padding:5px 0; margin:0;}
+.body p.about { background:#e6e6e6; border-left:5px solid #cdcdcd; padding:20px; margin:15px 0; font: italic 12px Arial, Helvetica, sans-serif; color:#747474;}
+.body p span { font-size:18px; font-weight:bold; color:#888;}
+.body a { color:#1ecdf6; text-decoration:underline;}
+.body ul.list { padding:0; margin:0; list-style:none;}
+.body ul.list li { float:left; width:50%; padding:3px 0;}
+.body img { margin:5px auto; padding:5px; background:#FFF; border:1px solid #d4d4d4;}
+.body img.noborder { border:0; padding:0; margin:10px 10px 0 0;}
+.body img.none { float:none; margin:5px 5px 5px 0; padding:0; border:none; background:none;}
+.body img.f_left { float:left;}
+.right, .sidebar2 {  width:280px; margin:10px 0; padding:0; float:right;}
+.left, .mainContent {  width:620px; margin:10px 0; padding:0 60px 0 0; float:left;}
+.port {width:280px; margin:10px 0; padding:0 60px 0 0; float:left;}
+.last { padding:0;}
+/********** contact form **********/
+.contactform { margin:0; padding:5px 0; }
+.contactform * { color:#F00; }
+.contactform ol { margin:0; padding:0; list-style:none; }
+.contactform li { margin:0; padding:0; background:none; border:none; display:block; clear:both; }
+.contactform li.buttons { margin:5px 0 5px 0; clear:both; }
+.contactform label { margin:0; width:100px; display:block; padding:5px 0; color:#737373; font: bold 12px Arial, Helvetica, sans-serif; float:left; }
+.contactform label span { color:#d66423; font-weight:bold; }
+.contactform input.text { width:450px; border:1px solid #d4d4d4; margin:2px 0; padding:5px 2px; height:16px; background:#fff; float:left; }
+.contactform textarea { width:450px; border:1px solid #d4d4d4; margin:2px 0; padding:2px; background:#fff; float:left; }
+.contactform li.buttons input { padding:3px 0 3px 0; margin:10px 0 0 100px; border:0; color:#FFF; float:left; }
+/*************footer**********/
+.footer { width:960px; padding:20px 0; margin:0 auto; border-top:1px solid #ededed;}
+.footer p { font:normal 12px Arial, Helvetica, sans-serif; color:#707070;}
+.footer a { font:bold 12px Arial, Helvetica, sans-serif; color:#1ecdf6; text-decoration:none; }
+.footer p.right { text-align:right; width:350px; margin:0; padding:10px 0; float:right;} 
+.footer p.leftt { text-align:left; width:550px; margin:0; padding:10px 0; float:left;}
+
+p.clr, .clr { clear:both; padding:0; margin:0; background:none;}
+.bg { clear:both; padding:3px 0; margin:0; border-bottom:1px solid #ededed;}
+/* Slider */
+#slider { width:960px; padding:37px 0 46px; margin:0 auto; }
+#slider .flash_slider { width:960px; height:359px; margin:0; overflow:hidden;}
+/* Top LIne */
+.top_line { width:960px; margin:0 auto; height:35px; color:#999999; font:normal 11px Arial, Helvetica, sans-serif;}
+.top_line .support { float:left; padding:8px 0; line-height:19px;}
+.top_line .support span { font-weight:bold; color:#e8f5f9;}
+.top_line .feebback { float:right; padding:8px 0; line-height:19px;}
+.top_line .feebback span { float:left; padding:0 2px;}
+.top_line .feebback img { float:left; padding:0 2px;}
+/*-- Hedaer blog --*/
+.header_text { padding:0;}
+.header_text h4 { font:normal 40px/46px Arial, Helvetica, sans-serif; color:#FFF; padding:40px 0; margin:0 auto; width:960px;}
+
+
+/* STYLES FOR THE IMAGE DESCRIPTIONS IN THE PIECEMAKER IMAGE GALLERY BY MODULARWEB */
+
+headline {
+	display: block;
+	font-size: 20;
+	color: #FFFFFF;
+}
+
+paragraph {
+	display: block;
+	color: #80B2E4;
+}
+
+inline {
+	display: inline;
+	color: #80B2E4;
+}
+
+break {
+	font-size: 7;
+	display:block;
+}
+
+a {
+	color: #FFFFFF;
+	display: inline;
+}
+
+a:hover {
+	color: #000000;
+	display: inline;
+}

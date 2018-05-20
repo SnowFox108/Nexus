@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage_AdminCP.master.cs"
+    Inherits="Nexus.Core.App_AdminCP_SiteAdmin_MasterPage_AdminCP" %>
+
+<%@ Register src="../UserAdmin/Users/LoginView.ascx" tagname="LoginView" tagprefix="Login" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/tr/xhtml11/dtd/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Website Control Panel</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="bg">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div id="nexusCore_wrapper">
+        <div id="nexusCore_header">
+            <div class="nextusCore_logo">
+                <a href="Default.aspx">
+                    <img src="/App_Themes/NexusCore/CSS_images/logo.png" /></a></div>
+                    <div>
+                        <Login:LoginView ID="LoginView_User" runat="server" />
+</div>
+            <div class="mainMenu">
+                <telerik:RadTabStrip ID="RadTabStrip_SiteAdminMenu" runat="server" 
+                    DataNavigateUrlField="Url" DataSourceID="SiteMapDataSource_SiteAdminMenu" 
+                    DataTextField="Title" Skin="Default" EnableEmbeddedSkins="False" >
+                </telerik:RadTabStrip>
+                <asp:SiteMapDataSource ID="SiteMapDataSource_SiteAdminMenu" runat="server" 
+                    SiteMapProvider="XmlProvider_SiteAdmin" ShowStartingNode="False" />
+            </div>
+        </div>
+        <div id="nexusCore_mainWrapper">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder_MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="LoginName_Advanced.ascx.cs" Inherits="Nexus.Controls.Login.LoginName.Advanced" ClassName="Nexus.Controls.Login.LoginName.LoginName_Advanced" %>
+<asp:Label ID="lbl_UserName" runat="server"></asp:Label>

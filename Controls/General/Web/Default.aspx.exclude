@@ -1,0 +1,37 @@
+﻿<%@ Page Language="C#" ValidateRequest="false" AutoEventWireup="true"  CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
+<%@ Register src="HTML/HTML_WebView.ascx" tagname="HTML_WebView" tagprefix="uc1" %>
+<%@ Register src="HTML/HTML_Advanced.ascx" tagname="HTML_Advanced" tagprefix="uc2" %>
+<%@ Register src="HTML/HTML_Editor.ascx" tagname="HTML_Editor" tagprefix="uc3" %>
+
+<%@ Register src="Script/Script_Editor.ascx" tagname="Script_Editor" tagprefix="uc4" %>
+<%@ Register src="Script/Script_WebView.ascx" tagname="Script_WebView" tagprefix="uc5" %>
+<%@ Register src="Script/Script_Advanced.ascx" tagname="Script_Advanced" tagprefix="uc6" %>
+<%@ Register src="Image/Image_WebView.ascx" tagname="Image_WebView" tagprefix="uc7" %>
+
+<%@ Register src="Image/Image_Editor.ascx" tagname="Image_Editor" tagprefix="uc8" %>
+
+<%@ Register src="Image/Image_Advanced.ascx" tagname="Image_Advanced" tagprefix="uc9" %>
+
+<%@ Register src="RichText/RichText_Editor.ascx" tagname="RichText_Editor" tagprefix="uc10" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
+        </telerik:RadScriptManager>
+        <div>
+                        
+            <uc4:Script_Editor ID="HTML_Editor1" runat="server" EditMode="Advanced" 
+                ScriptID="86C19F13-FE1A-442D-A488-02ADCD5BCED0" IsShared="False" 
+                Page_ControlID="3" Script_Content="Some Code Here" />
+                        
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿/* NexusCore 1 - Websites Stylesheet */
+
+.nexusCore_panel_homeSwitch,
+.nexusCore_headContent, 
+.nexusCore_pageTemplates,
+.nexusCore_pageSecurities, 
+.nexusCore_pagePermissions{ border:1px solid #7aaec6;  margin: 5px 10px; padding: 5px 10px;}
+
+.nexusCore_headContent h3, 
+.nexusCore_pageTemplates h3,
+.nexusCore_pageSecurities h3, 
+.nexusCore_pagePermissions h3{ margin:10px 0;}
+
+.nexusCore_headContent table, 
+.nexusCore_pageTemplates table,
+.nexusCore_pageSecurities table, 
+.nexusCore_pagePermissions table{ border-collapse:separate; }
+.nexusCore_pagePermissions table { margin-top:10px;}
+.nexusCore_pagePermissions table td {text-align:center; padding: 3px;}
+
+.nexusCore_headContent table tr th, 
+.nexusCore_pageTemplates table tr th,
+.nexusCore_pageSecurities table tr th, 
+.nexusCore_pagePermissions table tr th { padding-right:30px; width: 180px; text-align:right;}
+.nexusCore_pageTemplates table tr th { vertical-align: top;}
+
+/*-------------- text inupt  -----------------*/
+.nexusCore_panel_homeSwitch input[type="text"],
+.nexusCore_headContent input[type="text"], 
+.nexusCore_pageTemplates input[type="text"],
+.nexusCore_pageSecurities input[type="text"], 
+.nexusCore_pagePermissions input[type="text"]{font: 12px "Segoe UI", Arial, sans-serif;}
+
+.nexusCore_panel_homeSwitch select,
+.nexusCore_headContent select, 
+.nexusCore_pageTemplates select,
+.nexusCore_pageSecurities select, 
+.nexusCore_pagePermissions select{font: 12px "Segoe UI", Arial, sans-serif;}
+
+.nexusCore_panel_homeSwitch textarea,
+.nexusCore_headContent textarea, 
+.nexusCore_pageTemplates textarea,
+.nexusCore_pageSecurities textarea, 
+.nexusCore_pagePermissions textarea{font: 12px "Segoe UI", Arial, sans-serif;}

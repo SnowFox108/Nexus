@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="" title=""  description="">
+        <siteMapNode url="~/App_AdminCP/ShopAdmin/Default.aspx" title="Home"  description="Homepage of Shop Admin">
+            <siteMapNode url="~/App_AdminCP/SiteAdmin/Default.aspx" title="e2CMS"  description="" />
+        </siteMapNode>
+        <siteMapNode url="" title="Products"  description="">
+            <siteMapNode url="~/App_AdminCP/ShopAdmin/Products.aspx" title="Product"  description="" />
+            <siteMapNode url="~/App_AdminCP/ShopAdmin/Manufacturers.aspx" title="Manufacturer"  description="" />
+            <siteMapNode url="~/App_AdminCP/ShopAdmin/Attributes.aspx" title="Attribute"  description="" />
+        </siteMapNode>
+        <siteMapNode url="" title="Misc"  description="">
+            <siteMapNode url="~/App_AdminCP/ShopAdmin/Categories.aspx" title="Category"  description="" />
+            <siteMapNode url="~/App_AdminCP/ShopAdmin/Currencies.aspx" title="Currency"  description="" />
+        </siteMapNode>
+    </siteMapNode>
+</siteMap>

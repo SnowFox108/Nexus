@@ -1,0 +1,180 @@
+﻿using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using System.Reflection;
+using Telerik.Web.UI;
+using System.Collections.Generic;
+using Nexus.Core.ServerControls;
+
+public partial class TemplateControlTest : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        ContentPlaceHolder myContentPlaceHolder = (ContentPlaceHolder)Page.Master.FindControl("ContentPlaceHolder1");
+
+        PlaceHolder myPlaceHolder = (PlaceHolder)Master.FindControl("PlaceHolder1");
+
+        if (myPlaceHolder != null)
+        {
+            // First Control
+            TextBox myText = new TextBox();
+            myText.ID = "Text1";
+            myText.Text = "Text to Place Holder";
+
+            //myPlaceHolder.Controls.Add(myText);
+
+            // Second Control
+            RadDockLayout myDocLayout = new RadDockLayout();
+
+            RadDockZone myDocZone = new RadDockZone();
+
+            //myDocZone.Height = Unit.Pixel(300);
+            //myDocZone.Width = Unit.Pixel(300);
+            myDocZone.Orientation = Orientation.Vertical;
+            myDocZone.ID = "DockZone_ContentPlaceHolder1";
+
+            // Dock
+            RadDock myDock = new RadDock();
+            myDock.Title = "HTML";
+            myDock.Text = "Dock Test";
+            myDock.DefaultCommands = Telerik.Web.UI.Dock.DefaultCommands.None;
+            myDock.ID = "Dock_HTML";
+            myDock.UniqueName = "HTML_ID";
+            myDock.EnableDrag = true;
+            myDock.AutoPostBack = true;
+            myDock.CommandsAutoPostBack = true;
+
+            // Create Link Buttons
+            LinkButton Linkbtn_Edit = new LinkButton();
+            Linkbtn_Edit.ID = "Linkbtn_Edit";
+            Linkbtn_Edit.Command += new CommandEventHandler(Linkbtn_Edit_Command);
+            Linkbtn_Edit.Text = "Edit";
+
+            NC_LinkButton[] myLinkButtons = {
+                                                new NC_LinkButton("/App_Control_Style/General_Tools/Icons/html.png", Linkbtn_Edit, typeof(LinkButton))
+                                            };
+
+
+            myDock.TitlebarTemplate = new Nexus.Core.PageEditor.RadDockTemplate("HTML Title", myLinkButtons);
+
+            //DockCommand _edit = new DockCommand();
+            //_edit.Name = "Edit";
+            //_edit.Text = "Edit";
+            //_edit.AutoPostBack = true;
+
+            //myDock.Commands.Add(_edit);
+
+
+            string Controls = "Nexus.Controls.General.HTML.HTML_WebView";
+
+            Assembly assembly = Assembly.Load(new AssemblyName("Nexus.Controls.General, Culture=neutral, PublicKeyToken=null"));
+
+            Type t = assembly.GetType(Controls);
+            Control myControl = Page.LoadControl(t, null);
+
+            PropertyInfo p = t.GetProperty("HTMLID");
+            p.SetValue(myControl, "1", null);
+
+            myControl.ID = "myID";
+
+            myDocLayout.Controls.Add(myDocZone);
+            myDocZone.Controls.Add(myDock);
+
+            //myDock.Controls.Add(myControl);
+            //myDock.Controls.Add(myText);
+
+            myDock.ContentContainer.Controls.Add(myControl);
+            myDock.ContentContainer.Controls.Add(myText);
+
+            myContentPlaceHolder.Controls.Add(myDocLayout);
+        }
+
+        lbl_Dock.Text = "\"" + typeof(LinkButton).ToString() + "\"" + "<br/>";
+        lbl_Dock.Text += "\"" + typeof(HyperLink).ToString() + "\"";
+
+    }
+    protected void RadDock1_Command(object sender, Telerik.Web.UI.DockCommandEventArgs e)
+    {
+
+    }
+    protected void RadDock_DockPositionChanged(object sender, DockPositionChangedEventArgs e)
+    {
+        lbl_Dock.Text = "";
+        lbl_Dock.Text += sender.ToString();
+        lbl_Dock.Text += "<br/>DockZone: " + e.DockZoneID;
+        lbl_Dock.Text += "<br />DockIndex: " + e.Index;
+
+    }
+
+    protected void RadDockLayout1_SaveDockLayout(object sender, DockLayoutEventArgs e)
+    {
+        //lbl_Dock.Text = RadDockLayout1.GetRegisteredDocksState();
+        //List<DockState> CurrentDockStates = ((RadDockLayout)this.Page.FindControl(sender.ToString())).GetRegisteredDocksState();
+        List<DockState> CurrentDockStates = RadDockLayout1.GetRegisteredDocksState();
+
+        string _output = "";
+
+        foreach (DockState myDockState in CurrentDockStates)
+        {
+            _output += "<br/> DockLayOut ID: " + sender;
+            _output += "<br/> Dock UniqueName: " + myDockState.UniqueName;
+            _output += "<br/> Dock Tag: " + myDockState.Tag;
+            _output += "<br/> DockZoneID: " + myDockState.DockZoneID;
+            _output += "<br/> DockIndex: " + myDockState.Index;
+
+        }
+
+        Response.Write(_output);
+
+        //System.Web.Script.Serialization.JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+        //string serializedPositions = serializer.Serialize(e.Positions);
+        //string serializedIndices = serializer.Serialize(e.Indices);
+
+        //lbl_Dock.Text += "<br/> Dock Positions: " + serializedPositions;
+        //lbl_Dock.Text += "<br/> Dock Indices: " + serializedIndices;
+
+        //List<DockState> CurrentDockStates2 = RadDockLayout2.GetRegisteredDocksState();
+
+        //lbl_Dock.Text = "";
+
+        //foreach (DockState myDockState in CurrentDockStates2)
+        //{
+        //    lbl_Dock.Text += "<br/> DockLayOut ID: " + sender;
+        //    lbl_Dock.Text += "<br/> Dock UniqueName: " + myDockState.UniqueName;
+        //    lbl_Dock.Text += "<br/> Dock Tag: " + myDockState.Tag;
+        //    lbl_Dock.Text += "<br/> DockZoneID: " + myDockState.DockZoneID;
+        //    lbl_Dock.Text += "<br/> DockIndex: " + myDockState.Index;
+
+        //}
+
+
+    }
+
+
+    protected void RadDockLayout1_LoadDockLayout(object sender, DockLayoutEventArgs e)
+    {
+
+    }
+
+    protected void Linkbtn_Edit_Command(object sender, CommandEventArgs e)
+    {
+        Nexus.Core.Tools.AlertMessage.Show_Alert(this.Page, "LinkBtn Clicked");
+    }
+    protected void LinkButton1_Command(object sender, CommandEventArgs e)
+    {
+
+    }
+    protected void LinkButton1_Click(object sender, EventArgs e)
+    {
+
+    }
+}

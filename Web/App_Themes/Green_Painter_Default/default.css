@@ -1,0 +1,189 @@
+body {
+background: #ffffff;
+}
+
+td {
+	font: normal 11px Tahoma, Arial;
+	color: #495730;
+}
+
+h1, h2, h3, h4, h5 {
+
+    color: #63891c;
+    margin: 0px;
+}
+
+
+h1 {
+    font-size: 35px;
+}
+
+h2 {
+    font: normal 20px tahoma, Arial; 
+}
+
+h3 {
+    font-size: 14px;
+}
+
+
+a {
+
+font: normal 11px Tahoma, Arial;
+color: #63891c;
+text-decoration: underline;
+}
+
+a:hover {
+
+font: normal 11px Tahoma, Arial;
+color: #63891c;
+text-decoration: none;
+
+}
+
+a.white-link-underline {	
+	text-decoration: underline;
+	color: #FFFFFF;
+}
+
+.white-text{
+color: #ffffff;
+text-decoration: none;
+
+}
+a.b1
+{
+font:  14px tahoma, Arial;
+color: #fffea0;
+text-decoration: none;
+padding: 15px;
+margin: 0px;
+
+}
+.p1
+{
+padding: 0 0 0 20px;
+}
+
+.menu 
+{
+	padding:0px 0px 0px 0px;    
+}
+
+.menu ul
+{
+    list-style-type:none;
+	padding:0px 0px 0px 0px;        
+	margin:0px 0px 0px 0px;
+	float:right;    
+}
+
+.menu ul li
+{
+    width: 179px;
+	margin:0px 0px 0px 0px;  
+	padding:0px 0px 0px 0px;        	  
+    height: 41px;
+    background:url(CSS_images/menu.gif);
+
+}
+
+.menu  ul li.active
+{
+
+    background:url(CSS_images/menu_active.gif);
+
+}
+
+.menu ul li a, .menu ul li a.active
+{
+    color: #63891c;
+    font: 18px  tahoma, Arial;
+    text-decoration: none;
+	padding:12px 30px 0px 0px;        	      
+    float:right;
+}
+
+.menu ul li a:hover
+{
+    color: #47beed;
+}
+
+.blye-text-underline {
+color: #47beed;
+text-decoration: underline;
+}
+
+.blye-text-regular {
+color: #47beed;
+text-decoration: none;
+}
+
+.yellow-text-regular {
+color: #ece92c;
+text-decoration: none;
+}
+
+.yellow-text-underline {
+color: #ece92c;
+text-decoration: underline;
+}
+
+.orange-text-regular {
+color: #e88520;
+text-decoration: none;
+}
+
+.orange-text-underline {
+color: #e88520;
+text-decoration: underline;
+}
+.broun-text-regular {
+color: #de4e06;
+text-decoration: none;
+}
+
+.broun-text-underline {
+color: #de4e06;
+text-decoration: underline;
+}
+
+.red-text-regular {
+color: #e21b00;
+text-decoration: none;
+}
+
+.red-text-underline {
+color: #e21b00;
+text-decoration: underline;
+}
+.black-text-regular {
+color: #000000;
+text-decoration: none;
+}
+
+.black-text-underline {
+color: #000000;
+text-decoration: underline;
+}
+
+
+.gray-text-underline{
+color: #7c7c7c;
+text-decoration: underline;
+}
+.gray-text-regular{
+color: #7c7c7c;
+text-decoration: none;
+}
+
+.green-text{
+color: #a5b66e;
+text-decoration: none;
+}
+
+.green-text-underline{
+color: #a5b66e;
+text-decoration: underline;
+}

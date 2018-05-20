@@ -1,0 +1,87 @@
+/*
+Author: TemplateAccess.com (DT/TS)
+*/
+@charset "utf-8";
+body { margin:0; padding:0; width:100%; background:#62D99C;}
+html { padding:0; margin:0;}
+
+.main { margin:0 auto; padding:15px; width:962px; background-color:#FFFFFF}
+.main2 { margin:0 auto; padding:15px; width:962px; background-color:#FFFFFF}
+/********** header **********/
+.header { padding:0; margin:0 auto; width:962px;}
+/* logo */
+.head_line { padding:0; margin:0; width:962px; background-color:#36D986;}
+.logo {padding:0; margin:0; width:335px; float:left;}
+.head { padding:10px; margin:0; float:right; width:530px; color:#FFFFFF; text-align:right;}
+
+/*menu*/
+.menu { width:960px; padding:0; margin:0 auto;}
+.menu ul { text-align:left; padding:30px 0 0; margin:0; list-style:none; border:0; float:left; height:33px;}
+.menu ul li { float:left; margin:0; padding:0 5px; border:0; height:33px; }
+.menu ul li a { float:left; margin:0; padding:10px 0; color:#FFFFFF; font:normal 11px/13px Arial, Helvetica, sans-serif; text-decoration:none; }
+.menu ul li a span { padding:12px 15px; background-color:#36D986; }
+.menu ul li a:hover, .menu ul li a.active { color:#007439; background-color:#62D99C; }
+.menu ul li a:hover span, .menu ul li a.active span {color:#007439; background-color:#62D99C; }
+/* body */
+.body { width:960px; padding:0; margin:0 auto; color:#007439;}
+.body h2 { font: normal 16px Arial, Helvetica, sans-serif; color:#62D99C; padding:15px 0 5px 0; margin:0 0 10px 0;}
+.body h2 span { display:block; font: normal 12px Arial, Helvetica, sans-serif; color:#62D99C; padding:0; margin:0;}
+.body p { font:normal 12px Arial, Helvetica, sans-serif; line-height:1.8em; padding:5px 0; margin:0; color:#007439;}
+.body p.about { background:#e6e6e6; border-left:5px solid #007439; padding:20px; margin:15px 0; font: italic 12px Arial, Helvetica, sans-serif;}
+.body p span { font-size:18px; font-weight:bold; color:#00B358;}
+.body ul.list { padding:0; margin:0; list-style:none;}
+.body ul.list li { float:left; width:50%; padding:3px 0;}
+.body img { margin:5px auto; padding:5px; background:#FFF; border:1px solid #d4d4d4;}
+.body img.noborder { border:0; padding:0; margin:10px 10px 0 0;}
+.body img.none { float:none; margin:5px 5px 5px 0; padding:0; border:none; background:none;}
+.body img.f_left { float:left;}
+
+.left .mainContent { width:620px; margin:10px 0; padding:0 0 0 60px; float:right;}
+.left .sidebar1 {  width:280px; margin:10px 0; padding:0; float:left;}
+
+.right .mainContent {  width:620px; margin:10px 0; padding:0 60 0 0px; float:left;}
+.right .sidebar1 {  width:280px; margin:10px 0; padding:0; float:right;}
+
+.port {width:280px; margin:10px 0; padding:0 60px 0 0; float:left;}
+.last { padding:0;}
+/*************footer**********/
+.footer { width:962px; padding:15px; margin:0 auto; color:#FFFFFF; background-color:#36D986; }
+.footer p { font:normal 12px Arial, Helvetica, sans-serif;}
+.footer p.right { text-align:right; width:350px; margin:0; padding:10px 0; float:right;} 
+.footer p.leftt { text-align:left; width:550px; margin:0; padding:10px 0; float:left;}
+
+p.clr, .clr { clear:both; padding:0; margin:0; background:none;}
+.bg { clear:both; padding:3px 0; margin:0; border-bottom:1px solid #ededed;}
+
+/*-- Hedaer blog --*/
+.header_text { padding:0;}
+.header_text h4 { font:normal 40px/46px Arial, Helvetica, sans-serif; color:#FFF; padding:40px 0; margin:0 auto; width:960px;}
+
+
+/* STYLES FOR THE IMAGE DESCRIPTIONS IN THE PIECEMAKER IMAGE GALLERY BY MODULARWEB */
+
+paragraph {
+	display: block;
+	color: #80B2E4;
+}
+
+inline {
+	display: inline;
+	color: #80B2E4;
+}
+
+break {
+	font-size: 7;
+	display:block;
+}
+
+a {
+	color: #36D986;
+	display: inline;
+}
+
+a:hover {
+	color: #62D99C;
+	background-color:#00B358;
+	display: inline;
+}

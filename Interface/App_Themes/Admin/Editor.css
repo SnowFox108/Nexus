@@ -1,0 +1,33 @@
+﻿/*--------------------layout---------------------*/
+/*
+* {margin:0;padding:0}
+form {
+	text-align: center;		
+	}
+#pageContainer {
+	width: 770px;
+	background: #fff;
+	margin: 10px auto;
+	text-align: left;	
+	}
+#Main {
+	float:left;
+	width: 65%;
+	margin: 0;	
+	}
+#SideBar {
+	width: 28%;	
+	float: right;	
+	padding: 15px;	
+	}
+#Header, #Footer {
+	clear:both;
+	}
+*/
+
+.nc_wrapper {
+}
+
+.Editor_TreeMenu {
+}
+

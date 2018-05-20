@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage_AdminCP_Rad.master.cs"
+    Inherits="Nexus.Shop.App_AdminCP_ShopAdmin_MasterPage_AdminCP_Rad" %>
+
+<%@ Register Src="../UserAdmin/Users/LoginView.ascx" TagName="LoginView" TagPrefix="Login" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/tr/xhtml11/dtd/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Website Control Panel</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body class="nexusCore_bg">
+    <form id="Form_NexusCore" runat="server">
+    <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
+    </telerik:RadScriptManager>
+    <div id="nexusCore_wrapper">
+        <div id="header">
+            <div class="nexusCore_logo">
+                <img src="/App_Themes/NexusShop/CSS_images/logo.png" alt="Logo" />
+                <asp:Label ID="lbl_Version" runat="server"></asp:Label>                
+                </div>
+            <div class="nexusCore_login_bar">
+                <Login:LoginView ID="LoginView_User" runat="server" />
+            </div>
+            <div class="nexusCore_mainMenu">
+                <%--                <telerik:RadTabStrip ID="RadTabStrip_SiteAdminMenu" runat="server" 
+                    DataNavigateUrlField="Url" DataSourceID="SiteMapDataSource_SiteAdminMenu" 
+                    DataTextField="Title" Skin="Default" EnableEmbeddedSkins="False" >
+                </telerik:RadTabStrip>--%>
+                <telerik:RadMenu ID="RadMenu_SiteAdminMenu" runat="server" DataNavigateUrlField="Url"
+                    DataSourceID="SiteMapDataSource_ShopAdminMenu" DataTextField="Title" Skin="SiteAdmin"
+                    EnableEmbeddedSkins="False">
+                </telerik:RadMenu>
+                <asp:SiteMapDataSource ID="SiteMapDataSource_ShopAdminMenu" runat="server" SiteMapProvider="XmlProvider_ShopAdmin"
+                    ShowStartingNode="False" />
+            </div>
+        </div>
+        <div id="mainWrapper">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder_MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

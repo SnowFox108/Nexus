@@ -1,0 +1,99 @@
+/*
+Author: TemplateAccess.com (DT/TS)
+*/
+@charset "utf-8";
+body { margin:0; padding:0; width:100%;}
+html { padding:0; margin:0;}
+
+.main { margin:0 auto;   background:#e9e9e9 url(images/main_bg.gif) top center repeat-x; padding:0;}
+.main2 { margin:0 auto;   background:#f0f0f0 url(images/main_bg2.gif) top center repeat-x; padding:15px 0 0 0;}
+/********** header **********/
+.header {  padding:0; margin:0 auto; width:960px;}
+/* logo */
+.logo {padding:0; margin:0; width:335px; float:left;}
+/* rss */
+.rss_img { text-align:left; font: bold 11px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#ababab; float:left; margin:15px 0; padding:3px; background:#3f3f3f; border-bottom:1px solid #0e0e0e; border-top:1px solid #535353; border-right:1px solid #101010; border-left:1px solid #535353;}
+.rss_img p { float:left; padding:0 5px 0 0; margin:0;}
+.rss_img img { margin:0 3px; padding:0;}
+/*menu*/
+.menu { padding:0; margin:0; float:right; width:530px;}
+.menu ul { text-align: left;  padding:30px 0 0 0; margin:0; list-style:none; border:0; float:right;}
+.menu ul li { float:left; margin:0; padding:13px 5px; border:0; }
+.menu ul li a { float:left; margin:0; padding:13px 0 13px 0; color:#1e1e1e; font:bold 14px "Trebuchet MS", Arial, Helvetica, sans-serif; text-decoration:none; }
+.menu ul li a span { padding:13px 10px; background:none; }
+.menu ul li a:hover { color:#fff; background: url(images/r_menu.gif) no-repeat right; }
+.menu ul li a:hover span {color:#fff; background:url(images/l_menu.gif) no-repeat left; }
+.menu ul li a.active { color:#fff;  background:url(images/r_menu.gif) no-repeat right; }
+.menu ul li a.active span { color:#fff; background:url(images/l_menu.gif) no-repeat left; }
+/* search */
+.search { padding:15px 0 0 0; margin:0; width:230px; float:right;}
+.search form { display:block; float:right; padding:0;}
+.search span { display:block; float:left; background: url(images/search_bg.gif) left top no-repeat; width:146px; padding:0; height:24px;}
+.search form .keywords { width:179px; line-height:14px;  float:left; background:none; border:0; padding:5px 2px 0 10px; margin:0; font:normal 11px Arial, Helvetica, sans-serif; color:#777;}
+.search form .button { float:left; margin:0; padding:0;}
+/* click_blog */
+.click_blog { width:960px; margin:0 auto; padding:20px 0; background:url(images/slot_bg.gif) top no-repeat;}
+.click_blog p { font: normal 18px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#737373; width:710px; float:left; padding:0; margin:0;}
+.click_blog p span { font: normal 11px Arial, Helvetica, sans-serif; color:#979797;}
+.click_blog img { float:right; margin:0; padding:0;}
+/* FBG */
+.FBG {  padding:0; margin:0; background:#e9e9e9;}
+.FBG_resize { width:910px; margin:0 auto; padding:0;}
+.FBG_resize img { float:left; margin:0; padding:0;}
+.FBG_resize a { color:#a2565e; text-decoration:none; }
+.FBG_resize h2 { font: normal 18px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#504f4f; padding:10px 0; margin:0;}
+.FBG_resize p {font: normal 11px Arial, Helvetica, sans-serif; color:#919191; padding:5px 0; margin:0; line-height:1.8em;}
+.FBG_resize ul { padding:0; margin:0; list-style:none;}
+.FBG_resize li { padding:5px 0; margin:0; }
+.FBG_resize li a { font: normal 11px Arial, Helvetica, sans-serif; color:#aeaeae; padding:5px 0 5px 0; margin:0;text-decoration:none;}
+.FBG_resize li a:hover { color:#8c8c8c; text-decoration: underline;}
+.FBG_resize .blog { width:205px; float:left; margin:0; padding:20px 30px 20px 0;}
+.FBG_resize .last { padding:20px 0;}
+/* body */
+.body_resize { width:910px; margin:0 auto; padding:20px 25px; background:#fff;}
+.body { padding:0; margin:0 auto;}
+.body h2 { font: normal 24px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#494848; padding:10px 0; margin:0 0 10px 0; border-bottom:1px solid #dfdfdf;}
+.body h2 span { font: normal 11px Arial, Helvetica, sans-serif; color:#b7b7b7; padding:0; margin:0;}
+.body h3 { color:#4f4f4f; font: bold 24px "Trebuchet MS", Arial, Helvetica, sans-serif; border-bottom:1px solid #dbdbdb; padding:15px 0 15px 20px; margin:0; }
+.body h4 { font: bold 18px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#2a2a2a; padding:5px 0; margin:0; border-bottom:none;}
+.body .menu2 { width:170px; float:right; padding:0; margin:0;}
+.body .menu2 a { font: bold 12px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#5d5d5d; text-decoration:none; padding:0 3px;}
+.body .menu2 a:hover { color:#fff; background:#363636;}
+.body p.about { background:#e6e6e6; border-left:5px solid #cdcdcd; padding:20px; margin:15px 0; font: italic 12px Arial, Helvetica, sans-serif; color:#747474;}
+.body p { font:normal 12px Arial, Helvetica, sans-serif; color:#868686; line-height:1.8em; padding:5px 0; margin:0;}
+.body p span { font-size:18px; font-weight:bold; color:#888;}
+.body a { color:#912731; text-decoration:none;}
+.body img { margin:5px auto; padding:0; padding:0;}
+.body img.link { margin:5px auto; padding:0; text-align:center;}
+.right {  width:289px; margin:0; padding:10px 0; float:right;}
+.right ul { margin:0; padding:0; list-style:none;}
+.right li { border-bottom:1px solid #dfdfdf; padding:5px 0 5px 15px; margin:0; background:url(images/r_ul_li.gif) left no-repeat;}
+.right li a { font: normal 12px Arial, Helvetica, sans-serif; color:#747474; text-decoration:none;}
+.right li a:hover { color:#912731; text-decoration:underline;}
+.left { width:599px; margin:0; padding:10px 0; float:left;}
+.port { width:290px; margin:10px 0; padding:0 20px 0 0; float:left;}
+.last { padding:0;}
+/********** contact form **********/
+#contactform { margin:0; padding:5px 10px; }
+#contactform * { color:#F00; }
+#contactform ol { margin:0; padding:0; list-style:none; }
+#contactform li { margin:0; padding:0; background:none; border:none; display:block; clear:both; }
+#contactform li.buttons { margin:5px 0 5px 0; clear:both; }
+#contactform label { margin:0; width:400px; display:block; padding:5px 0; color:#868686; font: normal 12px Arial, Helvetica, sans-serif;  float:left; }
+#contactform label span { color:#d66423; font-weight:bold; }
+#contactform input.text { width:250px; border:1px solid #d4d4d4; margin:2px 0; padding:5px 2px; height:16px; background:#fff; float:left; }
+#contactform textarea { width:450px; border:1px solid #d4d4d4; margin:2px 0; padding:2px; background:#fff; float:left; }
+#contactform li.buttons input { padding:3px 0 3px 0; margin:10px 0 0 0; border:0; color:#FFF; float:left; }
+/*************footer**********/
+.footer {padding:0;  margin:0 auto; background:#e9e9e9;}
+.footer_resize { width:960px; margin:0 auto; padding:10px 0; background:url(images/footer_bg.gif) top center no-repeat;}
+.footer p { font:normal 12px  Arial, Helvetica, sans-serif; color:#979797;}
+.footer a { font:bold 12px Arial, Helvetica, sans-serif; color:#979797; text-decoration:none; }
+.footer p.right { text-align:right; width:350px; margin:0; padding:15px 0; float:right;} 
+.footer p.leftt { text-align:left; width:550px; margin:0; padding:15px 0; float:left;}
+
+p.clr, .clr { clear:both; padding:0; margin:0; background:none;}
+.bg { clear:both; padding:5px 0; margin:0; border-bottom:1px solid #dfdfdf;}
+/* Slider */
+#slider { width:960px; padding:0; margin:0 auto; }
+#slider .flash_slider { width:960px; height:350px; margin:0; overflow:hidden;}

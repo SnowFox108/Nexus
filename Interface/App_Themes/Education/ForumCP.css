@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+/*----------------------------------------------------------------------------
+
+
++ ************************************************************************************* +
+*																						*
+*	Description: chinasense.com									                     	*
+*	Last Modified:	11. 2009														    *
+*																						*
++ ************************************************************************************* +
+/*  ForumCP page
+
+----------------------------------------------------------------------------*/
+#forumCP 
+{
+	float: left;
+	padding: 10px;
+	width:900px;
+}
+
+
+#forumCP table 
+{
+    width:100%;
+}
+
+
+#forumCP table tr td 
+{
+    border-collapse: separate;
+    padding:5px;
+}
+
+
+
+#forumCP table caption
+{
+    background-color:#0154a0;
+    padding:10px;
+    text-align:left;
+    font-weight:bold;
+    color:#fff;
+}
+
+#forumCP table th
+{
+    background-color:#f5f4ee;
+    padding:10px;
+    text-align:left;
+    font-weight:bold;
+    vertical-align:text-top;
+    color:#0154a0;
+}
+
+#forumCP h4
+{
+    color:#0154a0;
+}
+
+#forumCP hr
+{ color: #e3e3e3}
+
+#forumCP  a {color:#333; background-color:Transparent; text-decoration:none; }
+#forumCP  a:hover{color:#333; background-color:Transparent; text-decoration:underline;}

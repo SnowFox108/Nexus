@@ -1,0 +1,505 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using Nexus.Core.Categories;
+using Telerik.Web.UI;
+
+namespace Nexus.Core.UI
+{
+    partial class App_AdminCP_ShopAdmin_Products_CategoryTreeTest : System.Web.UI.UserControl
+    {
+        #region Properties
+
+        private string _selected_categoryid = null;
+        private string _checked_categoryid = "";
+        private string _root_categoryid = "-1";
+        private string _module_itemid = "";
+
+        private bool _enable_homeroot = true;
+        private bool _enable_draganddrop = false;
+        private bool _enable_checkbox = false;
+
+        private bool _expand_allroot = false;
+
+        [Bindable(true)]
+        [Category("Data")]
+        [DefaultValue("")]
+        [Localizable(true)]
+        public string Selected_CategoryID
+        {
+            get
+            {
+                return _selected_categoryid;
+            }
+            set
+            {
+                _selected_categoryid = value;
+                ViewState["Selected_CategoryID"] = _selected_categoryid;
+            }
+        }
+
+        [Bindable(true)]
+        [Category("Data")]
+        [DefaultValue("")]
+        [Localizable(true)]
+        public string Checked_CategoryID
+        {
+            get
+            {
+                return _checked_categoryid;
+            }
+            set
+            {
+                _checked_categoryid = value;
+                ViewState["Checked_CategoryID"] = _checked_categoryid;
+            }
+        }
+
+        [Bindable(true)]
+        [Category("Data")]
+        [DefaultValue("-1")]
+        [Localizable(true)]
+        public string Root_CategoryID
+        {
+            get
+            {
+                return _root_categoryid;
+            }
+            set
+            {
+                _root_categoryid = value;
+                ViewState["Root_CategoryID"] = _root_categoryid;
+            }
+        }
+
+        [Bindable(true)]
+        [Category("Data")]
+        [DefaultValue("")]
+        [Localizable(true)]
+        public string Module_ItemID
+        {
+            get
+            {
+                return _module_itemid;
+            }
+            set
+            {
+                _module_itemid = value;
+                ViewState["Module_ItemID"] = _module_itemid;
+            }
+        }
+
+        [Bindable(true)]
+        [Category("Behavior")]
+        [DefaultValue("true")]
+        [Localizable(true)]
+        public bool Enable_HomeRoot
+        {
+            get
+            {
+                return _enable_homeroot;
+            }
+            set
+            {
+                _enable_homeroot = value;
+                ViewState["Enable_HomeRoot"] = _enable_homeroot;
+            }
+        }
+
+        [Bindable(true)]
+        [Category("Behavior")]
+        [DefaultValue("false")]
+        [Localizable(true)]
+        public bool Enable_DragAndDrop
+        {
+            get
+            {
+                return _enable_draganddrop;
+            }
+            set
+            {
+                _enable_draganddrop = value;
+                ViewState["Enable_DragAndDrop"] = _enable_draganddrop;
+            }
+        }
+
+        [Bindable(true)]
+        [Category("Behavior")]
+        [DefaultValue("false")]
+        [Localizable(true)]
+        public bool Enable_CheckBox
+        {
+            get
+            {
+                return _enable_checkbox;
+            }
+            set
+            {
+                _enable_checkbox = value;
+                ViewState["Enable_CheckBox"] = _enable_checkbox;
+            }
+        }
+
+        [Bindable(true)]
+        [Category("Behavior")]
+        [DefaultValue("false")]
+        [Localizable(true)]
+        public bool Expand_AllRoot
+        {
+            get
+            {
+                return _expand_allroot;
+            }
+            set
+            {
+                _expand_allroot = value;
+                ViewState["Expand_AllRoot"] = _expand_allroot;
+            }
+        }
+
+        #endregion
+
+        #region Events
+
+        // LinkButton Click Event
+        private static readonly object EventCategorySelected = new object();
+
+        [Category("Action")]
+        [Description("Raised Category Menu Clicked event")]
+        public event RadTreeViewEventHandler CategorySelected
+        {
+            add
+            {
+                Events.AddHandler(EventCategorySelected, value);
+            }
+            remove
+            {
+                Events.RemoveHandler(EventCategorySelected, value);
+            }
+        }
+
+        protected void OnCategorySelected(object sender, RadTreeNodeEventArgs e)
+        {
+            RadTreeViewEventHandler CategorySelectedHandler = (RadTreeViewEventHandler)Events[EventCategorySelected];
+
+            if (CategorySelectedHandler != null)
+                CategorySelectedHandler(sender, e);
+
+        }
+
+        #endregion
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (IsPostBack)
+            {
+                try
+                {
+                    _selected_categoryid = ViewState["Selected_CategoryID"].ToString();
+                    _checked_categoryid = ViewState["Checked_CategoryID"].ToString();
+                    _root_categoryid = ViewState["Root_CategoryID"].ToString();
+                    _module_itemid = ViewState["Module_ItemID"].ToString();
+
+                    _enable_homeroot = Convert.ToBoolean(ViewState["Enable_HomeRoot"]);
+                    _enable_draganddrop = Convert.ToBoolean(ViewState["Enable_DragAndDrop"]);
+                    _enable_checkbox = Convert.ToBoolean(ViewState["Enable_CheckBox"]);
+
+                    _expand_allroot = Convert.ToBoolean(ViewState["Expand_AllRoot"]);
+                }
+                catch
+                {
+                }
+            }
+            else
+            {
+                Control_Init();
+                LoadCategoryRoot();
+            }
+
+        }
+
+        private void Control_Init()
+        {
+            ViewState["Selected_CategoryID"] = _selected_categoryid;
+            ViewState["Checked_CategoryID"] = _checked_categoryid;
+            ViewState["Root_CategoryID"] = _root_categoryid;
+            ViewState["Module_ItemID"] = _module_itemid;
+            ViewState["Enable_HomeRoot"] = _enable_homeroot;
+            ViewState["Enable_DragAndDrop"] = _enable_draganddrop;
+            ViewState["Enable_CheckBox"] = _enable_checkbox;
+            ViewState["Expand_AllRoot"] = _expand_allroot;
+
+        }
+
+        public void LoadCategoryRoot()
+        {
+
+            #region Default Setting
+            RadTreeView_Category.EnableDragAndDrop = _enable_draganddrop;
+            RadTreeView_Category.EnableDragAndDropBetweenNodes = _enable_draganddrop;
+
+            RadTreeView_Category.CheckBoxes = _enable_checkbox;
+            RadTreeView_Category.CheckChildNodes = _enable_checkbox;
+            #endregion
+
+            // Remove all Node before add new one
+            RadTreeView_Category.Nodes.Clear();
+
+            RadTreeNode rootnode = new RadTreeNode();
+
+            if (_enable_homeroot)
+            {
+                rootnode.Text = "All Categories";
+                rootnode.Value = "-1";
+                rootnode.ExpandMode = TreeNodeExpandMode.ServerSideCallBack;
+                rootnode.ImageUrl = "/App_Control_Style/NexusCore/Menu_TreeView/Icons/All_category.gif";
+                rootnode.Expanded = true;
+                RadTreeView_Category.Nodes.Add(rootnode);
+            }
+
+            CategoryMgr myCategoryMgr = new CategoryMgr();
+            List<Category> myCategories = myCategoryMgr.Get_Categories(_root_categoryid);
+
+            foreach (Category myCategory in myCategories)
+            {
+                int Item_Count = myCategoryMgr.Sum_CategoryItems(myCategory.CategoryID, _module_itemid);
+
+                RadTreeNode node = new RadTreeNode();
+                node.Text = myCategory.Category_Name
+                    + " ("
+                    + Item_Count.ToString()
+                    + ")";
+                node.Value = myCategory.CategoryID;
+                node.ImageUrl = "/App_Control_Style/NexusCore/Menu_TreeView/Icons/folder.gif";
+
+                LoadCategoryNode(node);
+
+                if (_enable_homeroot)
+                {
+                    rootnode.Nodes.Add(node);
+                }
+                else
+                {
+                    RadTreeView_Category.Nodes.Add(node);
+                }
+            }
+
+            if (_expand_allroot)
+            {
+                RadTreeView_Category.ExpandAllNodes();
+            }
+
+            if (!DataEval.IsEmptyQuery(_selected_categoryid))
+                SetCategoryID();
+
+            if (_enable_checkbox)
+                SetCheckedNodes();
+
+        }
+
+        public void UnSelectItems()
+        {
+            RadTreeView_Category.UnselectAllNodes();
+            RadTreeView_Category.UncheckAllNodes();
+            //RadTreeView_Category.ClearSelectedNodes();
+            //RadTreeView_Category.ClearCheckedNodes();
+        }
+
+        private void SetCheckedNodes()
+        {
+            string[] CheckedNodes = _checked_categoryid.Split(',');
+
+            foreach (string CheckedNode in CheckedNodes)
+            {
+                RadTreeNode selectednode = RadTreeView_Category.FindNodeByValue(CheckedNode.Replace("\"", ""));
+
+                if (selectednode != null)
+                    selectednode.Checked = true;
+
+            }
+
+        }
+
+        public IList<RadTreeNode> Get_CheckedNodes()
+        {
+            return RadTreeView_Category.CheckedNodes;
+        }
+
+        public string Get_CheckdNodes_String()
+        {
+            IList<RadTreeNode> MyCheckedNodes = RadTreeView_Category.CheckedNodes;
+
+            string checknodes = "";
+
+            int i = 0;
+            foreach (RadTreeNode myCheckedNode in MyCheckedNodes)
+            {
+                if (i > 0)
+                    checknodes += ",";
+
+                checknodes += DataEval.QuoteText(myCheckedNode.Value);
+                i++;
+            }
+
+            return checknodes;
+        }
+
+        private void LoadCategoryNode(RadTreeNode MyNode)
+        {
+            CategoryMgr myCategoryMgr = new CategoryMgr();
+            List<Category> myCategories = myCategoryMgr.Get_Categories(MyNode.Value);
+
+            foreach (Category myCategory in myCategories)
+            {
+                int Item_Count = myCategoryMgr.Sum_CategoryItems(myCategory.CategoryID, _module_itemid);
+
+                RadTreeNode node = new RadTreeNode();
+                node.Text = myCategory.Category_Name
+                    + " ("
+                    + Item_Count.ToString()
+                    + ")";
+                node.Value = myCategory.CategoryID;
+                node.ImageUrl = "/App_Control_Style/NexusCore/Menu_TreeView/Icons/folder.gif";
+
+                MyNode.Nodes.Add(node);
+                LoadCategoryNode(node);
+            }
+        }
+
+        private void SetCategoryID()
+        {
+            RadTreeNode selectednode = RadTreeView_Category.FindNodeByValue(_selected_categoryid);
+
+            if (selectednode != null)
+            {
+                selectednode.Selected = true;
+
+                ExpandSelectedNode(selectednode);
+            }
+        }
+
+        private void ExpandSelectedNode(RadTreeNode SelectedNode)
+        {
+            if (SelectedNode.ParentNode != null)
+            {
+                if (SelectedNode.ParentNode.Value != "-1")
+                {
+                    SelectedNode.ParentNode.Expanded = true;
+                    ExpandSelectedNode(SelectedNode.ParentNode);
+                }
+            }
+        }
+
+        protected void RadTreeView_Category_NodeDrop(object sender, Telerik.Web.UI.RadTreeNodeDragDropEventArgs e)
+        {
+            RadTreeNode sourceNode = e.SourceDragNode;
+            RadTreeNode destNode = e.DestDragNode;
+            RadTreeViewDropPosition dropPosition = e.DropPosition;
+
+            if (destNode != null) //drag&drop is performed between trees
+            {
+                if (sourceNode.TreeView.SelectedNodes.Count <= 1)
+                {
+                    PerformDragAndDrop(dropPosition, sourceNode, destNode);
+                }
+                else if (sourceNode.TreeView.SelectedNodes.Count > 1)
+                {
+                    foreach (RadTreeNode node in sourceNode.TreeView.SelectedNodes)
+                    {
+                        PerformDragAndDrop(dropPosition, node, destNode);
+                    }
+                }
+
+                destNode.Expanded = _expand_allroot;
+                //sourceNode.TreeView.ClearSelectedNodes();
+                sourceNode.TreeView.UnselectAllNodes();
+
+            }
+
+        }
+
+        private void PerformDragAndDrop(RadTreeViewDropPosition dropPosition, RadTreeNode sourceNode,
+                                               RadTreeNode destNode)
+        {
+            if (sourceNode.Equals(destNode) || sourceNode.IsAncestorOf(destNode))
+            {
+                return;
+            }
+
+            // Check if destNote is Root when drop above and below it.
+            if (dropPosition == RadTreeViewDropPosition.Above || dropPosition == RadTreeViewDropPosition.Below)
+            {
+                if (destNode.ParentNode == null)
+                {
+                    return;
+                }
+
+            }
+
+            RadTreeNode srcNode = sourceNode.ParentNode;
+
+            sourceNode.Owner.Nodes.Remove(sourceNode);
+
+            switch (dropPosition)
+            {
+                case RadTreeViewDropPosition.Over:
+                    // child
+                    if (!sourceNode.IsAncestorOf(destNode))
+                    {
+                        destNode.Nodes.Add(sourceNode);
+
+                        // Update Database structure
+                        Update_Category_Nodes(sourceNode.Value, destNode.Value);
+                    }
+                    break;
+
+                case RadTreeViewDropPosition.Above:
+
+                    // sibling - above					
+                    destNode.InsertBefore(sourceNode);
+
+                    // Update Database structure
+                    Update_Category_Nodes(sourceNode.Value, destNode.ParentNode.Value);
+
+                    break;
+
+                case RadTreeViewDropPosition.Below:
+
+                    // sibling - below
+                    destNode.InsertAfter(sourceNode);
+
+                    // Update Database structure
+                    Update_Category_Nodes(sourceNode.Value, destNode.ParentNode.Value);
+
+                    break;
+            }
+        }
+
+        private void Update_Category_Nodes(string srcNode, string destNode)
+        {
+
+            CategoryMgr myCategoryMgr = new CategoryMgr();
+
+            e2Data[] UpdateData = {
+                                          new e2Data("CategoryID", srcNode),
+                                          new e2Data("Parent_CategoryID", destNode)
+                                      };
+
+            myCategoryMgr.Edit_Category(UpdateData);
+
+        }
+
+        protected void RadTreeView_Category_NodeClick(object sender, RadTreeNodeEventArgs e)
+        {
+            _selected_categoryid = e.Node.Value;
+            ViewState["Selected_CategoryID"] = _selected_categoryid;
+
+            OnCategorySelected(sender, e);
+
+        }
+    }
+}
